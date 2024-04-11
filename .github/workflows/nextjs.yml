@@ -73,8 +73,12 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Set environment variables
+        run: |
+          export NEXT_PUBLIC_BASE_URL=$YOUR_BASE_URL
+          export NEXT_PUBLIC_PublicUrl=$YOUR_PUBLIC_URL
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build --env NEXT_PUBLIC_BASE_URL=${{ secrets.NEXT_PUBLIC_BASE_URL }} NEXT_PUBLIC_PublicUrl=${{ secrets.NEXT_PUBLIC_PublicUrl }}
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
