@@ -27,6 +27,11 @@ concurrency:
 jobs:
   # Build job
   build:
+    environment:
+      - NEXT_PUBLIC_BASE_URL=$NEXT_PUBLIC_BASE_URL
+      - NEXT_PUBLIC_PublicUrl=$NEXT_PUBLIC_PublicUrl
+      - NEXT_PUBLIC_InstagramUrl=$NEXT_PUBLIC_InstagramUrl
+      - NEXT_PUBLIC_INS_TOKEN=$NEXT_PUBLIC_INS_TOKEN
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -73,10 +78,6 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Set environment variables
-        run: |
-          export NEXT_PUBLIC_BASE_URL=$YOUR_BASE_URL
-          export NEXT_PUBLIC_PublicUrl=$YOUR_PUBLIC_URL
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Export with Next.js
