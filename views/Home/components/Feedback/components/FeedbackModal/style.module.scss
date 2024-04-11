@@ -1,0 +1,77 @@
+.feedback-modal{
+  border: none;
+  outline: none;
+  padding:126px 54px;
+  background: $white;
+  box-shadow: 0px 4px 16px rgba(159, 168, 177, 0.3);
+  border-radius: 20px;
+  .feedback_item{
+    .feedback-headline{
+      *{
+        @include fontRem(60,700,72);
+        color: $primary;
+      }
+    }
+    .feedbackItem_infos{
+      max-width: 100%;
+      width: 100%;
+      margin-top: 71px;
+      .feedbackItemInfos_headline{
+        @include d-flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .feedbackItem_author{
+          @include d-flex;
+          gap: 32px;
+          max-width: 435px;
+          width: 100%;
+          align-items: center;
+          .feebackAuthor_image{
+            width: 88px;
+            height: 88px;
+            position: relative;
+            border-radius: 50%;
+          }
+          .feedBackAuthor_infos{
+            *{
+              @include fontRem(20,400,27);
+            }
+            .feedBackAuthor_name{
+              color: $primary;
+            }
+            .feedBackAuthor_position{
+              color: $lightGray;
+            }
+          }
+        }
+        .feedBack_stars{
+          margin-top: 18px;
+          @include d-flex;
+          .star{
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.3105 23.8333L8.07091 16.2229L2.16675 11.1042L9.96675 10.4271L13.0001 3.25L16.0334 10.4271L23.8334 11.1042L17.9292 16.2229L19.6897 23.8333L13.0001 19.7979L6.3105 23.8333Z' fill='%23FFDD2C'/%3E%3C/svg%3E");
+            background-size: contain;
+          }
+        }
+      }
+      .close-modal{
+        position: absolute;
+        top: 80px;
+        right: 80px;
+        display: block;
+        width: 30px;
+        @include buttonNulled;
+        height: 30px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.16316 30.835L0.855469 28.5273L13.5478 15.835L0.855469 3.14265L3.16316 0.834961L15.8555 13.5273L28.5478 0.834961L30.8555 3.14265L18.1632 15.835L30.8555 28.5273L28.5478 30.835L15.8555 18.1427L3.16316 30.835Z' fill='%239FA8B1'/%3E%3C/svg%3E");
+      }
+    }
+    .feedback_description{
+      max-width:100%;
+      width: 100%;
+      margin-top: 63px;
+    }
+  }
+
+}

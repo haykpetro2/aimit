@@ -1,0 +1,144 @@
+.deliver-section {
+  padding-top: 120px;
+  padding-bottom: 223px;
+  @media only screen and (max-width: $mobile){
+    padding-top: 0px;
+    padding-bottom: 85px;
+  }
+  .section-description {
+    max-width: 1358px;
+    width: 100%;
+    margin-top: 46px;
+    @media only screen and (max-width: $mobile){
+      margin-top: 11px;
+    }
+    *{
+      @include fontRem(40,600,56);
+      color: $primary;
+      @media only screen and (max-width: $tablet){
+        @include fontRem(30,600,46);
+      }
+      @media only screen and (max-width: $mobile){
+        @include fontRem(14,500,22);
+      }
+    }
+
+  }
+
+  .deliver-section-mainpanel {
+    background: $white;
+    box-shadow: 0px 4px 60px rgba(26, 32, 40, 0.2);
+    border-radius: 20px;
+    padding:45px 130px 140px 120px;
+    @media only screen and (max-width: $bigTablet){
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+    @media only screen and (max-width: $mobile){
+      padding:19px 20px 56px 43px;
+    }
+    &:not(:last-child){
+      margin-top: 114px;
+      @media only screen and (max-width: $mobile){
+        margin-top: 44px;
+      }
+    }
+    &:last-child{
+      margin-top: 92px;
+      @media only screen and (max-width: $mobile){
+        margin-top: 40px;
+      }
+    }
+    .mainpanel-headline{
+      *{
+        @include fontRem(40,700,48);
+        color: $primary;
+        @media only screen and (max-width: $mobile){
+          @include fontRem(20,700,24);
+          text-align: center;
+        }
+      }
+    }
+    .step-listing{
+      padding-top: 76px;
+      @media only screen and (max-width: $mobile){
+        padding-top: 40px;
+      }
+      ul{
+        @include flexRow(119,5);
+        list-style: none;
+        position: relative;
+        @media only screen and (max-width: $tablet){
+          @include flexRow(0.1)
+        }
+        &::after{
+          content: " ";
+          width: 100%;
+          max-width: 80%;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 42px;
+          height: 1px;
+          position: absolute;
+          border-top: 1px dashed $lightBlur;
+          display: block;
+          z-index: 1  ;
+          @media only screen and (max-width: $tablet){
+            height: 100%;
+            width: 1px;
+            border-left: 1px dashed $lightBlur;
+            left: 41px;
+            top: 0;
+          }
+        }
+        li{
+          max-width: 157px;
+          width: 100%;
+          @include flex-column;
+          align-items: center;
+          position: relative;
+          z-index: 2;
+          @media only screen and (max-width: $tablet){
+            flex-direction: row;
+            &:not(:first-child){
+              margin-top: 94px;
+            }
+          }
+          span{
+            display: block;
+          }
+          .listing-number{
+            @include flex-center;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: $lightBlur;
+            border: 1px solid $lightBlur;
+            box-shadow: 0px 4px 22px rgba(26, 32, 40, 0.4);
+            @include fontRem(40,700,57);
+            color: $white;
+          }
+          .listing-name{
+            @include fontRem(26,700,31);
+            color: $primary;
+            text-align: center;
+            margin-top: 24px;
+            @media only screen and (max-width: $bigTablet){
+              @include fontRem(20,700,25);
+            }
+            @media only screen and (max-width: $tablet){
+              margin-top: 0px;
+              margin-left: 40px;
+            }
+
+            @media only screen and (max-width: $mobile){
+              @include fontRem(16,700,20);
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+

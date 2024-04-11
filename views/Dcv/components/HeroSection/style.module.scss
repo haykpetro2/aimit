@@ -1,0 +1,245 @@
+.hero-section {
+  background-image: url(../../../../public/images/uploads/dcvHero.png);
+  padding: 140px 0 203px 0;
+  @media only screen and (max-width: $desktopBig) {
+    padding: 20px 0;
+  }
+  @media only screen and (max-width: $tablet) {
+    padding: 0;
+  }
+  .hero-section-mainpanel {
+    @include flex-center;
+    flex-wrap: nowrap;
+    position: relative;
+    min-height: calc(100vh - 343px);
+    @media only screen and (max-width: $desktopBig) {
+      min-height: calc(100vh - 40px);
+    }
+    @media only screen and (max-width: $tablet) {
+      min-height: 100vh;
+    }
+    .hero-headline {
+      * {
+        @include fontRem(190, 700, 230);
+        color: $white;
+        white-space: nowrap;
+        overflow: hidden;
+        span{
+          display: inline-block;
+          opacity: 0;
+          transform: translate(-150px, -50px) rotate(-180deg) scale(3);
+          animation: revolveScale 1s forwards;
+          position: relative;
+           &:nth-of-type(2) {
+            animation-delay: .05s;
+          }
+          &:nth-of-type(3) {
+            animation-delay: .1s;
+          }
+          &:nth-of-type(4) {
+            animation-delay: .15s;
+          }
+          &:nth-of-type(5) {
+            animation-delay: .2s;
+          }
+          &:nth-of-type(6) {
+            animation-delay: .25s;
+          }
+          &:nth-of-type(7) {
+            animation-delay: .3s;
+          }
+          &:nth-of-type(8) {
+            animation-delay: .35s;
+          }
+          &:nth-of-type(9) {
+            animation-delay: .4s;
+          }
+          &:nth-of-type(10) {
+            animation-delay: .45s;
+          }
+          &:nth-of-type(11) {
+            animation-delay: .5s;
+          }
+          &:nth-of-type(12) {
+            animation-delay: .55s;
+          }
+          &:nth-of-type(13) {
+            animation-delay: .6s;
+          }
+          &:nth-of-type(14) {
+            animation-delay: .65s;
+          }
+        }
+        @media only screen and (max-width: $desktop) {
+          @include fontRem(140, 700, 180);
+        }
+        @media only screen and (max-width: $desktopBig) {
+          @include fontRem(115, 700, 160);
+        }
+        @media only screen and (max-width: $laptop) {
+          @include fontRem(90, 700, 130);
+        }
+        @media only screen and (max-width: $middle) {
+          @include fontRem(70, 700, 110);
+        }
+        @media only screen and (max-width: $tablet) {
+          @include fontRem(50, 700, 90);
+        }
+        @media only screen and (max-width: $mobile) {
+          @include fontRem(34, 700, 70);
+        }
+      }
+    }
+    .cv-player {
+      @include absoluteCenter(vertical);
+      width: 913px;
+      height: 757px;
+      @include flex-center;
+      background-image: url(../../../../public/images/uploads/cv-player.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      @media only screen and (max-width: $desktop) {
+        width: 713px;
+        height: 557px;
+      }
+      @media only screen and (max-width: $laptop) {
+        width: 513px;
+        height: 357px;
+      }
+      @media only screen and (max-width: $tablet) {
+        width: 313px;
+      }
+      @media only screen and (max-width: $mobile) {
+        width: 250px;
+      }
+      .video-cover {
+        width: 686px;
+        height: 511px;
+        position: absolute;
+        left: 104px;
+        top: 107px;
+        background-image: url(../../../../public/images/uploads/cv_cover.png);
+        z-index: 9;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url(../../../../public/images/uploads/cv_cover_overlay.png);
+          display: block;
+        }
+        &.video-opened {
+          background-image: none;
+          &::after {
+            content: none;
+          }
+        }
+        @media only screen and (max-width: $desktop) {
+          width: 507px;
+          height: 380px;
+        }
+        @media only screen and (max-width: $laptop) {
+          width: 322px;
+          height: 243px;
+          left: 92px;
+          top: 49px;
+        }
+        @media only screen and (max-width: $tablet) {
+          width: 234px;
+          height: 174px;
+          left: 37px;
+          top: 86px;
+        }
+        @media only screen and (max-width: $mobile) {
+          width: 187px;
+          height: 141px;
+          left: 29px;
+          top: 104px;
+        }
+      }
+      .video {
+        video {
+          width: 686px;
+          height: 511px;
+          position: absolute;
+          left: 104px;
+          top: 107px;
+          @media only screen and (max-width: $desktop) {
+            width: 507px;
+            height: 380px;
+          }
+          @media only screen and (max-width: $laptop) {
+            width: 322px;
+            height: 243px;
+            left: 92px;
+            top: 49px;
+          }
+          @media only screen and (max-width: $tablet) {
+            width: 234px;
+            height: 174px;
+            left: 37px;
+            top: 86px;
+          }
+          @media only screen and (max-width: $mobile) {
+            width: 187px;
+            height: 141px;
+            left: 29px;
+            top: 104px;
+          }
+        }
+      }
+      .toggle-video {
+        @include buttonNulled;
+        width: 54px;
+        height: 54px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='54' height='54' rx='27' fill='white'/%3E%3Cpath d='M21.3619 36.8812L36.8812 27L21.3619 17.1187V36.8812ZM27 50.25C23.8225 50.25 20.8194 49.6397 17.9906 48.4191C15.1619 47.1984 12.6916 45.5322 10.5797 43.4203C8.46781 41.3084 6.80156 38.8381 5.58094 36.0094C4.36031 33.1806 3.75 30.1775 3.75 27C3.75 23.7838 4.36031 20.7612 5.58094 17.9325C6.80156 15.1037 8.46781 12.6431 10.5797 10.5506C12.6916 8.45812 15.1619 6.80156 17.9906 5.58094C20.8194 4.36031 23.8225 3.75 27 3.75C30.2162 3.75 33.2388 4.36031 36.0675 5.58094C38.8963 6.80156 41.3569 8.45812 43.4494 10.5506C45.5419 12.6431 47.1984 15.1037 48.4191 17.9325C49.6397 20.7612 50.25 23.7838 50.25 27C50.25 30.1775 49.6397 33.1806 48.4191 36.0094C47.1984 38.8381 45.5419 41.3084 43.4494 43.4203C41.3569 45.5322 38.8963 47.1984 36.0675 48.4191C33.2388 49.6397 30.2162 50.25 27 50.25Z' fill='%230066FF'/%3E%3C/svg%3E");
+        top: 89%;
+        right: 21.5%;
+        position: absolute;
+        background-size: contain;
+        &.play-video{
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='54' height='54' rx='26' fill='white'/%3E%3Cpath d='M18 36H36V18H18V36ZM27 51C23.72 51 20.62 50.37 17.7 49.11C14.78 47.85 12.23 46.13 10.05 43.95C7.87 41.77 6.15 39.22 4.89 36.3C3.63 33.38 3 30.28 3 27C3 23.68 3.63 20.56 4.89 17.64C6.15 14.72 7.87 12.18 10.05 10.02C12.23 7.86 14.78 6.15 17.7 4.89C20.62 3.63 23.72 3 27 3C30.32 3 33.44 3.63 36.36 4.89C39.28 6.15 41.82 7.86 43.98 10.02C46.14 12.18 47.85 14.72 49.11 17.64C50.37 20.56 51 23.68 51 27C51 30.28 50.37 33.38 49.11 36.3C47.85 39.22 46.14 41.77 43.98 43.95C41.82 46.13 39.28 47.85 36.36 49.11C33.44 50.37 30.32 51 27 51Z' fill='%23FF6969'/%3E%3C/svg%3E");
+        }
+        @media only screen and (max-width: $desktop) {
+          top: 88%;
+          right: 22.5%;
+        }
+        @media only screen and (max-width: $laptop) {
+          width: 34px;
+          height: 34px;
+          right: 24.5%;
+        }
+        @media only screen and (max-width: $tablet) {
+          width: 24px;
+          height: 24px;
+          top: 77%;
+          right: 19.5%;
+        }
+        @media only screen and (max-width: $mobile) {
+          top: 71%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes revolveScale {
+	60% {
+		transform: translate(20px, 20px) rotate(30deg) scale(.3);
+    z-index: 9999;
+	}
+
+	100% {
+		transform: translate(0) rotate(0) scale(1);
+		opacity: 1;
+    z-index: 0;
+	}
+}

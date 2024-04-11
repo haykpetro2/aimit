@@ -1,0 +1,25 @@
+.contact-section{
+  padding: 46px 0 113px 0;
+  background-color: $sectionBg2;
+  margin-top: 142px;
+  @media only screen and (max-width: $bigTablet){
+    margin-top: 113px;
+    padding: 56px 0 51px 0;
+  }
+  .contact-section-mainpanel{
+    @include d-flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .contact-section-descriptions{
+      max-width: 566px;
+      width: 100%;
+      margin-top: 26px;
+      .section-description{
+        margin-top: 34px;
+        @media only screen and (max-width: $bigTablet) {
+          margin-top: 13px;
+        }
+      }
+    }
+  }
+}

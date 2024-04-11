@@ -1,0 +1,63 @@
+.trustworthy-section {
+  padding: 51px 0;
+  background: #fafafe;
+  @media only screen and (max-width: $smallDesktop) {
+    padding-top: 40px;
+    padding-bottom: 90px;
+  }
+  @media only screen and (max-width: $mobile) {
+    padding-top: 24px;
+    padding-bottom: 39px;
+  }
+  .trustworthy-section_mainpanel {
+    @include flex-column;
+    justify-content: space-between;
+    .trustworthy-section_headline {
+      @include d-flex;
+      align-items: center;
+      justify-content: space-between;
+      .trustworthy-section_description {
+        max-width: 830px;
+        width: 100%;
+        @media only screen and (max-width: $smallDesktop) {
+          max-width: 640px;
+        }
+        @media only screen and (max-width: $bigTablet) {
+          max-width: 100%;
+          margin-top: 21px;
+        }
+        @media only screen and (max-width: $mobile) {
+          margin-top: 12px;
+        }
+        * {
+          @include fontRem(24, 400, 36);
+          @media only screen and (max-width: $mobile) {
+            @include fontRem(16, 400, 24);
+          }
+        }
+      }
+    }
+  }
+  .trusworthy-swiper {
+    :global {
+      .swiper-wrapper {
+        transition-timing-function: linear !important;
+      }
+    }
+    margin-top: 21px;
+    @media only screen and (max-width: $bigTablet) {
+      margin-top: 51px;
+    }
+    @media only screen and (max-width: $mobile) {
+      margin-top: 15px;
+    }
+    .trImagge {
+      max-width: 220px;
+      position: relative;
+      min-height: 98px;
+      @media only screen and (max-width: $mobile){
+        min-height: 54px;
+      }
+    }
+  }
+}

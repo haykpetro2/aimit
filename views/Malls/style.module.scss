@@ -1,0 +1,7 @@
+.informative{
+  background-color: #E9EDF3;
+  padding: 130px 0;
+  @media only screen and (max-width: $tablet){
+    padding: 60px 0;
+  }
+}

@@ -1,0 +1,47 @@
+.news-section{
+    background-color: $davClinicGray;
+    @media only screen and (max-width: $bigTablet){
+        padding-top: 40px;
+    }
+    .section-heading{
+        text-align: center;
+        *{
+            color: $white;
+            span{
+                color: $davGreen;
+            }
+        }
+    }
+    .section-big-headline{
+        text-align: center;
+        *{
+            @include fontRem(174,700,250);
+            font-weight: 700;
+            color: #1C2B37;
+            text-shadow: 0px 4px 64px #2F4150;
+            @media only screen and (max-width: $laptop){
+                @include fontRem(113,700,143);
+            }
+            @media only screen and (max-width: $tablet){
+                @include fontRem(48,700,68);
+            }
+        }
+    }
+    .news-mainpanel{
+        padding-top: 40px;
+        .section-image{
+            position: relative;
+            min-height: 877px;
+            max-width: 1151px;
+            width: 100%;
+            margin: 0 auto;
+            filter: drop-shadow(0px 4px 60px rgba(0, 0, 0, 0.2));
+            @media only screen and (max-width: $bigTablet){
+                min-height: 547px;
+            }
+            @media only screen and (max-width: $mobile){
+                min-height: 250px;
+            }
+        }
+    }
+}

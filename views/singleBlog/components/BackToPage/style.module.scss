@@ -1,0 +1,35 @@
+.backPage-section {
+  background-color: $lightBlur;
+  padding-top: 33px;
+  padding-bottom: 27px;
+  .backToPage-element{
+    @include d-flex;
+    cursor: pointer;
+    flex-direction: column;
+    .backToPage-icon{
+      width: 22px;
+      height: 22px;
+      background-color: $white;
+      border-radius: 6px;
+      padding: 5px;
+      position: relative;
+      margin-top: 10px;
+      .backToPage-arrow{
+        width: 11px;
+        height: 11px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 40L21.9 37.85L34.25 25.5H8V22.5H34.25L21.9 10.15L24 8L40 24L24 40Z' fill='DodgerBlue'/%3E%3C/svg%3E");
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        background-size: contain;
+      }
+    }
+    .backToPage-link{
+        a{
+          @include fontRem(28,700,34);
+          color: $white;
+          text-decoration: none;
+        }
+    }
+  }
+}

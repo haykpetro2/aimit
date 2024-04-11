@@ -1,0 +1,93 @@
+.hero-section {
+  padding-bottom: 1200px;
+  position: relative;
+  @media only screen and (max-width: $laptop) {
+    padding-bottom: 540px;
+  }
+  @media only screen and (max-width: $tablet) {
+    padding-bottom: 460px;
+  }
+  @media only screen and (max-width: $mobile) {
+    padding-bottom: 148px;
+  }
+
+  .hero-section-mainpanel {
+    max-height: 1000px;
+    background: linear-gradient(276.14deg, #FC3B3B -3.96%, #FF6464 88.97%);
+    padding-top: 200px;
+    @media only screen and (max-width: $laptop) {
+      max-height: 600px;
+    }
+    @media only screen and (max-width: $tablet) {
+      max-height: 400px;
+      padding-top: 120px;
+    }
+
+  }
+
+  .hero-images-overlay {
+    padding: 50px 50px 0 0;
+    position: relative;
+    max-width: 1250px;
+    margin: 0 auto;
+    width: 100%;
+    @media only screen and (max-width: $laptop) {
+      max-width: 700px;
+    }
+    @media only screen and (max-width: $tablet) {
+      max-width: 500px;
+    }
+    @media only screen and (max-width: $mobile) {
+      max-width: 300px;
+      padding: 25px 25px 0 0;
+
+    }
+
+    .hero-image {
+      min-height: 1935px;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0px 4px 60px rgba(34, 48, 60, 0.3));
+      border-radius: 20px;
+      @media only screen and (max-width: $laptop) {
+        min-height: 900px
+      }
+      @media only screen and (max-width: $tablet) {
+        min-height: 600px;
+      }
+      @media only screen and (max-width: $mobile) {
+        min-height: 400px;
+      }
+    }
+
+    .hero-image-shadow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      max-width: 1200px;
+      width: 100%;
+      min-height: 1935px;
+      z-index: 1;
+      opacity: 0.5;
+      animation: scale alternate 1 1.5s;
+      @media only screen and (max-width: $laptop) {
+        min-height: 900px
+      }
+      @media only screen and (max-width: $tablet) {
+        min-height: 600px;
+      }
+      @media only screen and (max-width: $mobile) {
+        min-height: 400px;
+      }
+    }
+  }
+
+}
+@keyframes scale {
+  0%{
+    transform: scale(0.7);
+  }
+  100%{
+    transform: scale(1);
+  }
+}

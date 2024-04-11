@@ -1,0 +1,30 @@
+.list-item{
+  *:hover{
+    text-decoration: none;
+  }
+    list-style: none;
+    .item-name{
+        @include fontRem(24,700,45);
+        color: $lightBlur;
+        @media only screen and (max-width: $tablet){
+            @include fontRem(18,700,22);
+        }
+    }
+    .item-date{
+        margin-top: 6px;
+        @include fontRem(16,400,21);
+        color: $lightGray;
+        @media only screen and (max-width: $tablet){
+            margin-top: 11px;
+            @include fontRem(12,400,16);
+        }
+    }
+  .description-item {
+    height: 70px;
+    overflow: hidden;
+    @include  textShorten(2);
+    @media only screen and (max-width: $mobile){
+      height: 50px;
+    }
+  }
+}

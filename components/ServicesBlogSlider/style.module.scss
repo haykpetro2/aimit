@@ -1,0 +1,52 @@
+.featured-section{
+  position: relative;
+  padding: 64px 0 42px 0;
+  background-color: $sectionBg2;
+  .featured-section_mainpanel{
+    margin-top: 56px;
+    padding-bottom: 120px;
+    position: relative;
+    @media only screen and (max-width: $mobile){
+      margin-top: 42px;
+    }
+    .featured-items{
+      @include flexRow(50,3);
+      @media only screen and (max-width: $tablet){
+        @include flexRow(0,1);
+        row-gap: 17px;
+      }
+      .featured-item{
+        .featured-item-name{
+          *{
+            @include fontRem(24,700,32);
+            color: $primary;
+            @media only screen and (max-width: $mobile){
+              @include fontRem(18,700,22);
+            }
+          }
+        }
+        .featured-item-description{
+          margin-top: 7px;
+          *{
+            @include fontRem(24,500,32);
+            color: $primary;
+            @media only screen and (max-width: $mobile){
+              @include fontRem(14,400,22);
+            }
+          }
+        }
+      }
+    }
+    .featured-buttons-overlay{
+      max-width: 136px;
+      width: 100%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      @media only screen and (max-width: $mobile){
+        @include absoluteCenter(horizontal);
+      }
+    }
+
+  }
+}

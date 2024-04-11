@@ -1,0 +1,13 @@
+.primary_btn{
+    @include buttonNulled;
+    padding: 16px 38px;
+    @include fontRem(16,700,19);
+    background: $primary;
+    border-radius: 30px;
+    color: $white;
+    text-decoration: none;
+    display: inline-block;
+    &.blue-version{
+        background: #4F8EFE;
+    }
+}

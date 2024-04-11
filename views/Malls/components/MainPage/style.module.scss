@@ -1,0 +1,47 @@
+.mainpage-section{
+    padding-top: 85px;
+    padding-bottom: 179px;
+    background-color: #E9EDF3;
+    @media only screen and (max-width: $bigTablet) {
+        padding-bottom: 106px;
+    }
+  .container{
+    max-width: 1287px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    .section-heading{
+      *{
+        color: $black;
+      }
+    }
+    .top-screen{
+      position: relative;
+      min-height: 1160px;
+      margin-top: 68px;
+      filter: drop-shadow(0px 1.53813px 13.8432px rgba(73, 72, 92, 0.2));
+      border-radius: 4px;
+      @media only screen and (max-width: $bigTablet){
+        margin-top: 23px;
+        min-height: 650px;
+      }
+      @media only screen and (max-width: $mobile){
+        min-height: 280px;
+      }
+    }
+    .bottom-screen{
+      position: relative;
+      min-height: 2211px;
+      max-width: 1257px;
+      width: 100%;
+      margin:0 auto;
+      @media only screen and (max-width: $bigTablet){
+        min-height: 1255px;
+      }
+      @media only screen and (max-width: $mobile){
+        min-height: 545px;
+      }
+    }
+  }
+
+}

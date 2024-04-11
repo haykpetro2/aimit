@@ -1,0 +1,73 @@
+.mobile-login {
+  background-color: $primary;
+  padding-top: 108px;
+  overflow: hidden;
+  @media only screen and (max-width: $bigTablet){
+    padding-top: 50px;
+  }
+  .container {
+    max-width: 1376px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    .section-headline {
+      text-align: center;
+      * {
+        @include fontRem(60, 700, 84);
+        color: $white;
+        @media only screen and (max-width: $bigTablet){
+          @include fontRem(30, 700, 55);
+        }
+      }
+    }
+    .cv-steps-main-panel {
+      @include d-flex;
+      padding-top: 80px;
+      row-gap: 30px;
+      padding-bottom: 167px;
+      position: relative;
+      @media only screen and (max-width: $bigTablet){
+        padding-top: 50px;
+        padding-bottom: 90px;
+      }
+      .step-image-overlay {
+        max-width: 33.333%;
+        width: 100%;
+        padding: 0 15px;
+        position: relative;
+        @media only screen and (max-width: $mobile){
+          max-width: 100%;
+        }
+        &:last-child {
+          &::after {
+            content: " ";
+            min-height: 167px;
+            border: 1px dashed $white;
+            @include absoluteCenter(horizontal);
+            bottom: -167px;
+            @media only screen and (max-width: $bigTablet){
+              bottom: -90px;
+              min-height: 90px;
+            }
+            @media only screen and (max-width: $mobile){
+              content: none;
+            }
+          }
+        }
+
+        .step-image {
+          max-width: 100%;
+          width: 100%;
+          position: relative;
+          min-height: 844px;
+          @media only screen and (max-width: $bigTablet){
+            min-height: 544px;
+          }
+          @media only screen and (max-width: $mobile){
+            min-height: 650px;
+          } 
+        }
+      }
+    }
+  }
+}

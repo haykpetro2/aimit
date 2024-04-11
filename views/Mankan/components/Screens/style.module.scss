@@ -1,0 +1,36 @@
+.screens-section{
+  padding-bottom: 180px;
+  @media only screen and (max-width: $mobile){
+    padding-bottom: 100px;
+  }
+  .desktop-screens{
+    padding-top: 72px;
+    @media only screen and (max-width: $mobile){
+      padding-top: 30px;
+    }
+    .screen-image{
+      position: relative;
+      min-height: 420px;
+      width: 100%;
+      max-width: 100%;
+      @media only screen and (max-width: $mobile){
+        min-height: 200px;
+      }
+    }
+  }
+  .mobile-screens-overlay{
+    padding-top: 231px;
+    @media only screen and (max-width: $mobile){
+      padding-top: 50px;
+    }
+    .mobile-screens{
+      padding-top: 72px;
+      @media only screen and (max-width: $mobile){
+        padding-top: 25px;
+      }
+      .mobile-image{
+        min-height: 500px;
+      }
+    }
+  }
+}

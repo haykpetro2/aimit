@@ -1,0 +1,54 @@
+.expertise-section{
+    padding-top: 69px;
+    .section-big-headline{
+        *{
+                @include fontRem(60,700,77);
+                color: $primary;
+                @media only screen and (max-width: $bigTablet){
+                    @include fontRem(30,700,36);
+                }
+        }
+    }
+    .expertise-widgets{
+        margin-top: 44px;
+        @include flexRow(25,3);
+        @media only screen and (max-width: $bigTablet){
+            @include flexRow(0,1);
+            margin-top: 25px;
+        }
+        .expertise-widget-overlay{
+            margin: 11px 0;
+            @media only screen and (max-width: $bigTablet){
+                margin: 5.5px 0;
+            }
+            .expertise-widget{
+                padding: 42px 34px 21px 32px;
+                background: $extraLightGary;
+                border-radius: 20px;
+                @media only screen and (max-width: $bigTablet){
+                    padding: 25px 16px;
+                }
+                .expertise-widget-name{
+                    *{
+                        @include fontRem(34,700,28);
+                        color: $primary;
+                        @media only screen and (max-width: $bigTablet){
+                            @include fontRem(18,700,22);
+                        }
+                    }
+                }
+                .expertise-widget-description{
+                    margin-top: 22px;
+                    *{
+                        @include fontRem(20,400,32);
+                        color: $primary;
+                        @media only screen and (max-width: $bigTablet){
+                            @include fontRem(14,400,22);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,248 @@
+.hero-section {
+  padding-top: 134px;
+  background-image: linear-gradient(180deg, #18A885 0%, rgba(12, 199, 132, 0.63) 100%);
+  overflow: hidden;
+  padding-bottom: 50px;
+  position: relative;
+  .davClinic-circle {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='224' height='223' viewBox='0 0 224 223' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M190.918 190.343C234.461 146.995 234.461 76.7138 190.918 33.3656C147.374 -9.98256 76.7765 -9.98255 33.233 33.3656C-10.3104 76.7138 -10.3104 146.995 33.233 190.343C76.7765 233.692 147.374 233.692 190.918 190.343Z' fill='url(%23paint0_radial_47_774)'/%3E%3Cpath style='mix-blend-mode:overlay' opacity='0.4' d='M112.074 222.854C173.654 222.854 223.574 173.158 223.574 111.854C223.574 50.5509 173.654 0.854492 112.074 0.854492C50.4945 0.854492 0.574219 50.5509 0.574219 111.854C0.574219 173.158 50.4945 222.854 112.074 222.854Z' fill='url(%23paint1_radial_47_774)'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial_47_774' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(87.5018 63.7149) scale(165.853 165.109)'%3E%3Cstop stop-color='white'/%3E%3Cstop offset='0.18' stop-color='%23F7F7F7'/%3E%3Cstop offset='0.45' stop-color='%23E1E1E1'/%3E%3Cstop offset='0.77' stop-color='%23BFBFBF'/%3E%3Cstop offset='0.84' stop-color='%23C6C6C6'/%3E%3Cstop offset='0.95' stop-color='%23D9D9D9'/%3E%3Cstop offset='1' stop-color='%23E6E6E6'/%3E%3C/radialGradient%3E%3CradialGradient id='paint1_radial_47_774' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(112.076 111.853) rotate(-44.8712) scale(111.252 111.251)'%3E%3Cstop offset='0.65'/%3E%3Cstop offset='0.77' stop-color='%23020202'/%3E%3Cstop offset='0.82' stop-color='%23090909'/%3E%3Cstop offset='0.85' stop-color='%23141414'/%3E%3Cstop offset='0.88' stop-color='%23252525'/%3E%3Cstop offset='0.9' stop-color='%233B3B3B'/%3E%3Cstop offset='0.92' stop-color='%23575757'/%3E%3Cstop offset='0.94' stop-color='%23777777'/%3E%3Cstop offset='0.96' stop-color='%239D9D9D'/%3E%3Cstop offset='0.97' stop-color='%23C8C8C8'/%3E%3Cstop offset='0.99' stop-color='white'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");
+    width: 223px;
+    opacity: 0.4;
+    height: 223px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    transition: 0.1s;
+    animation: shake infinite alternate linear 2s;
+    @media only screen and (max-width: $tablet) {
+      display: none;
+    }
+
+    &.right-top {
+      right: 0;
+      top: 0px;
+      transition: 0.2s;
+      animation-delay: 0.1s;
+    }
+
+    &.right-bottom {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='84' height='83' viewBox='0 0 84 83' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.4' clip-path='url(%23clip0_48_785)'%3E%3Cpath d='M71.236 70.7829C87.4427 54.7714 87.4427 28.8116 71.236 12.8001C55.0292 -3.21137 28.7529 -3.21137 12.5461 12.8001C-3.66065 28.8116 -3.66065 54.7714 12.5461 70.7829C28.7529 86.7944 55.0292 86.7944 71.236 70.7829Z' fill='url(%23paint0_radial_48_785)'/%3E%3Cpath style='mix-blend-mode:overlay' opacity='0.4' d='M41.8906 82.7915C64.8104 82.7915 83.3906 64.4352 83.3906 41.7915C83.3906 19.1478 64.8104 0.791504 41.8906 0.791504C18.9708 0.791504 0.390625 19.1478 0.390625 41.7915C0.390625 64.4352 18.9708 82.7915 41.8906 82.7915Z' fill='url(%23paint1_radial_48_785)'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='paint0_radial_48_785' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(32.7448 24.0102) scale(61.73 60.9863)'%3E%3Cstop stop-color='white'/%3E%3Cstop offset='0.18' stop-color='%23F7F7F7'/%3E%3Cstop offset='0.45' stop-color='%23E1E1E1'/%3E%3Cstop offset='0.77' stop-color='%23BFBFBF'/%3E%3Cstop offset='0.84' stop-color='%23C6C6C6'/%3E%3Cstop offset='0.95' stop-color='%23D9D9D9'/%3E%3Cstop offset='1' stop-color='%23E6E6E6'/%3E%3C/radialGradient%3E%3CradialGradient id='paint1_radial_48_785' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(41.8914 41.7909) rotate(-44.6528) scale(41.2514 41.2484)'%3E%3Cstop offset='0.65'/%3E%3Cstop offset='0.77' stop-color='%23020202'/%3E%3Cstop offset='0.82' stop-color='%23090909'/%3E%3Cstop offset='0.85' stop-color='%23141414'/%3E%3Cstop offset='0.88' stop-color='%23252525'/%3E%3Cstop offset='0.9' stop-color='%233B3B3B'/%3E%3Cstop offset='0.92' stop-color='%23575757'/%3E%3Cstop offset='0.94' stop-color='%23777777'/%3E%3Cstop offset='0.96' stop-color='%239D9D9D'/%3E%3Cstop offset='0.97' stop-color='%23C8C8C8'/%3E%3Cstop offset='0.99' stop-color='white'/%3E%3C/radialGradient%3E%3CclipPath id='clip0_48_785'%3E%3Crect width='83' height='82' fill='white' transform='translate(0.390625 0.791504)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center center;
+      right: 50px;
+      top: 300px;
+      transition: 0.7s;
+      animation-delay: 0.2s;
+    }
+
+    &.left-top {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='128' height='128' viewBox='0 0 128 128' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.5' clip-path='url(%23clip0_48_797)'%3E%3Cpath d='M108.976 109.361C133.775 84.5625 133.775 44.3565 108.976 19.5582C84.178 -5.2401 43.972 -5.2401 19.1737 19.5582C-5.62455 44.3565 -5.62455 84.5625 19.1737 109.361C43.972 134.159 84.178 134.159 108.976 109.361Z' fill='url(%23paint0_radial_48_797)'/%3E%3Cpath style='mix-blend-mode:overlay' opacity='0.4' d='M64.0742 127.959C99.1443 127.959 127.574 99.5296 127.574 64.4595C127.574 29.3894 99.1443 0.959473 64.0742 0.959473C29.0041 0.959473 0.574219 29.3894 0.574219 64.4595C0.574219 99.5296 29.0041 127.959 64.0742 127.959Z' fill='url(%23paint1_radial_48_797)'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='paint0_radial_48_797' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(50.0802 36.9202) scale(94.4544 94.4543)'%3E%3Cstop stop-color='white'/%3E%3Cstop offset='0.18' stop-color='%23F7F7F7'/%3E%3Cstop offset='0.45' stop-color='%23E1E1E1'/%3E%3Cstop offset='0.77' stop-color='%23BFBFBF'/%3E%3Cstop offset='0.84' stop-color='%23C6C6C6'/%3E%3Cstop offset='0.95' stop-color='%23D9D9D9'/%3E%3Cstop offset='1' stop-color='%23E6E6E6'/%3E%3C/radialGradient%3E%3CradialGradient id='paint1_radial_48_797' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(64.0754 64.4585) rotate(-45) scale(63.5011)'%3E%3Cstop offset='0.65'/%3E%3Cstop offset='0.77' stop-color='%23020202'/%3E%3Cstop offset='0.82' stop-color='%23090909'/%3E%3Cstop offset='0.85' stop-color='%23141414'/%3E%3Cstop offset='0.88' stop-color='%23252525'/%3E%3Cstop offset='0.9' stop-color='%233B3B3B'/%3E%3Cstop offset='0.92' stop-color='%23575757'/%3E%3Cstop offset='0.94' stop-color='%23777777'/%3E%3Cstop offset='0.96' stop-color='%239D9D9D'/%3E%3Cstop offset='0.97' stop-color='%23C8C8C8'/%3E%3Cstop offset='0.99' stop-color='white'/%3E%3C/radialGradient%3E%3CclipPath id='clip0_48_797'%3E%3Crect width='127' height='127' fill='white' transform='translate(0.574219 0.959473)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center center;
+      left: -150px;
+      top: 200px;
+      transition: 0.5s;
+      animation-delay: 0.3s;
+    }
+
+    &.left-bottom {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='224' height='222' viewBox='0 0 224 222' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.5' clip-path='url(%23clip0_48_791)'%3E%3Cpath d='M190.994 189.489C234.537 146.141 234.537 75.8593 190.994 32.5111C147.451 -10.8371 76.8527 -10.837 33.3092 32.5111C-10.2343 75.8593 -10.2343 146.141 33.3092 189.489C76.8527 232.837 147.451 232.837 190.994 189.489Z' fill='url(%23paint0_radial_48_791)'/%3E%3Cpath style='mix-blend-mode:overlay' opacity='0.4' d='M112.15 222C173.73 222 223.65 172.304 223.65 111C223.65 49.6964 173.73 0 112.15 0C50.5706 0 0.650391 49.6964 0.650391 111C0.650391 172.304 50.5706 222 112.15 222Z' fill='url(%23paint1_radial_48_791)'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='paint0_radial_48_791' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(87.5779 62.8604) scale(165.853 165.109)'%3E%3Cstop stop-color='white'/%3E%3Cstop offset='0.18' stop-color='%23F7F7F7'/%3E%3Cstop offset='0.45' stop-color='%23E1E1E1'/%3E%3Cstop offset='0.77' stop-color='%23BFBFBF'/%3E%3Cstop offset='0.84' stop-color='%23C6C6C6'/%3E%3Cstop offset='0.95' stop-color='%23D9D9D9'/%3E%3Cstop offset='1' stop-color='%23E6E6E6'/%3E%3C/radialGradient%3E%3CradialGradient id='paint1_radial_48_791' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(112.152 110.998) rotate(-44.8712) scale(111.252 111.251)'%3E%3Cstop offset='0.65'/%3E%3Cstop offset='0.77' stop-color='%23020202'/%3E%3Cstop offset='0.82' stop-color='%23090909'/%3E%3Cstop offset='0.85' stop-color='%23141414'/%3E%3Cstop offset='0.88' stop-color='%23252525'/%3E%3Cstop offset='0.9' stop-color='%233B3B3B'/%3E%3Cstop offset='0.92' stop-color='%23575757'/%3E%3Cstop offset='0.94' stop-color='%23777777'/%3E%3Cstop offset='0.96' stop-color='%239D9D9D'/%3E%3Cstop offset='0.97' stop-color='%23C8C8C8'/%3E%3Cstop offset='0.99' stop-color='white'/%3E%3C/radialGradient%3E%3CclipPath id='clip0_48_791'%3E%3Crect width='223' height='222' fill='white' transform='translate(0.650391)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center center;
+      left: 0px;
+      bottom: 0px;
+      transition: 0.3s;
+      animation-delay: 0.4s;
+    }
+  }
+  @media only screen and (max-width: $tablet) {
+    padding-top: 67px;
+  }
+  @media only screen and (max-width: $bigMobile) {
+    padding-top: 101px;
+  }
+
+  .hero-section-mainpanel {
+    max-width: 1137px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    .main-inner-overlay{
+      position: relative;
+      padding-left: 100px;
+      .main-inner{
+        background: #FFFFFF;
+        border: 1px solid #F8F9FC;
+        box-shadow: 0px 4px 40px rgba(26, 32, 40, 0.15);
+        border-radius: 30px;
+        padding: 23px 30px;
+        .laptop-headline{
+          position: relative;
+          width: 100%;
+          max-width: 100%;
+          min-height: 317px;
+        }
+        .laptop-footer{
+          background-color: #EEEEEE;
+          padding: 50px 130px;
+          .laptop-footer-heading{
+            text-align: center;
+            *{
+              color: $black;
+              @include fontRem(22,700,27);
+            }
+          }
+          .laptop-footer-main{
+            @include flexRow(5,6);
+            margin-top: 15px;
+            .footer-item{
+              height: 100%;
+              @include flex-column;
+              align-items: center;
+              background-color: $white;
+              border-radius: 30px;
+              padding: 20px 10px;
+              .footer-item-icon{
+                text-align: center;
+              }
+              .footer-icon-name{
+                width: 100%;
+                max-width: 100%;
+                margin-top: 15px;
+                text-align: center;
+                *{
+                  color: $black;
+                  @include fontRem(8,300,12);
+                }
+              }
+            }
+          }
+        }
+        .main-service{
+          max-width: 235px;
+          width: 100%;
+          @include absoluteCenter(vertical);
+          left: 0px;
+          .footer-item{
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+            @include flex-column;
+            align-items: center;
+            background-color: $white;
+            border-radius: 30px;
+            padding: 50px 30px;
+            .footer-item-icon{
+              text-align: center;
+            }
+            .footer-icon-name{
+              width: 100%;
+              max-width: 100%;
+              margin-top: 15px;
+              text-align: center;
+              *{
+                color: $black;
+                @include fontRem(12,500,17);
+              }
+            }
+          }
+        }
+      }
+
+    }
+    @media only screen and (max-width: $middleDesktop) {
+      min-height: 735px;
+
+    }
+    @media only screen and (max-width: $laptop) {
+      background-position: center;
+      min-height: 650px;
+    }
+    @media only screen and (max-width: $bigTablet) {
+      background-position: 100% 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(../../../../public/images/uploads/davClinic.png);
+    }
+    @media only screen and (max-width: $tablet) {
+      min-height: 434px;
+    }
+    @media only screen and (max-width: $bigMobile) {
+      background-position: center;
+      background-image: url(../../../../public/images/uploads/davClinicMobile.png);
+      min-height: 290px;
+    }
+
+    .hero-headline {
+      text-align: center;
+      padding: 0 15px;
+
+      @media only screen and (max-width: $tablet) {
+        display: none;
+      }
+
+      * {
+        @include fontRem(40, 700, 48);
+        color: $white;
+      }
+    }
+
+    .hero-description {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 33px;
+      @media only screen and (max-width: $tablet) {
+        display: none;
+      }
+
+      * {
+        @include fontRem(22, 500, 35);
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+
+  .hero-button {
+    max-width: 424px;
+    width: 100%;
+    position: relative;
+    min-height: 124px;
+    margin-left: auto;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(4px, 2px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-2px, -4px) rotate(-2deg);
+  }
+  20% {
+    transform: translate(-5px, 0px) rotate(3deg);
+  }
+  30% {
+    transform: translate(0px, 4px) rotate(0deg);
+  }
+  40% {
+    transform: translate(3px, -2px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-3px, 4px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-5px, 3px) rotate(0deg);
+  }
+  70% {
+    transform: translate(4px, 3px) rotate(-2deg);
+  }
+  80% {
+    transform: translate(-3px, -3px) rotate(4deg);
+  }
+  90% {
+    transform: translate(4px, 4px) rotate(0deg);
+  }
+  100% {
+    transform: translate(3px, -4px) rotate(-1deg);
+  }
+}

@@ -1,0 +1,204 @@
+.moulkUi-section{
+  background-color: $moulkUi;
+  padding: 134px 0 20px 0;
+  margin-top: 200px;
+  @media only screen and (max-width: $laptop){
+    padding-top: 0px;
+  }
+  @media only screen and (max-width: $mobile){
+    margin-top: 120px;
+  }
+  .moulkUi-mainpanel-overlay{
+  position: relative;
+  padding-bottom: 40px;
+  @media only screen and (max-width: $middleDesktop){
+    padding-bottom: 120px;
+  }
+  @media only screen and (max-width: $laptop){
+    padding-bottom: 140px;
+    padding-top: 112px;
+  }
+  @media only screen and (max-width: $tablet){
+    padding-bottom: 160px;
+  }
+  @media only screen and (max-width: $mobile){
+    padding-top: 41px;
+    padding-bottom: 120px;
+
+  }
+    .moulkUi-mainpanel{
+      @include d-flex;
+      align-items: flex-start;
+      column-gap: 14px;
+      @media only screen and (max-width: $middleDesktop){
+        justify-content: center;
+      }
+      .screen-img{
+        min-height: 722px;
+        max-width:  300px;
+        margin-top: -280px;
+        position: relative;
+        width: 100%;
+        filter: drop-shadow(0px 4px 60px rgba($textStroke, 0.2));
+        border-radius: 20px;
+        @media only screen and (max-width: $middleDesktop){
+          max-width: 300px;
+          min-height: 600px;
+        }
+      }
+      .signUp-img{
+        max-width: 335px;
+        min-height: 737px;
+        position: relative;
+        width: 100%;
+        filter: drop-shadow(0px 4px 60px rgba($textStroke, 0.2));
+        border-radius: 20px;
+        @media only screen and (max-width: $middleDesktop){
+          max-width: 300px;
+          min-height: 600px;
+        }
+      }
+      .profile-images{
+        max-width: 739px;
+        @include d-flex;
+        align-items: flex-start;
+        margin-top: -130px;
+        width: 100%;
+        column-gap: 14px;
+        @media only screen and (max-width: $middleDesktop){
+          max-width: 594px;
+        }
+        .signIn-img{
+          max-width: 338px;
+          min-height: 379px;
+          margin-top: 182px;
+          position: relative;
+          width: 100%;
+          filter: drop-shadow(0px 4px 60px rgba($textStroke, 0.2));
+          border-radius: 20px;
+          @media only screen and (max-width: $middleDesktop){
+            max-width: 290px;
+          }
+        }
+        .profile-img{
+          max-width: 342px;
+          min-height: 740px;
+          margin-top: -120px;
+          position: relative;
+          width: 100%;
+          filter: drop-shadow(0px 4px 60px rgba($textStroke, 0.2));
+          border-radius: 20px;
+          @media only screen and (max-width: $middleDesktop){
+            max-width: 290px;
+            min-height: 600px;
+          }
+        }
+        .navbar-img{
+          max-width: 551px;
+          min-height: 99px;
+          position: relative;
+          width: 100%;
+          filter: drop-shadow(0px 4px 60px rgba($textStroke, 0.2));
+          border-radius: 20px;
+          margin-top: 55px;
+        }
+      }
+
+    }
+    .section-headline{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      *{
+        @include fontRem(154,700,130);
+        color: rgba($white,0.2);
+        @media only screen and (max-width: $laptop){
+            @include fontRem(140,700,130);
+        }
+        @media only screen and (max-width: $tablet){
+          @include fontRem(77,700,100);
+      }
+      }
+    }
+    .moulkUi-mainpanel-isMobile{
+      @include d-flex;
+      align-items: flex-start;
+      @media only screen and (max-width: $tablet){
+        margin: 0 -5px;
+      }
+      .images-group{
+        max-width: 50%;
+        width: 100%;
+        @include flex-center-horiz;
+        @media only screen and (max-width: $tablet){
+        flex-direction:column;
+        align-items: center;
+        padding: 0 5px;
+          &:nth-child(2){
+            margin-top: 120px;
+          }
+        }
+        .screen-img{
+          min-height: 722px;
+          max-width: 333px;
+          position: relative;
+          width: 100%;
+          margin-top: -260px;
+          @media only screen and (max-width: $mobile){
+            margin-top: 0px;
+            min-height: 297px;
+            max-width: 137px;
+          }
+        }
+        .signUp-img{
+          max-width: 342px;
+          min-height: 740px;
+          position: relative;
+          width: 100%;
+          margin-top: 65px;
+          @media only screen and (max-width: $mobile){
+            min-height: 298px;
+            max-width: 138px;
+            margin-top: 15px;
+          }
+        }
+        .signIn-img{
+          max-width: 338px;
+          min-height: 379px;
+          position: relative;
+          width: 100%;
+          margin-top: 75px;
+          @media only screen and (max-width: $mobile){
+            min-height: 153px;
+            max-width: 137px;
+            margin-top: 18px;
+          }
+
+        }
+        .profile-img{
+          max-width: 340px;
+          min-height: 737px;
+          position: relative;
+          width: 100%;
+          @media only screen and (max-width: $mobile){
+            min-height: 300px;
+            max-width: 138px;
+          }
+        }
+      }
+      .navbar-img{
+        max-width: 551px;
+        min-height: 99px;
+        position: relative;
+        width: 100%;
+        margin: 58px auto 0 auto;
+        @media only screen and (max-width: $mobile){
+          min-height: 40px;
+          max-width: 223px;
+          margin-top: 21px;
+        }
+      }
+    }
+  }
+
+}

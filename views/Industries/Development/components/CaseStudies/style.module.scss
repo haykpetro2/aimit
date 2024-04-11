@@ -1,0 +1,53 @@
+.caseStudies-section{
+    padding-top: 118px;
+    padding-bottom: 111px;
+    @media only screen and (max-width: $smallDesktop){
+        padding-bottom: 55px;
+    }
+    @media only screen and (max-width: $bigTablet){
+        padding-top: 51px;
+    }
+    .caseStudies-section_mainpanel{
+        margin-top: 65px;
+        @media only screen and (max-width: $smallDesktop){
+            margin-top: 50px;
+        }
+        @media only screen and (max-width: $mobile){
+            margin-top: 29px;
+        }
+        .caseStudiItems{
+            @include flex-column;
+        }
+
+        }
+    }
+    .case-studies-swipe{
+        padding-bottom: 148px;
+        @media only screen and (max-width: $bigTablet){
+            padding-bottom: 137px;
+        }
+        @media only screen and (max-width: $tablet){
+            padding-bottom: 0px
+        }
+        :global{
+            .swiper-pagination{
+                @media only screen and (max-width: $tablet){
+                    display: none;
+                }
+                .swiper-pagination-bullet{
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+        .case-studies-buttons-overlay{
+            max-width: 136px;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @media only screen and (max-width: $tablet){
+                display: none;
+            }
+        }
+}

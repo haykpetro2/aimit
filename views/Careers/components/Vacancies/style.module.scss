@@ -1,0 +1,109 @@
+.vacancies-section {
+  padding-top: 104px;
+  @media only screen and (max-width: $bigTablet){
+    padding-top: 74px;
+  }
+  @media only screen and (max-width: $tablet){
+    padding-top: 45px;
+  }
+
+  .vacancies-section-mainpanel {
+    .vacancies-section-headline {
+      @include flex-center-vert;
+      justify-content: space-between;
+      .searchbar-overlay {
+        max-width: 830px;
+        width: 100%;
+        @include flex-center-vert;
+        align-items: stretch;
+        justify-content: space-between;
+        .searchBtn{
+          @include buttonNulled;
+          display: inline-block;
+          max-width: 115px;
+          width: 100%;
+          border-radius: 0px 12px 12px 0px;
+          background-color: $lightBlur;
+          position: relative;
+          &:after{
+            content: " ";
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29.85 31.4625L19.9875 21.6C19.2375 22.25 18.3625 22.7563 17.3625 23.1188C16.3625 23.4813 15.3 23.6625 14.175 23.6625C11.475 23.6625 9.1875 22.725 7.3125 20.85C5.4375 18.975 4.5 16.7125 4.5 14.0625C4.5 11.4125 5.4375 9.15002 7.3125 7.27502C9.1875 5.40002 11.4625 4.46252 14.1375 4.46252C16.7875 4.46252 19.0437 5.40002 20.9062 7.27502C22.7687 9.15002 23.7 11.4125 23.7 14.0625C23.7 15.1375 23.525 16.175 23.175 17.175C22.825 18.175 22.3 19.1125 21.6 19.9875L31.5 29.8125L29.85 31.4625ZM14.1375 21.4125C16.1625 21.4125 17.8875 20.6938 19.3125 19.2563C20.7375 17.8188 21.45 16.0875 21.45 14.0625C21.45 12.0375 20.7375 10.3063 19.3125 8.86877C17.8875 7.43127 16.1625 6.71252 14.1375 6.71252C12.0875 6.71252 10.3438 7.43127 8.90625 8.86877C7.46875 10.3063 6.75 12.0375 6.75 14.0625C6.75 16.0875 7.46875 17.8188 8.90625 19.2563C10.3438 20.6938 12.0875 21.4125 14.1375 21.4125Z' fill='white'/%3E%3C/svg%3E");
+            width: 36px;
+            height: 36px;
+            background-size: contain;
+            @include absoluteCenter(both);
+            background-repeat: no-repeat;
+          }
+        }
+        .searchbar {
+          max-width: 708px;
+          width: 100%;
+          @include flex-center-vert;
+          align-items: stretch;
+          background-color: $extraLightGary;
+          border-radius: 12px;
+          input {
+            max-width: 488px;
+            display: block;
+            width: 100%;
+            padding: 18px 66px 18px 23px;
+            background: $extraLightGary;
+            border-radius: 12px 0 0 12px;
+            outline: none;
+            border: none;
+            @include fontRem(16, 400, 19);
+            color: $primary;
+          }
+
+          .select-overlay {
+            position: relative;
+            max-width: 220px;
+            width: 100%;
+            &:after {
+              content: "";
+              width: 19px;
+              height: 19px;
+              @include absoluteCenter(vertical);
+              right: 18px;
+              background-repeat: no-repeat;
+              background-size: contain;
+              z-index: 1;
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.5 12.1719L4.75 7.4219L5.60104 6.57086L9.5 10.4896L13.399 6.59065L14.25 7.44169L9.5 12.1719Z' fill='%231A2028'/%3E%3C/svg%3E");
+            }
+
+            select {
+              max-width: 100%;
+              display: block;
+              width: 100%;
+              padding: 18px 66px 18px 23px;
+              background: transparent;
+              border-radius: 0px 12px 12px 0px;
+              outline: none;
+              border: none;
+              min-height: 60px;
+              appearance: none;
+              position: relative;
+              z-index: 2;
+            }
+          }
+        }
+      }
+    }
+
+    .vacancies-widgets {
+      @include flexRow(26, 3);
+      margin-top: 41px;
+      @media only screen and (max-width: $bigTablet){
+        margin-top: 35px;
+        @include flexRow(22, 2);
+      }
+      @media only screen and (max-width: $tablet){
+        margin-top: 35px;
+        @include flexRow(0, 1);
+      }
+    }
+  }
+}
+.loader {
+  margin-top: 100px;
+}

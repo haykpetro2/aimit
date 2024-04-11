@@ -1,0 +1,105 @@
+.adds-section {
+  padding: 50px 0 222px 0;
+  background-color: $sectionBg2;
+  margin-top: 130px;
+  @media only screen and (max-width:$middle){
+    padding: 25px 0 100px 0;
+    margin-top: 70px;
+  }
+  .section-description {
+    margin-top: 42px;
+    @media only screen and (max-width:$mobile){
+      margin-top: 14px;
+    }
+  }
+
+  .adds-section_mainpanel {
+    margin-top: 80px;
+    @include flexRow(15,2);
+    @media only screen and (max-width:$middle){
+      @include flexRow(0,1);
+      row-gap: 30px;
+    }
+    @media only screen and (max-width:$mobile){
+      margin-top: 43px;
+    }
+    .adds-item-overlay{
+      .adds-item{
+        height: 100%;
+        padding: 24px 100px;
+        background-color: $white;
+        box-shadow: 0px 4px 16px rgba(159, 168, 177, 0.3);
+        border-radius: 20px;
+        @media only screen and (max-width: $laptop){
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        @media only screen and (max-width:$middle){
+          padding-left: 100px;
+          padding-right: 100px;
+        }
+        @media only screen and (max-width:$mobile){
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+        .adds-item-headline{
+          *{
+            @include fontRem(28,700,32);
+            color: $primary;
+            text-align: center;
+          }
+        }
+        .release-items{
+          @include d-flex;
+          justify-content: space-between;
+          margin-top: 30px;
+          position: relative;
+          @media only screen and (max-width:$mobile){
+            flex-direction: column;
+          }
+          &::after{
+            content: " ";
+            background-color: $lightBlur;
+            width: 2px;
+            height: 162px;
+            @include absoluteCenter(both);
+            @media only screen and (max-width:$mobile){
+              height: 2px;
+              width: 162px;
+            }
+          }
+          .release_item-overlay{
+            &:first-child{
+              @media only screen and (max-width:$mobile){
+                padding-bottom: 24px;
+              }
+            }
+            .release-item-headline{
+              *{
+                @include fontRem(20,500,32);
+                color: $primary;
+                @media only screen and (max-width:$mobile){
+                  text-align: center;
+                }
+              }
+            }
+            .release-item{
+              margin-top: 22px;
+              text-align: center;
+            }
+            .release-item-info{
+              margin-top: 8px;
+              *{
+                text-align: center;
+                @include fontRem(20,500,32);
+                color: $primary;
+              }
+            }
+
+          }
+
+        }
+      }
+    }
+  }
+}

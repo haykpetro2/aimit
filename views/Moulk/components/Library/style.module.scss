@@ -1,0 +1,25 @@
+.architecture-section{
+    padding-top: 63px;
+    padding-bottom: 60px;
+  .section-heading{
+    text-align: center;
+  }
+.architecture-section_mainpanel{
+  padding-top: 40px;
+  .architecture-image{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-height: 700px;
+    @media only screen and (max-width: $bigTablet){
+      min-height: 516px;
+    }
+    @media only screen and (max-width: $bigTablet){
+      min-height: 360px;
+    }
+    @media only screen and (max-width: $mobile){
+      min-height: 210px;
+    }
+  }
+}
+}

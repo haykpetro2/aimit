@@ -1,0 +1,150 @@
+.about-section{
+  padding: 170px 0 194px 0;
+  background-color: $crmYellow;
+  position: relative;
+  @media only screen and (max-width: $bigTablet){
+    padding: 100px 0 47px 0;
+  }
+  .about-section-main{
+    position: relative;
+    @media only screen and (max-width: $bigTablet){
+      padding-bottom: 70px;
+    }
+    .section-headline{
+      text-align: center;
+    }
+    .mainpanel-overlay{
+      @include d-flex;
+      justify-content: space-between;
+      align-items: stretch;
+      .animated-button{
+        position: relative;
+        width: 80px;
+        cursor:pointer;
+        cursor: url(../../../../public/images/uploads/mouse_hover.svg),auto;
+        @media only screen and (max-width: $tablet){
+          width: 40px;
+        }
+        &.left-side{
+          margin-top: auto;
+          @media only screen and (max-height: $bigTablet){
+            position: absolute;
+            right: 30px;
+            top: 0;
+          }
+          @media only screen and (max-width: $tablet){
+            right: 10px;
+          }
+        }
+        &.right-side{
+            position: absolute;
+            left: 60px;
+            bottom: 0;
+            @media only screen and (max-width: $tablet){
+              bottom: 30px;
+            }
+        }
+        &.animated{
+          .animated-left{
+            transition: 1s;
+            transform: translate(-35px,-70px) rotate(-25deg);
+            @media only screen and (max-width: $tablet){
+              transform: translate(-15px,-35px) rotate(-15deg);
+            }
+          }
+          .animated-right{
+            transition: 1s;
+            transform: translate(35px,-70px) scale(0.7);
+            @media only screen and (max-width: $tablet){
+              transform: translate(20px,-55px) scale(0.7);
+            }
+          }
+        }
+        & > div{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 86px;
+          transition: 1s;
+          @media only screen and (max-width: $mobile){
+            height: 40px;
+          }
+        }
+      }
+      .about-mainpanel{
+        max-width: 1280px;
+        width: 100%;
+        margin: 57px auto 0 auto;
+        @media only screen and (max-width: $middleDesktop){
+          max-width: 1000px;
+        }
+        .about-mainpanel-top{
+          @include d-flex;
+          gap: 11px;
+          background: $white;
+          border: 5px solid $black;
+          padding: 26px;
+          @media only screen and (max-width: $tablet){
+            padding: 18px;
+            gap: 7px;
+          }
+          span{
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: $black;
+            @media only screen and (max-width: $tablet){
+              width: 11px;
+              height: 11px;
+            }
+          }
+        }
+        .about-mainpanel-body{
+          max-height: 794px;
+          overflow: auto;
+          height: 100%;
+          padding: 57px 107px 63px 57px;
+          background-color: $white;
+          border: 5px solid #000000;
+          border-top: none;
+          cursor: url(../../../../public/images/uploads/mouse_hover.svg),auto;
+          @media only screen and (max-width: $middleDesktop){
+            max-height: 500px;
+          }
+          @media only screen and (max-width: $tablet){
+            min-height: 640px;
+            padding: 13px 17px;
+          }
+          &::-webkit-scrollbar {
+            width: 20px;
+            background-color: #E4EDF3;
+            @media only screen and (max-width: $bigTablet){
+              width: 11px;
+            }
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: $black;
+            width: 10px;
+            @media only screen and (max-width: $bigTablet){
+              width: 11px;
+            }
+          }
+          .about-text{
+            *{
+              @include fontRem(22,500,32);
+              color: $black;
+              @media only screen and (max-width: $bigTablet){
+                @include fontRem(16,500,27);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}

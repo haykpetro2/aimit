@@ -1,0 +1,65 @@
+.faqs-section {
+  padding-top: 104px;
+  .faqs-section-mainpanel {
+    padding-top: 54px;
+    .accordion-items{
+      @include flex-column;
+      .accordion-item{
+        padding-bottom: 0px;
+        background: $extraLightGary;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        transition: all .5s;
+        cursor: pointer;
+        &:not(:first-child){
+          margin-top: 11px;
+        }
+        *{
+          pointer-events: none;
+        }
+        .accordion-item-name{
+          padding: 38px 157px 38px 47px;
+          cursor: pointer;
+          background: $extraLightGary;
+          position: relative;
+          z-index: 2;
+          @media only screen and (max-width: $tablet){
+            padding-right: 50px;
+          }
+          &:after{
+            content: " ";
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 21.7812L8.5 13.2812L10.0229 11.7583L17 18.7708L23.9771 11.7937L25.5 13.3166L17 21.7812Z' fill='%231A2028'/%3E%3C/svg%3E");
+            width: 34px;
+            height: 34px;
+            right: 33px;
+            position: absolute;
+            top: 50%;
+            transform:translateY(-50%) rotate(0deg);
+            transition: .2s;
+            @media only screen and (max-width: $mobile){
+              right: 10px;
+            }
+          }
+          *{
+            @include fontRem(20,500,24);
+            color: $primary;
+          }
+        }
+        .accordion-item-description{
+          transition: .2s;
+          padding: 0 38px 0px 47px;
+        }
+        &.openItem{
+          & > .accordion-item-name{
+            &:after{
+              transform:translateY(-50%) rotate(180deg);
+              transition: .2s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.design-section{
+  padding-top: 69px;
+  padding-bottom: 179px;
+  @media only screen and (max-width: $mobile){
+    padding-top: 46px;
+    padding-bottom: 61px;
+  }
+  .design-section-mainpanel {
+    padding-top: 71px;
+    @include flexRow(25,3,stretch);
+    @media only screen and (max-width: $bigTablet){
+      @include flexRow(25,2);
+      row-gap: 25px;
+    }
+    @media only screen and (max-width: $tablet){
+      @include flexRow(0,1);
+    }
+    @media only screen and (max-width: $mobile){
+      padding-top: 15px;
+    }
+
+    .design-item{
+      background-color: $sectionBg2;
+      padding: 28px 45px;
+      height: 100%;
+      &.selected{
+        border: 6px solid rgba(79, 142, 254, 0.5);
+        border-radius: 20px;
+      }
+      @media only screen and (max-width: $mobile){
+        padding: 25px 12px 25px 20px;
+      }
+      .design-item-name{
+        *{
+          @include fontRem(24,700,32);
+          color: $primary;
+          @media only screen and (max-width: $mobile){
+            @include fontRem(18,700,21);
+          }
+        }
+      }
+      .design-item-description{
+        margin-top: 24px;
+        height: 90px;
+        overflow: hidden;
+        &.more-view{
+          height: auto;
+        }
+        @media only screen and (max-width: $mobile){
+          margin-top: 15px;
+        }
+        *{
+          @include fontRem(20,500,32);
+          color: $primary;
+          @media only screen and (max-width: $mobile){
+            @include fontRem(14,400,22);
+          }
+        }
+      }
+      .more-button{
+        color: $lightBlur;
+        text-decoration: underline;
+        @include fontRem(14,400,17);
+        cursor: pointer;
+        @include buttonNulled;
+      }
+      .design-item-info{
+        margin-top: 24px;
+        @media only screen and (max-width: $mobile){
+          margin-top: 15px;
+        }
+        *{
+          @include fontRem(20,700,32);
+          color: $lightBlur;
+          @media only screen and (max-width: $mobile){
+            @include fontRem(14,700,32);
+          }
+        }
+      }
+    }
+  }
+}

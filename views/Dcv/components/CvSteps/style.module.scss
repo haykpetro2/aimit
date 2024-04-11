@@ -1,0 +1,94 @@
+.cv-steps {
+  @include d-flex;
+  padding: 116px 0 223px 0;
+  background-color: $primary;
+  overflow: hidden;
+  @media only screen and (max-width: $bigTablet) {
+    padding: 50px 0;
+  }
+  @media only screen and (max-width: $mobile) {
+    padding: 10px 0;
+  }
+  .step-left-side {
+    max-width: 50%;
+    width: 100%;
+    @include d-flex;
+    align-items: center;
+    padding-right: 20px;
+    .left-step-sidebar {
+      max-width: 259px;
+      width: 100%;
+      background-color: rgba(45, 192, 141, 1);
+      padding: 128px 90px;
+      border-radius: 0px 60px 60px 0px;
+      z-index: 999;
+      @media only screen and (max-width: $bigTablet) {
+        padding: 50px 30px;
+        max-width: 100px;
+      }
+      @media only screen and (max-width: $mobile) {
+        padding: 10px 20px;
+        max-width: 80px;
+        border-radius: 0px 20px 20px 0px;
+
+      }
+      * {
+        @include fontRem(60, 700, 72);
+        color: $white;
+        writing-mode: vertical-rl;
+        @media only screen and (max-width: $bigTablet) {
+          @include fontRem(40, 700, 32);
+          max-width: 32px;
+        }
+        @media only screen and (max-width: $mobile) {
+          @include fontRem(30, 700, 35);
+        }
+      }
+    }
+    .left-step-image {
+      position: relative;
+      max-height: 695px;
+      min-height: 695px;
+      max-width: 100%;
+      width: 100%;
+      margin-left: -259px;
+      @media only screen and (max-width: $bigTablet) {
+        margin-left: -100px;
+        min-height: 395px;
+      } 
+      @media only screen and (max-width: $mobile) {
+        margin-left: -80px;
+        min-height: 250px;
+      }
+    }
+  }
+  .step-right-side {
+    max-width: 50%;
+    width: 100%;
+    @include d-flex;
+    align-items: center;
+    .right-step-image {
+      max-width: 33.333%;
+      width: 100%;
+      position: relative;
+      min-height: 695px;
+      overflow: hidden;
+      border-radius: 26px 0 0 26px;
+      @media only screen and (max-width: $bigTablet) {
+        min-height: 395px;
+        max-height: 395px;
+      }
+      @media only screen and (max-width: $mobile) {
+        min-height: 250px;
+        max-height: 250px;
+      }
+      img {
+        width: 1076px;
+        max-width: none;
+        object-fit: cover;
+        object-position: left;
+      }
+
+    }
+  }
+}

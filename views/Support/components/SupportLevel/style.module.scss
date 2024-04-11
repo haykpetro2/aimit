@@ -1,0 +1,102 @@
+.support-section{
+  margin-top: 178px;
+  @media only screen and (max-width: $bigTablet){
+    margin-top: 80px;
+  }
+  .support-section_mainpanel{
+    margin-top: 64px;
+    @include flexRow(26,3);
+    @media only screen and (max-width: $bigTablet){
+      margin-top: 31px;
+      @include flexRow(0,1);
+      row-gap: 18px;
+    }
+    .level-item-overlay{
+      &:first-child{
+        .list-headline{
+          background-color:  #4FBFFE;
+        }
+        ul{
+          li{
+            &::after{
+              background-color:#4FBFFE ;
+            }
+          }
+        }
+      }
+      &:nth-child(2){
+        .list-headline{
+          background-color: $lightBlur;
+        }
+        ul{
+          li{
+            &::after{
+              background-color:$lightBlur ;
+            }
+          }
+        }
+      }
+      &:nth-child(3){
+        .list-headline{
+          background-color: #FEA34F;
+        }
+        ul{
+          li{
+            &::after{
+              background-color: #FEA34F ;
+            }
+          }
+        }
+      }
+      .level-item-list{
+        box-shadow: 0px 4px 16px rgba(159, 168, 177, 0.2);
+        border-radius: 20px;
+        overflow: hidden;
+        height: 100%;
+        .list-headline{
+          padding: 28px 28px 28px 41px;
+          @media only screen and (max-width: $mobile){
+            padding: 14px 14px 14px 24px;
+          }
+          *{
+            @include fontRem(28,700,34);
+            color: $white;
+            @media only screen and (max-width: $mobile){
+              @include fontRem(18,700,21);
+            }
+          }
+        }
+        ul{
+          padding: 20px;
+          list-style: none;
+          @media only screen and (max-width: $mobile){
+            padding: 10px;
+          }
+          li{
+            @include fontRem(20,500,32);
+            color: $primary;
+            position: relative;
+            padding-left: 20px;
+            @media only screen and (max-width: $mobile){
+              @include fontRem(14,500,32);
+            }
+            &::after{
+              content: " ";
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              left: 0;
+              @include absoluteCenter(vertical);
+            }
+            &:not(:first-child){
+              margin-top: 20px;
+              @media only screen and (max-width: $mobile){
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

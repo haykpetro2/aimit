@@ -1,0 +1,111 @@
+
+
+            .caseStudiItem{
+                @include d-flex;
+                justify-content: space-between;
+                @media only screen and (max-width: $smallDesktop){
+                    @include flexRow(38,2);
+                    margin: 50px 0 0 0;
+                }
+                @media only screen and (max-width: $bigTablet){
+                    @include flexRow(0,1);
+                    justify-content: center;
+                    margin: 0;
+                }
+                .caseStudiItem_image{
+                    max-width: 662px;
+                    width: 100%;
+                    position: relative;
+                    min-height: 402px;
+                    max-height:402px;
+                    :global {
+                      .parallax-effect-img {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 20px;
+                        overflow:hidden;
+                      }
+                    }
+                    @media only screen and (max-width: $bigTablet){
+                        max-width: 100%;
+                    }
+                    @media only screen and (max-width: $mobile){
+                        min-height: 187px;
+                    }
+                }
+                .caseStudiItem_info{
+                    max-width: 675px;
+                    width: 100%;
+                    @media only screen and (max-width: $bigTablet){
+                        padding-top: 38px;
+                        max-width: 100%;
+                    }
+                    @media only screen and (max-width: $mobile){
+                        padding-top: 17px;
+                    }
+                    .caseStudiItem_headline{
+                        @include fontRem(28,700,34);
+                        color: $primary;
+                    @media only screen and (max-width: $mobile){
+                        @include fontRem(20,700,24);
+                    }
+                    }
+                    .caseStudiItem_variants{
+                        @include d-flex;
+                        margin-top: 17px;
+                        @media only screen and (max-width: $mobile){
+                            margin-top: 0px;
+                        }
+                        .caseStudiItem_varians{
+                            padding: 6px 22px;
+                            background: rgba($lightBlur, 0.2);
+                            border-radius: 15px;
+                          margin-top: 7px;
+                            @media only screen and (max-width: $mobile){
+                                margin-top: 9px;
+                            }
+                            *{
+                                @include fontRem(14,400,17);
+                                color: $lightBlur;
+                            }
+                        }
+                        & > .caseStudiItem_varians:not(:last-child){
+                            margin-right: 6px;
+                        }
+
+                    }
+                    .caseStudiItem_description{
+                        margin-top: 32px;
+                      @include textShorten(5);
+                        @media only screen and (max-width: $mobile){
+                            margin-top: 19px;
+                        }
+                        *{
+                            color: $lightGray;
+                            @include fontRem(18,400,32);
+                            @media only screen and (max-width: $mobile){
+                                @include fontRem(16,400,24);
+                            }
+                        }
+                    }
+                    .caseStudiItem_button{
+                        margin-top: 57px;
+                        @media only screen and (max-width: $bigTablet){
+                            text-align: center
+                        }
+                        @media only screen and (max-width: $mobile){
+                            margin-top: 21px;
+                        }
+                    }
+                }
+                &:not(:first-child){
+                    margin-top: 90px;
+                    @media only screen and (max-width: $bigTablet){
+                        margin-top: 115px;
+                    }
+                    @media only screen and (max-width: $tablet){
+                        margin-top: 57px;
+                    }
+                }
+            }

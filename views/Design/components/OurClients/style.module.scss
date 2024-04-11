@@ -1,0 +1,36 @@
+.ourClients-section{
+  padding-top: 142px;
+  padding-bottom: 200px;
+  @media only screen and (max-width: $mobile){
+    padding-top: 70px;
+    padding-bottom: 85px;
+  }
+  .ourClients-mainpanel{
+    margin-top: 70px;
+    @media only screen and (max-width: $mobile){
+      margin-top: 9px;
+      padding: 34px 14px;
+    }
+    background: rgba($white, 0.4);
+    box-shadow: 34px 37px 60px rgba(94, 95, 100, 0.2);
+    border-radius: 20px;
+    padding: 47px 127px;
+    @include flexRow(25,3);
+    row-gap: 10px ;
+    @media only screen and (max-width: $tablet){
+      @include flexRow(0,2);
+    }
+    .partner-image{
+      position: relative;
+      min-height: 100px;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 219px;
+      @media only screen and (max-width: $tablet){
+        max-width: 128px;
+        min-height: 59px;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+.screens-section {
+  padding-top: 115px;
+  overflow: hidden;
+  .hero-headline {
+    * {
+      @include fontRem(40, 700, 48);
+      color: $primary;
+    }
+  }
+  .screens-mainpanel {
+    .screens-count{
+      text-align: right;
+      transform: translateY(-200px);
+      @media only screen and (max-width: $smallDesktop){
+        transform: translateY(-120px);
+      }
+      *{
+        @include fontRem(40,700,48);
+        color: $gray;
+      }
+    }
+    .screens-slider {
+      transform: rotate(-11.23deg);
+      position: relative;
+      &:first-child{
+        padding-top: 200px;
+        &::after{
+          content: " ";
+          background-color: #72DEC1;
+          border-radius:0px 50px 0 0;
+          width: 100%;
+          max-width: 50%;
+          height: 106%;
+          display: inline-block;
+          left: -90px;
+          top: 0;
+          position: absolute;
+          @media only screen and (max-width: $bigTablet){
+            max-width: 61%;
+            height: 177%;
+            left: -203px;
+            transform: rotate(-20deg);
+            border-radius:0px 50px 50px 50px;
+          }
+        }
+      }
+      .screen-swipe{
+        overflow: initial;
+      }
+      .screen-swipe-second {
+        padding-bottom: 150px;
+        overflow: initial;
+        position: relative;
+        padding-top: 50px;
+ 
+      }
+      .screen-image {
+        width: 100%;
+        max-width: 100%;
+        min-height: 675px;
+        position: relative;
+        filter: drop-shadow(0px 4px 60px rgba(121, 121, 121, 0.2));
+        @media only screen and (max-width: $smallDesktop){
+          min-height: 560px;
+        }
+        @media only screen and (max-width: $bigTablet){
+          min-height: 392px;
+        }
+      }
+
+      :global {
+        .swiper-wrapper {
+          transition-timing-function: linear;
+        }
+      }
+    }
+    .mobile-screens{
+      padding-top: 50px;
+      @media only screen and (max-width: $smallDesktop){
+        padding-top: 0px;
+      }
+      .mobile-screen-swipe{
+        .screen-image {
+          width: 100%;
+          max-width: 100%;
+          min-height: 629px;
+          position: relative;
+          filter: drop-shadow(0px 4px 60px rgba(121, 121, 121, 0.2));
+          @media only screen and (max-width: $smallDesktop){
+            min-height: 500px
+          }
+          @media only screen and (max-width: $bigTablet){
+            min-height: 360px
+          }
+        }
+        :global {
+          .swiper-wrapper {
+            transition-timing-function: linear;
+            .swiper-slide{
+              padding: 100px 0;
+            }
+          }
+        }
+      }
+    }
+    .screen-image{
+      @media only screen and (max-width: $tablet){
+        position: relative;
+        min-height: 330px;
+        &:first-child{
+          margin-top: 27px;
+        }
+        &:not(:first-child){
+          margin-top: 37px;
+        }
+      }
+      @media only screen and (max-width: $mobile){
+        min-height: 194px;
+      }
+    }
+
+    .mobile-screens{
+      @media only screen and (max-width: $tablet){
+        padding-top: 67px;
+        @include d-flex;
+        justify-content: center;
+        .mobile-screen-image{
+          position: relative;
+          min-height: 297px;
+          max-width: 166px;
+          width: 100%;
+          margin-top: 26px;
+          filter: drop-shadow(0px 2.22732px 33.4097px rgba(121, 121, 121, 0.2))
+        }
+      }
+    }
+  }
+
+
+}

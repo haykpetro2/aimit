@@ -1,0 +1,216 @@
+.add-board{
+  padding-bottom: 121px;
+  @media only screen and (max-width: $bigTablet){
+    padding-bottom: 95px;
+  }
+  @media only screen and (max-width: $mobile){
+    padding-top: 40px;
+    max-width: 310px;
+  }
+  .add-main{
+    padding: 43px 63px 72px 58px;
+    background: $moulkLightGray;
+    border-radius: 9px;
+    max-width: 806px;
+    width: 100%;
+    @media only screen and (max-width: $bigTablet){
+      max-width: 500px;
+    }
+    @media only screen and (max-width: $tablet){
+      padding: 16px 22px 27px 22px;
+    }
+    .input-overlay{
+      width: 100%;
+      max-width: 100%;
+      input{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        background: $white;
+        border: 3px solid $black;
+        border-radius: 1.5px;
+        padding: 19px 30px;
+        color: $black;
+        @include fontRem(36,500,44);
+        @media only screen and (max-width: $bigTablet){
+          @include fontRem(22,55,32);
+          padding: 14px 22px;
+        }
+        @media only screen and (max-width: $tablet){
+          @include fontRem(13,55,17);
+          padding: 7px 11px;
+        }
+        &::placeholder{
+          color: $black;
+          @include fontRem(36,500,44);
+          @media only screen and (max-width: $bigTablet){
+            @include fontRem(22,500,32)
+          }
+          @media only screen and (max-width: $tablet){
+            @include fontRem(13,55,17);
+          }
+        }
+      }
+    }
+    .button-overlay{
+      max-width: 230px;
+      width: 100%;
+      position: relative;
+      @include flex-center-vert;
+      justify-content: space-between;
+      margin-left: auto;
+      margin-top: 16px;
+      @media only screen and (max-width: $bigTablet){
+        max-width: 160px;
+      }
+      &::before{
+        content: " ";
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        background-color: $white;
+        @media only screen and (max-width: $bigTablet){
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='33' height='34' viewBox='0 0 33 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.98944 27.1781L6.76074 24.9494L14.5612 17.149L6.76074 9.34857L8.98944 7.11987L16.7899 14.9203L24.5903 7.11987L26.819 9.34857L19.0186 17.149L26.819 24.9494L24.5903 27.1781L16.7899 19.3777L8.98944 27.1781Z' fill='black'/%3E%3C/svg%3E");
+          width: 32px;
+          height: 32px;
+          background-color: transparent;
+        }
+      }
+      button{
+        @include buttonNulled;
+        padding: 12px 50px;
+        background-color: #3F77FB;
+        @include fontRem(30,700,36);
+        color: $white;
+        display: inline-block;
+        min-height: 60px  ;
+        cursor: url(../../../../../../public/images/uploads/mouse_hover.svg),auto;
+        @media only screen and (max-width: $bigTablet){
+          @include fontRem(22,700,27);
+          padding: 8px 38px;
+        }
+        @media only screen and (max-width: $tablet){
+          @include fontRem(13,55,17);
+          padding: 4px 20px;
+          min-height: 20px;
+        }
+      }
+    }
+  }
+  .create-button{
+    transform: rotate(2deg) translateY(-50px);
+    max-width: 930px;
+    width: 100%;
+    text-align: right;
+    @media only screen and (max-width: $bigTablet){
+      max-width: 600px;
+    }
+    @media only screen and (max-width: $tablet){
+      transform: rotate(1deg) translateY(-20px);
+    }
+    button{
+      display: inline-block;
+      @include buttonNulled;
+      @include fontRem(32,600,39);
+      color: $black;
+      padding: 14px 63px;
+      background-color: $crmYellow;
+      box-shadow: -4px 4px;
+      cursor: url(../../../../../../public/images/uploads/mouse_hover.svg),auto;
+      @media only screen and (max-width: $bigTablet){
+        padding: 10px 47px;
+      }
+      @media only screen and (max-width: $bigTablet){
+        @include fontRem(23,600,29);
+      }
+      @media only screen and (max-width: $tablet){
+        @include fontRem(18,600,21);
+        padding: 8px 34px;
+      }
+    }
+  }
+  .boards-main{
+    @include d-flex;
+    justify-content: space-between;
+    margin: 0 -7px;
+    .board-overlay{
+      max-width: 33.333%;
+      width: 100%;
+      padding: 7px;
+      @media only screen and (max-width: $bigTablet){
+        max-width: 100%;
+      }
+      &:nth-child(odd){
+        .board-item{
+          background-color: $crmYellow;
+          span{
+            background-color: $black;
+          }
+          .board-name{
+            color: $black;
+          }
+        }
+      }
+      &:nth-child(even){
+        .board-item{
+          background-color: $lightBlur;
+          margin: 0 auto;
+          span{
+            background-color: $white;
+          }
+          .board-name{
+            color: $white;
+          }
+        }
+      }
+      &:nth-child(3){
+        .board-item{
+          background-color: $black;
+          margin-left: auto;
+          span{
+            background-color: $white;
+          }
+          .board-name{
+            color: $white;
+          }
+        }
+      }
+      .board-item{
+        padding: 21px 30px 21px 20px;
+        border-radius: 6px;
+        position: relative;
+        @media only screen and (max-width: $bigTablet){
+          max-width: 470px;
+        }
+        @media only screen and (max-width: $bigTablet){
+          padding: 14px;
+        }
+        .icons-overlay{
+          @include flex-column;
+          right: 23px;
+          @include absoluteCenter(vertical);
+          gap: 3px;
+          span{
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            display: inline-block;
+            @media only screen and (max-width: $bigTablet){
+              width: 4px;
+              height: 4px;
+            }
+          }
+        }
+
+        .board-name{
+          *{
+            @include fontRem(27,600,33);
+            @media only screen and (max-width: $bigTablet){
+              @include fontRem(18,600,22)
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.thnkYou-header{
+    padding: 26px 0 30px 0;
+  @media only screen and (max-width: $tablet){
+    padding-bottom: 13px;
+    padding-top: 13px;
+  }
+    .brand{
+        max-width: 129px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}

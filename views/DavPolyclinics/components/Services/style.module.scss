@@ -1,0 +1,190 @@
+.services-section {
+  padding-top: 244px;
+  padding-bottom: 212px;
+  background-color: $white;
+  overflow: hidden;
+  @media only screen and (max-width: $tablet) {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  .container {
+    max-width: 1210px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    .services-mainpanel {
+      @include d-flex;
+      justify-content: center;
+      align-items: stretch;
+      column-gap: 36px;
+      @media only screen and (max-width: $laptop) {
+        justify-content: flex-start;
+      }
+      @media only screen and (max-width: $laptop) {
+        justify-content: center;
+      }
+      .panel-headline{
+        padding: 34px 48px 34px 116px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 60px rgba(34, 48, 60, 0.2);
+        border-radius: 10px;
+        text-align: right;
+        position: relative;
+        @media only screen and (max-width: $mobile){
+          padding: 24px 29px 24px 98px;
+        }
+        .panel-icon{
+          @include absoluteCenter(vertical);
+          left: 36px;
+          @media only screen and (max-width: $mobile){
+            width: 50px;
+            height: 50px;
+          }
+        }
+        *{
+          @include fontRem(23,500,33);
+          color: $primary;
+          @media only screen and (max-width: $mobile){
+            @include fontRem(18,500,26);
+          }
+        }
+      }
+
+      .left-side {
+        max-width: 341px;
+        width: 100%;
+        position: relative;
+        padding: 140px 0 68px 0;
+        .panel-headline{
+          max-width: 292px;
+          width: 100%;
+          margin-left: auto;
+          @media only screen and (max-width: $mobile){
+            max-width: 310px;
+          }
+        }
+        .info-panel{
+          position: absolute;
+          @include absoluteCenter(vertical);
+          right: 50px;
+          transition: 1s;
+          @media only screen and (max-width: $mobile){
+            top: 55%;
+          }
+          *{
+            @include fontRem(16,500,23);
+            color: $primary;
+            transition: 1s;
+          }
+          &.info-panel-one{
+            top: 50px;
+            left: 110px;
+            @media only screen and (max-width: $mobile){
+              top: 80px;
+            }
+          }
+          &.info-panel-two{
+            top: 100px;
+            left: 0px;
+            @media only screen and (max-width: $mobile){
+              top: 110px;
+            }
+          }
+          &.info-panel-three{
+            top: 100px;
+            left: 200px;
+            @media only screen and (max-width: $mobile){
+              top: 110px;
+              left: 193px;
+            }
+          }
+          &.info-panel-four{
+            left: 20px;
+            top: 300px;
+            @media only screen and (max-width: $mobile){
+              top: 250px;
+            }
+          }
+        }
+      }
+
+      .middle-image {
+        position: relative;
+        max-width: 199px;
+        width: 100%;
+        min-height: 288px;
+      }
+
+      .right-image-overlay {
+        .right-side {
+          max-width: 446px;
+          width: 100%;
+          min-height: 100px;
+          margin-bottom: auto;
+          position: relative;
+          padding: 40px 0 100px 0;
+          @media only screen and (max-width: $laptop) {
+            margin-left: auto;
+            margin-top: 99px;
+            max-width: 433px;
+          }
+          @media only screen and (max-width: $mobile) {
+            max-width: 350px;
+          }
+          .panel-headline{
+            max-width: 431px;
+            width: 100%;
+            @media only screen and (max-width: $mobile){
+              max-width: 310px;
+            }
+          }
+          .info-panel{
+            transition: 1s;
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+            right: 50px;
+            @media only screen and (max-width: $mobile){
+              top: 40%;
+            }
+            *{
+              @include fontRem(16,500,23);
+              color: $primary;
+              transition: 1s;
+            }
+            &.info-panel-one{
+              top: 180px;
+              left: 20px;
+              @media only screen and (max-width: $mobile){
+                top: 150px;
+              }
+            }
+            &.info-panel-two{
+              top: 230px;
+              left: 150px;
+              @media only screen and (max-width: $mobile){
+                left: 100px;
+                top: 210px;
+              }
+            }
+            &.info-panel-three{
+              top: 180px;
+              left: 227px;
+              @media only screen and (max-width: $mobile){
+                left: 145px;
+              }
+            }
+            &.info-panel-four{
+              top: 7px;
+              left: 20px;
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+}

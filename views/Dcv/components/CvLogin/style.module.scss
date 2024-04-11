@@ -1,0 +1,15 @@
+.login-section{
+  min-height: 1200px;
+  background-image: url(../../../../public/images/uploads/cv_login.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  @media only screen and (max-width: $bigTablet) {
+    min-height: 900px;
+    background-position: top center;
+  }
+  @media only screen and (max-width: $mobile) {
+    min-height: 400px;
+    background-size: contain;
+    background-color: $primary;
+  }
+}

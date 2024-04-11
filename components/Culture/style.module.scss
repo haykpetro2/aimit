@@ -1,0 +1,69 @@
+.culture-section{
+    padding-top: 23px;
+    padding-bottom: 105px;
+    @media only screen and (max-width: $bigTablet){
+        padding-top: 11px;
+        padding-bottom: 22px;
+    }
+    @media only screen and (max-width: $mobile){
+        padding-top: 76px;
+    }
+    .culture-image{
+        width: 100%;
+        max-width: 600px;
+        position: relative;
+        min-height: 360px;
+        cursor:pointer;
+      img{
+        object-fit: cover;
+      }
+        @media only screen and (max-width: $bigTablet){
+            min-height: 215px;
+        }
+        @media only screen and (max-width: $tablet){
+            min-height: 160px;
+        }
+        @media only screen and (max-width: $mobile){
+            min-height: 116px;
+        }
+    }
+    .culture-swipe{
+        margin:23px -13px 0 -13px;
+        @media only screen and (max-width: $mobile){
+            margin-top: 19px;
+        }
+        :global{
+            .swiper-wrapper{
+                flex-wrap: wrap;
+                .swiper-slide{
+                  @media only screen and (min-width: $mobile){
+                    margin: 13px !important;
+                  }
+                }
+            }
+        }
+    }
+    .culture-button-overlay{
+        max-width: 136px;
+        width: 100%;
+        margin-top: 31px;
+        margin-left: auto;
+        @media only screen and (max-width: $bigTablet){
+            display: none;
+        }
+        @media only screen and (max-width: $mobile){
+           @include d-flex;
+           margin: 29px auto 0 auto;
+        }
+    }
+    .culture-description{
+      margin-top: 18px;
+        margin-right: 25px;
+        max-width: 1318px;
+        width: 100%;
+        @media only screen and (max-width: $mobile){
+            margin-top: 17px;
+        }
+    }
+}
+

@@ -1,0 +1,46 @@
+.vacancies-widget-overlay {
+  margin: 13px 0;
+  a{
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    text-decoration: none;
+    &:hover{
+      .vacancies-widget{
+        border-color: rgba($lightBlur,0.5);
+      }
+    }
+  .vacancies-widget {
+    padding: 58px 70px 58px 37px;
+    background: $white;
+    box-shadow: 0px 4px 9px rgba($lightGray, 0.3);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 6px solid transparent;
+    height: 100%;
+    &.iconed {
+      &:after {
+        content: "";
+        position: absolute;
+        top: 25px;
+        right: 32px;
+        width: 30px;
+        height: 38px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='30' height='38' viewBox='0 0 30 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_97_1664)'%3E%3Cpath d='M28.7755 18.9664L28.7514 18.8773C25.2039 8.56021 14.6334 1.23559 14.1839 0.930409L12.8195 0L12.9079 1.56315C12.9079 1.6302 13.1565 7.68925 6.82397 12.7287C-0.0544603 18.2072 -0.0143063 22.7256 0.00171971 25.1522L0.00982132 25.4871C0.00982132 32.1045 5.24613 37.0524 12.7376 37.868C12.3299 37.8086 11.9133 37.7316 11.4952 37.6129C9.07933 36.9206 7.66675 35.35 7.39386 33.0871L7.32969 32.6406C7.11298 30.8913 6.83198 28.7252 10.9575 24.6162C12.4984 23.0828 13.8388 21.4303 14.9464 19.7108L15.5002 18.8474L16.2306 19.5917C18.4137 21.8025 20.0831 24.0356 21.2068 26.2091C22.2422 28.1297 22.3064 31.1667 22.2261 31.8142C21.8329 35.1193 19.2565 37.5831 15.8053 37.9405C15.5802 37.9642 15.2435 37.9873 14.8313 37.9959C14.8676 37.996 14.902 38 14.9384 38C23.0929 38 29.4737 31.9184 29.4737 24.1547C29.4737 22.2938 28.7995 19.1004 28.7755 18.9664Z' fill='url(%23paint0_linear_97_1664)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_97_1664' x1='2.27002' y1='-1.60517' x2='37.4546' y2='19.898' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F9EA48'/%3E%3Cstop offset='0.494792' stop-color='%23FE6D1D'/%3E%3Cstop offset='1' stop-color='%23FF0000'/%3E%3C/linearGradient%3E%3CclipPath id='clip0_97_1664'%3E%3Crect width='30' height='38' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    .vacancies-name {
+      * {
+        @include fontRem(20, 700, 24);
+        color: $primary;
+      }
+    }
+  }
+  }
+}

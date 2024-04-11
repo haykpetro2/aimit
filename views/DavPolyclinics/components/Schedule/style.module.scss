@@ -1,0 +1,92 @@
+.schedule-section{
+    padding-top: 77px;
+    background-color: $davClinicGray;
+    .section-heading{
+        text-align: center;
+        *{
+            color: $white;
+            span{
+                color: $davGreen;
+            }
+        }
+    }
+    .schedule-mainpanel{
+        padding-top: 68px;
+        max-height: 472px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        @media only screen and (max-width: $bigTablet){
+            max-height: 350px;
+        };
+        @media only screen and (max-width: $bigTablet){
+            max-height: 280px;
+        }
+        &::after{
+            content: " ";
+            background-image: url(../../../../public/images/uploads/calendar_big.svg);
+            width: 303px;
+            height: 283px;
+            position: absolute;
+            top: -103px;
+            right: 0px;
+            display: block;
+            @media only screen and (max-width: $bigTablet){
+                top: -60px;
+            }
+            @media only screen and (max-width: $mobile){
+                width: 150px;
+                height: 150px;
+                background-size: contain;
+                top: 0px;
+            }
+        }
+        &::before{
+            content: " ";
+            background-image: url(../../../../public/images/uploads/calendar_big.svg);
+            width: 167px;
+            height: 183px;
+            position: absolute;
+            bottom: 0px;
+            left: -65px;
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: rotate(296deg);
+            @media only screen and (max-width: $bigTablet){
+                content: none;
+            }
+        }
+
+        .section-image{
+            position: relative;
+            min-height: 782px;
+            max-width: 1170px;
+            margin: 0 auto;
+            @media only screen and (max-width: $bigTablet){
+                min-height: 480px;
+            }
+            @media only screen and (max-width: $bigTablet){
+                min-height: 280px;
+            }
+            &::before{
+                content: none;
+                background-image: url(../../../../public/images/uploads/calendar_big.svg);
+                width: 167px;
+                height: 183px;
+                position: absolute;
+                bottom: -60px;
+                left: 0px;
+                display: block;
+                background-size: contain;
+                background-repeat: no-repeat;
+                transform: rotate(296deg);
+                z-index: 1;
+                @media only screen and (max-width: $bigTablet){
+                    content: " ";
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.catalogue-section{
+    padding-top: 45px;
+    padding-bottom: 185px;
+    background-color: $mallsBlue;
+    @media only screen and (max-width: $bigTablet){
+        padding-bottom: 166px;
+    }
+    @media only screen and (max-width: $mobile){
+        padding-bottom: 75px;
+    }
+  .container{
+    max-width: 1294px;
+    width: 100%;
+    margin: 0px auto 0 auto;
+    padding: 0 15px;
+    .section-heading{
+      *{
+        color: $white;
+      }
+    }
+    .top-screen{
+      position: relative;
+      min-height: 661px;
+
+      margin-top: 67px;
+      @media only screen and (max-width: $bigTablet){
+        margin-top: 42px;
+        min-height: 376px;
+      }
+      @media only screen and (max-width: $mobile){
+        margin-top: 21px;
+        min-height: 162px;
+      }
+    }
+  }
+
+}

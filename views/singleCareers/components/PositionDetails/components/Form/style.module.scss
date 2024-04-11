@@ -1,0 +1,159 @@
+.form-overlay{
+    margin-top: 31px;
+    @media only screen and (max-width: $tablet){
+        max-width:385px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    @media only screen and (max-width: $mobile){
+        max-width:309px;
+        overflow: hidden;
+    }
+    .form-headline{
+        *{
+            @include fontRem(28,700,34);
+            color: $black;
+            @media only screen and (max-width: $bigTablet){
+                text-align: center;
+                @include fontRem(16,700,19);
+            }
+        }
+    }
+    .form-body{
+        max-width: 100%;
+        width: 100%;
+        padding: 48px 41px 45px 37px;
+        background: $sectionBg2;
+        border-radius: 20px;
+        margin-top: 23px;
+        @media only screen and (max-width: $tablet){
+            padding: 20px;
+        }
+        @media only screen and (max-width: $tablet){
+            padding: 0px;
+        }
+        .input-overaly{
+            width: 100%;
+            max-width: 100%;
+            &:not(:first-child){
+                margin-top: 49px;
+                @media only screen and (max-width: $bigTablet){
+                    margin-top: 40px;
+                }
+                @media only screen and (max-width: $mobile){
+                    margin-top: 29px;
+                }
+            }
+            input{
+                width: 100%;
+                max-width: 100%;
+                display: block;
+                border: none;
+                outline: none;
+                padding-bottom:8px ;
+              background-color: $sectionBg2;
+                border-bottom: 1px solid $lightGray;
+                @include fontRem(20,400,32);
+              &:-webkit-autofill,
+              &:-webkit-autofill:hover,
+              &:-webkit-autofill:focus,
+              &:-webkit-autofill:active{
+                -webkit-box-shadow: 0 0 0 30px $sectionBg2 inset !important;
+              }
+                @media only screen and (max-width: $mobile){
+                    font-size: 14px;
+                }
+            }
+        }
+        .file-overlay{
+            position: relative;
+            margin-top: 49px;
+            @media only screen and (max-width: $bigTablet){
+                margin-top: 40px;
+            }
+            @media only screen and (max-width: $mobile){
+                margin-top: 34px;
+            }
+            input{
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                visibility: hidden;
+            }
+            label{
+                border: 2px dashed $lightGray;
+                padding: 12px;
+                @include fontRem(10,400,32);
+                color: $lightGray;
+                text-align: center;
+                .desktop-text{
+                    @media only screen and (max-width: $mobile) {
+                      .file-size {
+                        display: none;
+                      }
+                      .file-dragCv {
+                        display: none;
+                      }
+                    }
+                    & > span{
+                        display: block;
+                    }
+                    .attach-txt{
+                            color: #1A2028;
+                            text-decoration: underline;
+                            font-size: 14px;
+                            display: inline-block;
+                            margin-left: 3px;
+                      @media only screen and (max-width: $mobile) {
+                        display: none;
+                      }
+                    }
+                }
+                .mobile-text{
+                    display: none;
+                    position: relative;
+                    padding-left: 30px;
+                    @media only screen and (max-width: $mobile) {
+                        display: block;
+                    }
+                    .attach-file{
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.4227 11.7902L13.2327 20.9802C12.1069 22.106 10.5799 22.7385 8.98771 22.7385C7.39553 22.7385 5.86856 22.106 4.74271 20.9802C3.61687 19.8543 2.98438 18.3273 2.98438 16.7352C2.98438 15.143 3.61687 13.616 4.74271 12.4902L13.9327 3.30015C14.6833 2.54959 15.7013 2.12793 16.7627 2.12793C17.8242 2.12793 18.8421 2.54959 19.5927 3.30015C20.3433 4.05072 20.7649 5.0687 20.7649 6.13015C20.7649 7.19161 20.3433 8.20959 19.5927 8.96015L10.3927 18.1502C10.0174 18.5254 9.50844 18.7363 8.97771 18.7363C8.44698 18.7363 7.93799 18.5254 7.56271 18.1502C7.18743 17.7749 6.9766 17.2659 6.9766 16.7352C6.9766 16.2044 7.18743 15.6954 7.56271 15.3202L16.0527 6.84015' stroke='%231A2028' stroke-width='2'/%3E%3C/svg%3E");
+                        background-size: contain;
+                        @include absoluteCenter(vertical);
+                        left: 0;
+                    }
+                }
+            }
+        }
+        .submit-overlay{
+            width: 100%;
+            max-width: 100%;
+            margin-top: 34px;
+            button{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        .terms{
+            max-width: 303px;
+            width: 100%;
+            margin: 33px auto 0 auto;
+            @media only screen and (max-width: $mobile){
+                display: none;
+            }
+            a{
+                display: inline-block;
+                margin: 0 2px;
+            }
+            *{
+                @include fontRem(12,400,20);
+                color: $primary;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+next.config.js
+node_modules
+build
+public/js/*.js
+*.less
+*.css
+*.scss

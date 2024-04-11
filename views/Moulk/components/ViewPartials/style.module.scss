@@ -1,0 +1,141 @@
+.architecture-section{
+    padding-top: 63px;
+    padding-bottom: 60px;
+    background-color: $sectionBg2;
+    overflow: hidden;
+    @media only screen and (max-width: $bigTablet){
+      padding-top: 43px;
+    }
+    @media only screen and (max-width: $tablet){
+      padding-bottom: 5px;
+    }
+  .section-heading{
+    text-align: center;
+  }
+  .section-description{
+    margin-top: 76px;
+  }
+  .partials-view{
+    max-width: 1444px;
+    width: 100%;
+    margin: 0 auto;
+    *{
+      text-align: center;
+    }
+  }
+.architecture-section_mainpanel{
+  padding-top: 40px;
+  padding-bottom: 1035px;
+  position: relative;
+  @media only screen and (max-width: $bigTablet){
+    padding-bottom: 665px;
+  }
+  @media only screen and (max-width: $tablet){
+    padding-bottom: 720px;
+  }
+  @media only screen and (max-width: $mobile){
+    padding-bottom: 465px;
+  }
+  .partial-1{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    max-width: 720px;
+    min-height: 567px;
+    @media only screen and (max-width: $bigTablet){
+      max-width: 520px;
+      min-height: 367px;
+    }
+    @media only screen and (max-width: $tablet){
+      max-width: 470px;
+      min-height: 358px;
+    }
+    @media only screen and (max-width: $mobile){
+      max-width: 236px;
+      min-height: 219px;
+      left: -33px;
+    }
+  }
+  .partial-2{
+    position: absolute;
+    width: 100%;
+    top: 200px;
+    right: 0;
+    max-width: 753px;
+    min-height: 600px;
+    z-index: 3;
+    @media only screen and (max-width: $bigTablet){
+      max-width: 553px;
+      min-height: 400px;
+      right: -110px;
+    }
+    @media only screen and (max-width: $tablet){
+      max-width: 454px;
+      min-height: 350px;
+    }
+    @media only screen and (max-width: $mobile){
+      max-width: 400px;
+      min-height: 275px;
+      top: 50px;
+      right: -80px;
+    }
+    @media only screen and (max-width: 500px){
+      max-width: 300px;
+      min-height: 230px;
+      top: 50px;
+      right: -100px;
+    }
+  }
+  .partial-3{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0;
+    max-width: 202px;
+    min-height: 452px;
+    z-index: 3;
+    @media only screen and (max-width: $bigTablet){
+      max-width: 134px;
+      min-height: 277px;
+    }
+    @media only screen and (max-width: $tablet){
+      max-width: 100px;
+      min-height: 227px;
+    }
+    @media only screen and (max-width: $tablet){
+      max-width: 100px;
+      min-height: 227px;
+      top: auto;
+      right: auto;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  .partial-4{
+    position: absolute;
+    width: 100%;
+    left: 120px;
+    bottom: 0px;
+    max-width: 777px;
+    min-height: 636px;
+    z-index: 2;
+    @media only screen and (max-width: $bigTablet){
+      max-width: 577px;
+      min-height: 436px;
+      left: 25px;
+    }
+    @media only screen and (max-width: $tablet){
+      max-width: 527px;
+      min-height: 386px;
+      left: 15px;
+      bottom: 90px;
+    }
+    @media only screen and (max-width: $mobile){
+      max-width: 293px;
+      min-height: 221px;
+      bottom: 132px;
+    }
+  }
+}
+}

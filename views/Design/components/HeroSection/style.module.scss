@@ -1,0 +1,100 @@
+.hero-section{
+  background-color: $black;
+  padding-top: 106px;
+  padding-bottom: 100px;
+  @media only screen and (max-width: $laptop){
+    padding-top: 140px;
+  }
+  @media only screen and (max-width: $mobile){
+    padding-top: 98px;
+    background: $black;
+  }
+  .hero-section-mainpanel{
+    width: 100%;
+    max-width: 100%;
+    @include d-flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media only screen and (max-width: $laptop){
+      justify-content: center;
+    }
+    .hero-section-description{
+      max-width: 648px;
+      width: 100%;
+      .section-heading{
+        *{
+          @include fontRem(60,700,72);
+          color: $white;
+          @media only screen and (max-width: $mobile){
+            @include fontRem(20,700,24);
+          }
+        }
+      }
+      .section-description{
+        margin-top: 24px;
+        @media only screen and (max-width: $mobile){
+          margin-top: 6px;
+        }
+        *{
+          @include fontRem(20,400,28);
+          color: $white;
+          @media only screen and (max-width: $mobile){
+            @include fontRem(14,700,19);
+          }
+        }
+      }
+      .hero-video{
+        padding-top: 69px;
+        @include flex-center-vert;
+        @media only screen and (max-width: $mobile){
+          padding-top: 32px;
+        }
+        .play-icon-overlay{
+          width: 85px;
+          height: 85px;
+          border: 1px solid $white;
+          border-radius: 50%;
+          @include flex-center;
+          margin-right: 23px;
+          @media only screen and (max-width: $mobile){
+            width: 70px;
+            height: 70px;
+          }
+          .play-icon{
+            width: 57px;
+            height: 57px;
+            @media only screen and (max-width: $mobile){
+              width: 47px;
+              height: 47px;
+            }
+            &::after{
+              width: 16px;
+              height: 22px;
+              @media only screen and (max-width: $mobile){
+                width: 18px;
+                height: 18px;
+              }
+            }
+          }
+        }
+        .video-text{
+          *{
+            @include fontRem(16,700,23);
+            color: $white;
+            @media only screen and (max-width: $mobile){
+              @include fontRem(14,700,19);
+            }
+          }
+        }
+      }
+    }
+    .hero-section-image{
+      max-width: 506px;
+      width:100%;
+      @media only screen and (max-width: $laptop){
+        max-width: 300px;
+        margin-top: 25px;
+      }
+    }
+  }
+}

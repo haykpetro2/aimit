@@ -1,0 +1,105 @@
+.more-section {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  @media only screen and (max-width: $tablet) {
+    padding-bottom: 58px;
+  }
+  @media only screen and (max-width: $tablet) {
+    padding-bottom: 0px;
+  }
+
+  .section-big-headline {
+    * {
+      @include fontRem(60, 700, 77);
+      color: $primary;
+      @media only screen and (max-width: $tablet) {
+        @include fontRem(30, 700, 36);
+      }
+    }
+  }
+
+  .more-text {
+    padding: 48px 60px 102px 60px;
+    background-color: $sectionBg2;
+    border-radius: 20px;
+    margin-top: 37px;
+    position: relative;
+    @media only screen and (max-width: $tablet) {
+      padding: 25px 25px 102px 25px;
+    }
+    .our-experience{
+      @include flex-center-vert;
+      justify-content: space-between;
+      padding-bottom: 50px;
+      @media only screen and (max-width: $bigTablet){
+        row-gap: 50px;
+      }
+      .item{
+        max-width: 245px;
+        width: 100%;
+        @include flex-center-column;
+        @media only screen and (max-width: $bigTablet){
+          max-width: 175px;
+        }
+        @media only screen and (max-width: $bigTablet){
+          max-width: 100%;
+        }
+        .item-icon{
+          width: 123px;
+          height: 123px;
+          background-color: $lightBlur;
+          @include flex-center;
+          border-radius: 50%;
+        }
+        .item-name{
+          margin-top: 19px;
+          *{
+            @include fontRem(28,700,33);
+            color: $primary;
+            @media only screen and (max-width: $bigTablet){
+              @include fontRem(20,700,24);
+            }
+          }
+        }
+      }
+    }
+    .experinace-text{
+      *{
+        @include textShorten(8);
+      }
+      &.show{
+        *{
+          display: block;
+        }
+        .more-actions{
+          transform: rotate(180deg);
+        }
+      }
+    }
+    * {
+      @include fontRem(20, 400, 32);
+      @media only screen and (max-width: $tablet) {
+        @include fontRem(16, 400, 28);
+      }
+    }
+
+    .more-actions {
+      width: 44px;
+      height: 44px;
+      background-color: $primary;
+      border-radius: 15px;
+      @include absoluteCenter(horizontal);
+      bottom: 35px;
+      cursor: pointer;
+
+      svg {
+        width: 100%;
+        max-width: 100%;
+
+        path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

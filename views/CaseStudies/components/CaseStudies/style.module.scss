@@ -1,0 +1,46 @@
+.caseStudies-section{
+    padding-top: 59px;
+    padding-bottom: 118px;
+    background-color: $sectionBg2;
+  overflow: hidden;
+    @media only screen and (max-width: $bigTablet){
+        padding-top: 34px;
+    }
+    .descriptionOverlay{
+        margin-top: 18px;
+    }
+    .caseStudies-section_mainpanel{
+        margin-top: 65px;
+        @media only screen and (max-width: $smallDesktop){
+            margin-top: 50px;
+        }
+        @media only screen and (max-width: $mobile){
+            margin-top: 29px;
+        }
+        .caseStudiItems{
+            @include flex-column;
+            .item-overlay{
+                &:not(:first-child){
+                    margin-top: 78px;
+                    @media only screen and (max-width: $bigTablet){
+                        margin-top: 115px;
+                    }
+                    @media only screen and (max-width: $mobile){
+                        margin-top: 57px;
+                    }
+                }
+            }
+        }
+        .more-actions {
+            margin-top: 125px;
+            text-align: center;
+            button{
+                @include buttonNulled;
+                text-decoration: underline;
+                @include fontRem(20,700,24);
+                color: $primary;
+            }
+        }
+
+        }
+    }

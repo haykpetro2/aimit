@@ -1,0 +1,56 @@
+.uiKit-section {
+  padding-top: 115px;
+  padding-bottom: 350px;
+  @media only  screen and (max-width: $tablet){
+    padding-top: 87px;
+    padding-bottom: 90px;
+  }
+  .kit-mainpanel{
+    @include d-flex;
+    justify-content: space-between;
+    align-items: center;
+    .kit-image{
+      position: relative;
+      max-width: 1024px;
+      width: 100%;
+      min-height: 849px;
+      @media only screen and (max-width: $middleDesktop){
+        max-width: 840px;
+        min-height: 750px;
+      }
+      @media only  screen and (max-width: $laptop){
+        max-width: 100%;
+        min-height: 940px;
+        margin-top: 10px;
+      }
+      @media only  screen and (max-width: $bigTablet){
+        min-height: 716px;
+      }
+      @media only  screen and (max-width: $tablet){
+        min-height: 500px;
+      }
+      @media only  screen and (max-width: $mobile){
+        min-height: 255px;
+      }
+    }
+    .kit-text{
+      @media only screen and (max-width: $laptop){
+        order: -1;
+        text-align: right;
+        width: 100%;
+        max-width: 100%;
+      }
+      *{
+        @include fontRem(314,700,380);
+        writing-mode: vertical-rl;
+        color: $gray;
+        font-variant: small-caps;
+        white-space: nowrap;
+        @media only  screen and (max-width: $laptop){
+          writing-mode: horizontal-tb;
+          @include fontRem(77,700,94);
+        }
+      }
+    }
+  }
+}

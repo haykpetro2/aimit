@@ -1,0 +1,189 @@
+.hero-section {
+  padding-top: 53px;
+  padding-bottom: 159px;
+  @media only screen and (max-width: $smallDesktop) {
+    padding-bottom: 130px;
+  }
+  @media only screen and (max-width: $bigTablet) {
+    padding-top: 37px;
+  }
+  @media only screen and (max-width: $mobile) {
+    padding-top: 14px;
+    padding-bottom: 77px;
+  }
+
+
+  .hero-section_mainpanel {
+    @include d-flex;
+    justify-content: space-between;
+    padding-right: 75px;
+    @media only screen and (max-width: $smallDesktop) {
+      @include flexRow(30, 2, flex-start);
+    }
+    @media only screen and (max-width: $bigTablet) {
+      padding-right: 15px;
+    }
+    @media only screen and (max-width: $tablet) {
+      @include flexRow(0, 1, center);
+      justify-content: center;
+
+    }
+
+    .hero-description_overlay {
+      max-width: 749px;
+      width: 100%;
+      margin-top: 34px;
+      @media only screen and (max-width: $tablet) {
+        margin-top: 0px;
+      }
+
+      .hero-description_text {
+        max-width: 415px;
+        width: 100%;
+        margin-top: 27px;
+        @media only screen and (max-width: $bigTablet) {
+          margin-top: 20px;
+        }
+        @media only screen and (max-width: $mobile) {
+          margin-top: 4px;
+        }
+      }
+
+      .hero_button {
+        margin-top: 67px;
+        @media only screen and (max-width: $bigTablet) {
+          margin-top: 43px;
+        }
+        @media only screen and (max-width: $mobile) {
+          margin-top: 33px;
+        }
+      }
+    }
+
+    .hero-image {
+      max-width: 403px;
+      width: 100%;
+      padding-bottom: 15px;
+      padding-right: 72px;
+      position: relative;
+      @media only screen and (max-width: $tablet) {
+        margin-top: 42px;
+      }
+      @media only screen and (max-width: $mobile) {
+        max-width: 246px;
+        padding-right: 50px;
+      }
+
+      .hero-image_overlay {
+        max-width: 100%;
+        width: 100%;
+        min-height: 331px;
+        position: relative;
+        @media only screen and (max-width: $smallDesktop) {
+          min-height: 316px;
+        }
+        @media only screen and (max-width: $tablet) {
+          min-height: 331px;
+        }
+        @media only screen and (max-width: $mobile) {
+          min-height: 196px;
+        }
+
+        &::after {
+          content: " ";
+          width: 241px;
+          height: 241px;
+          background-size: contain;
+          background-position: center;
+          position: absolute;
+          @include absoluteCenter(both);
+          z-index: 1;
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='241' height='242' viewBox='0 0 241 242' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M240.251 105.602C236.83 79.7995 225.148 55.798 206.952 37.1862C188.757 18.5745 165.026 6.3526 139.307 2.34806C113.589 -1.65648 87.2655 2.77152 64.2727 14.9699C41.2799 27.1684 22.8535 46.4818 11.7487 70.0222C0.643849 93.5626 -2.54265 120.065 2.66565 145.567C7.87396 171.069 21.1972 194.2 40.6432 211.501C60.0891 228.802 84.6129 239.343 110.548 241.549C136.482 243.755 162.434 237.506 184.523 223.738L157.83 180.915C144.989 188.92 129.901 192.552 114.824 191.27C99.7466 189.988 85.4895 183.859 74.1843 173.801C62.8792 163.743 55.1336 150.296 52.1057 135.47C49.0778 120.644 50.9303 105.236 57.3862 91.551C63.8421 77.8655 74.5545 66.6374 87.9216 59.5457C101.289 52.4541 116.592 49.8798 131.544 52.2079C146.496 54.536 160.292 61.6413 170.87 72.4614C181.448 83.2816 188.239 97.2351 190.229 112.236L240.251 105.602Z' fill='white' fill-opacity='0.5'/%3E%3C/svg%3E");
+          @media only screen and (max-width: $mobile) {
+            width: 142px;
+            height: 142px;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='143' height='143' viewBox='0 0 143 143' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6841 25.8159C41.9147 -4.45811 86.9101 -8.54656 117.184 16.6841C147.458 41.9147 151.547 86.9101 126.316 117.184C101.085 147.458 56.0899 151.546 25.8159 126.316C-4.45805 101.085 -8.5465 56.0899 16.6841 25.8159ZM103.368 98.0589C118.036 80.4588 115.659 54.3002 98.059 39.6321C80.4588 24.9641 54.3003 27.3409 39.6322 44.941C24.9641 62.5411 27.341 88.6997 44.9411 103.368C62.5412 118.036 88.6997 115.659 103.368 98.0589Z' fill='white' fill-opacity='0.5'/%3E%3C/svg%3E");
+          }
+        }
+      }
+
+      .hero-play_btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .playText {
+      margin-left: 4px;
+      @media only screen and (max-width: $mobile) {
+        margin-left: 2px;
+      }
+
+      * {
+        @include fontRem(14, 400, 32);
+        color: $primary;
+        @media only screen and (max-width: $mobile) {
+          @include fontRem(10, 400, 32);
+        }
+      }
+    }
+
+  }
+}
+.heroVideo {
+  position: relative;
+  &:hover{
+    .video_pause{
+      visibility: visible !important;
+    }
+  }
+
+  video {
+    max-height: 400px;
+    object-fit: cover;
+    object-position: 0 -200px;
+    width: 100%;
+
+    @media only screen and (max-width: $bigTablet){
+      max-height: 588px;
+      object-position: 0 -200px;
+    }
+    @media only screen and (max-width: $mobile){
+      max-height: 207px;
+      object-position: 0 -120px;
+    }
+  }
+}
+
+.video_buttons{
+  position: absolute;
+  @include absoluteCenter(both);
+  button{
+    width: 81px;
+    height: 81px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    @include buttonNulled;
+    font-size: 0px;
+  }
+  .video_play{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='95' height='95' viewBox='0 0 95 95' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_170_371)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M47.5 84C69.8675 84 88 65.8675 88 43.5C88 21.1325 69.8675 3 47.5 3C25.1325 3 7 21.1325 7 43.5C7 65.8675 25.1325 84 47.5 84ZM62 44.85L40 30.85V58.85L62 44.85Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_170_371' x='0' y='0' width='95' height='95' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='3.5'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_170_371'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_170_371' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+  }
+  .video_pause{
+    visibility: hidden;
+    transition: 0.2s;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='95' height='95' viewBox='0 0 95 95' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_170_379)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M47.5 84C69.8677 84 88 65.8676 88 43.5C88 21.1324 69.8677 3 47.5 3C25.1323 3 7 21.1324 7 43.5C7 65.8676 25.1323 84 47.5 84ZM51.25 30V58H59V30H51.25ZM35 30V58H42.75V30H35Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_170_379' x='0' y='0' width='95' height='95' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='3.5'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_170_379'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_170_379' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+  }
+}
+.video-overlay{
+  .video-thumbnail{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+  }
+}

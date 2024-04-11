@@ -1,0 +1,49 @@
+.more-section{
+    padding-top: 58px;
+    padding-bottom: 209px;
+    @media only screen and (max-width: $tablet){
+        padding-bottom: 58px;
+    }
+    .section-big-headline{
+        *{
+                @include fontRem(60,700,77);
+                color: $primary;
+                @media only screen and (max-width: $tablet){
+                    @include fontRem(30,700,36);
+                }
+        }
+    }
+    .more-text{
+    padding: 51px 59px 102px 63px;
+    background: $white;
+    border-radius: 20px;
+    margin-top: 40px;
+    position: relative;
+    @media only screen and (max-width: $tablet){
+        padding: 25px 25px 102px 25px;
+    }
+    *{
+        @include textShorten(8);
+        @include fontRem(20,400,32);
+        @media only screen and (max-width: $tablet){
+            @include fontRem(16,400,28);
+        }
+    }
+    .more-actions{
+        width: 44px;
+        height: 44px;
+        background-color: $primary;
+        border-radius: 15px;
+        @include absoluteCenter(horizontal);
+        bottom: 35px;
+        cursor: pointer;
+        svg{
+            width: 100%;
+            max-width: 100%;
+            path{
+                fill: $white;
+            }
+        }
+    }
+    }
+}

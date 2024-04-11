@@ -1,0 +1,110 @@
+.team-section {
+  padding: 67px 0 123px 0;
+  background-color: $sectionBg2;
+  @media only screen and (max-width: $bigTablet){
+    padding-top: 107px;
+    padding-bottom: 49px;
+  }
+  @media only screen and (max-width: $tablet){
+    padding-bottom: 62px;
+  }
+
+  .team-section-mainpanel{
+    margin-top: 62px;
+
+    .team-members{
+      @include flexRow(25,4);
+      row-gap:25px ;
+        @media only screen and (max-width: $laptop){
+          @include flexRow(25,3);
+        }
+        @media only screen and (max-width: $bigTablet){
+          @include flexRow(25,2);
+        }
+        @media only screen and (max-width: $mobile){
+          @include flexRow(0,1);
+        }
+      .team-member{
+        @include d-flex;
+        height: 100%;
+        align-items: center;
+        background: $white;
+        border-radius: 20px;
+        border: 6px solid transparent;
+        padding: 32px 40px;
+        transition: 0.3s ease-in-out;
+        justify-content: center;
+        flex-direction: column;
+        &:hover{
+          box-shadow: 0px 4px 30px rgba(26, 32, 40, 0.1);
+          transition: 0.3s;
+        }
+        @media only screen and (max-width: $smallDesktop){
+          padding: 41px 20px 48px 20px;
+        }
+        @media only screen and (max-width: $bigTablet){
+          margin: 6.5px 0;
+        }
+        @media only screen and (max-width: $bigTablet){
+          padding: 21px 16px 27px 16px;
+          margin: 8px 0;
+        }
+        .team-member-image{
+          width: 100%;
+          max-width: 260px;
+          min-height: 260px;
+          position: relative;
+          border-radius: 50%;
+          overflow: hidden;
+
+        }
+        .team-member-infos{
+          max-width: 298px;
+          width: 100%;
+          text-align: center;
+          margin-top: 15px;
+          @media only screen and (max-width: $smallDesktop){
+            max-width: 240px;
+          }
+          @media only screen and (max-width: $mobile){
+            max-width: 184px;
+          }
+          .team-member-name{
+            *{
+              @include fontRem(20,600,32);
+              color: $primary;
+              @media only screen and (max-width: $tablet){
+                @include fontRem(16,600,32);
+              }
+            }
+          }
+          .team-member-position{
+            *{
+              @include fontRem(16,400,32);
+              color: $primary;
+              @media only screen and (max-width: $tablet){
+                @include fontRem(14,400,20);
+              }
+            }
+          }
+        }
+      }
+
+    }
+    .view-more{
+      margin-top: 40px;
+      display: none;
+      text-align: center;
+      @media only screen and (max-width: $bigTablet){
+        display: block;
+      }
+      button{
+        @include buttonNulled;
+        @include fontRem(16,700,19);
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+  }
+
+}

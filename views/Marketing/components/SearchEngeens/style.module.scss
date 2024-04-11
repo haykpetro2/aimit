@@ -1,0 +1,34 @@
+.search-section {
+  margin-top: 65px;
+  .search-section_mainpanel{
+    margin-top: 43px;
+    background: rgba($white, 0.4);
+    padding:54px 56px;
+    box-shadow: 34px 37px 60px rgba(94, 95, 100, 0.2);
+    border-radius: 20px;
+    @include flexRow(104,4);
+    @media only screen and (max-width: $smallDesktop){
+      @include flexRow(15,4);
+    }
+    @media only screen and (max-width: $tablet){
+      @include flexRow(15,2);
+      margin-top: 22px;
+      padding: 22px 0;
+    }
+    @media only screen and (max-width: $mobile){
+      @include flexRow(0,1);
+    }
+    .search-item-overlay{
+      margin: 11px 0;
+      .search-item{
+        max-width: 300px;
+        width: 100%;
+        height: 100%;
+        @media only screen and (max-width: $mobile){
+          margin: 0 auto;
+          max-width: 230px;
+        }
+      }
+    }
+  }
+}

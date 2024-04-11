@@ -1,0 +1,90 @@
+.form-modal {
+  position: relative;
+  background-color: $white;
+  overflow: auto;
+  padding-bottom: 142px;
+  padding-top: 57px;
+  @media only screen and (max-width: $laptop){
+    padding-top: 123px;
+  }
+  @media only screen and (max-width: $bigTablet){
+    padding-top: 90px;
+  }
+  &::after {
+    content: " ";
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='168' height='168' viewBox='0 0 168 168' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M83.9769 168C64.5965 167.99 45.8156 161.281 30.816 149.01C15.8164 136.74 5.52054 119.662 1.67276 100.67C-2.17503 81.6782 0.661892 61.9403 9.70287 44.8004C18.7438 27.6605 33.4329 14.1726 51.2814 6.62195C71.8089 -2.04853 94.9405 -2.21051 115.587 6.17164C136.234 14.5538 152.705 30.7935 161.377 51.3181C170.049 71.8427 170.211 94.971 161.827 115.615C153.444 136.259 137.202 152.728 116.675 161.398C106.331 165.776 95.2094 168.021 83.9769 168ZM83.9769 35.247C74.3306 35.2475 64.9011 38.108 56.8808 43.4668C48.8605 48.8257 42.6096 56.4421 38.9185 65.353C35.2275 74.264 34.2621 84.0691 36.1445 93.5286C38.0269 102.988 42.6724 111.677 49.4937 118.497C56.315 125.316 65.0056 129.96 74.4666 131.842C83.9276 133.723 93.7341 132.757 102.646 129.065C111.558 125.374 119.175 119.123 124.533 111.103C129.892 103.084 132.752 93.6551 132.752 84.0101C132.735 71.0814 127.591 58.687 118.447 49.5452C109.304 40.4034 96.9074 35.2606 83.9769 35.2446V35.247Z' fill='%23F8F8FF'/%3E%3Cpath d='M84 108C97.2548 108 108 97.2548 108 84C108 70.7452 97.2548 60 84 60C70.7452 60 60 70.7452 60 84C60 97.2548 70.7452 108 84 108Z' fill='%23F8F8FF'/%3E%3C/svg%3E");
+    width: 168px;
+    height: 168px;
+    position: absolute;
+    right: 140px;
+    top: 62px;
+    background-size: contain;
+    @media only screen and (max-width: $laptop){
+      width: 120px;
+      height: 120px;
+      top: 160px;
+      right: 20px;
+    }
+    @media only screen and (max-width: $middle){
+      display: none;
+    }
+  }
+  &::before {
+    content: " ";
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='168' height='168' viewBox='0 0 168 168' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M83.9769 168C64.5965 167.99 45.8156 161.281 30.816 149.01C15.8164 136.74 5.52054 119.662 1.67276 100.67C-2.17503 81.6782 0.661892 61.9403 9.70287 44.8004C18.7438 27.6605 33.4329 14.1726 51.2814 6.62195C71.8089 -2.04853 94.9405 -2.21051 115.587 6.17164C136.234 14.5538 152.705 30.7935 161.377 51.3181C170.049 71.8427 170.211 94.971 161.827 115.615C153.444 136.259 137.202 152.728 116.675 161.398C106.331 165.776 95.2094 168.021 83.9769 168ZM83.9769 35.247C74.3306 35.2475 64.9011 38.108 56.8808 43.4668C48.8605 48.8257 42.6096 56.4421 38.9185 65.353C35.2275 74.264 34.2621 84.0691 36.1445 93.5286C38.0269 102.988 42.6724 111.677 49.4937 118.497C56.315 125.316 65.0056 129.96 74.4666 131.842C83.9276 133.723 93.7341 132.757 102.646 129.065C111.558 125.374 119.175 119.123 124.533 111.103C129.892 103.084 132.752 93.6551 132.752 84.0101C132.735 71.0814 127.591 58.687 118.447 49.5452C109.304 40.4034 96.9074 35.2606 83.9769 35.2446V35.247Z' fill='%23F8F8FF'/%3E%3Cpath d='M84 108C97.2548 108 108 97.2548 108 84C108 70.7452 97.2548 60 84 60C70.7452 60 60 70.7452 60 84C60 97.2548 70.7452 108 84 108Z' fill='%23F8F8FF'/%3E%3C/svg%3E");
+    width: 337px;
+    height: 337px;
+    position: absolute;
+    left: 0px;
+    bottom: 62px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    @media only screen and (max-width: $laptop){
+      width: 260px;
+      height: 260px;
+      bottom: 0px;
+    }
+    @media only screen and (max-width: $middle){
+      display: none;
+    }
+  }
+  .modal-content {
+    @include flex-center;
+    max-width: 708px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media only screen and (max-width: $tablet){
+      max-width: 500px;
+    }
+    @media only screen and (max-width: $mobile){
+      max-width: 310px;
+    }
+    .section-heading{
+      @include fontRem(30,700,36);
+      color: $primary;
+    }
+    .close-modal {
+      position: absolute;
+      top: 48px;
+      right: 96px;
+      width: 27px;
+      height: 27px;
+      @include buttonNulled;
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.44961 27.6496L0.349609 25.5496L11.8996 13.9996L0.349609 2.44961L2.44961 0.349609L13.9996 11.8996L25.5496 0.349609L27.6496 2.44961L16.0996 13.9996L27.6496 25.5496L25.5496 27.6496L13.9996 16.0996L2.44961 27.6496Z' fill='%239FA8B1'/%3E%3C/svg%3E");
+      @media only screen and (max-width: $tablet){
+        top: 18px;
+        right: 18px;
+      }
+    }
+  }
+  button{
+    width: 100%;
+    max-width: 100%;
+    z-index: 2;
+    position: relative;
+  }
+
+}
+

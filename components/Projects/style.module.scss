@@ -1,0 +1,152 @@
+.designSuccess-section {
+  .designSuccess-section_mainpanel {
+    margin-top: 65px;
+    @media only screen and (max-width: $mobile) {
+      margin-top: 34px;
+    }
+
+    .success-items {
+      @include flexRow(25, 2);
+      @media only screen and (max-width: $tablet) {
+        @include flexRow(0, 1);
+        row-gap: 40px;
+      }
+    }
+
+    .success-item {
+      border-radius: 20px;
+      padding: 65px 35px 53px 61px;
+      @include d-flex;
+      justify-content: space-between;
+      position: relative;
+      @media only screen and (max-width: $tablet) {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 30px 60px 30px;
+      }
+
+      &.colored-blue {
+        background-color: $darBlue;
+      }
+
+      &.colored-red {
+        background-color: $red;
+      }
+
+      .success-item-infos {
+        max-width: 350px;
+        width: 100%;
+        @include flex-column;
+        @media only screen and (max-width: $smallDesktop) {
+          max-width: 250px;
+        }
+        @media only screen and (max-width: $laptop) {
+          max-width: 200px;
+        }
+        @media only screen and (max-width: $bigTablet) {
+          max-width: 250px;
+        }
+
+        .success-item-name {
+          * {
+            @include fontRem(28, 700, 34);
+            color: $white;
+          }
+        }
+
+        .success-item-description {
+          margin-top: 16px;
+          height: 166px;
+          overflow: hidden;
+          @include textShorten(6);
+          * {
+            @include fontRem(20, 500, 28);
+            color: $white;
+            @media only screen and (max-width: $mobile) {
+              @include fontRem(14, 500, 19);
+            }
+          }
+        }
+
+        .success-item-link {
+          margin-top: auto;
+          position: relative;
+          padding-right: 38px;
+          max-width: 140px;
+          @media only screen and (max-width: $bigTablet) {
+            position: absolute;
+            bottom: 23px;
+            right: 32px;
+          }
+
+          &::after {
+            content: " ";
+            width: 30px;
+            height: 30px;
+            background-color: rgba($white, 0.2);
+            border: 1.5px solid $white;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='28' height='27' viewBox='0 0 28 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.407 13.2408L11.1789 20.2012L9.51953 18.5491L15.0883 13.2408L9.54766 7.90534L11.207 6.28034L18.407 13.2408Z' fill='white'/%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            display: inline-block;
+            border-radius: 50%;
+            right: 0;
+            @include absoluteCenter(vertical);
+          }
+
+          * {
+            @include fontRem(16, 700, 23);
+            color: $white;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .sucess-item-image {
+        max-width: 250px;
+        max-height: 300px;
+        min-height: 300px;
+        width: 100%;
+        @media only screen and (max-width: $laptop) {
+          max-width: 200px;
+        }
+        @media only screen and (max-width: $bigTablet) {
+          max-width: 250px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+}
+
+.case-studies-swipe {
+  padding-bottom: 148px;
+  @media only screen and (max-width: $bigTablet) {
+    padding-bottom: 137px;
+  }
+
+  :global {
+    .swiper-pagination {
+      @media only screen and (max-width: $tablet) {
+        display: none;
+      }
+
+      .swiper-pagination-bullet {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .case-studies-buttons-overlay {
+    max-width: 136px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    @media only screen and (max-width: $mobile) {
+      @include absoluteCenter(horizontal);
+    }
+  }
+}

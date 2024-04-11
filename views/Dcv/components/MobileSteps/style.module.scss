@@ -1,0 +1,119 @@
+.mobile-login {
+  background-color: $primary;
+  overflow: hidden;
+  @media only screen and (max-width: $mobile){
+    padding-bottom: 50px;
+  }
+  .container {
+    max-width: 1376px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    .cv-steps-main-panel {
+      @include d-flex;
+      row-gap: 30px;
+      position: relative;
+      padding-left: 63px;
+      @media only screen and (max-width: $mobile){
+        padding-left: 0;
+        row-gap: 30px;
+        &:not(:first-child){
+          margin-top: 30px;
+        }
+      }
+      &:last-child {
+        &::after {
+          content: none;
+        }
+        &::before{
+          height: 50%;
+        }
+        .step-image-overlay {
+          padding-top: 0px;
+          &::after {
+            content: none;
+          }
+          &:first-child{
+            &:before{
+              content: " ";
+              width: 77px;
+              @include absoluteCenter(vertical);
+              left: -62px;
+              border: 1px dashed $white;
+              @media only screen and (max-width: $mobile){
+                content: none;
+              }
+            }
+          }
+
+        }
+      }
+      &::after {
+        content: " ";
+        width: 83.3%;
+        border: 1px dashed $white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        @media only screen and (max-width: $mobile){
+          content: none;
+        }
+      }
+      &::before {
+        content: " ";
+        height: 100%;
+        border: 1px dashed $white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        @media only screen and (max-width: $mobile){
+          content: none;
+        }
+      }
+      .step-image-overlay {
+        max-width: 33.333%;
+        width: 100%;
+        padding: 167px 15px;
+        position: relative;
+
+        @media only screen and (max-width: $bigTablet){
+          padding: 90px 15px;
+        }
+        @media only screen and (max-width: $mobile){
+          max-width: 100%;
+          padding:0 15px;
+        }
+        &::after {
+          content: " ";
+          min-height: 167px;
+          border: 1px dashed $white;
+          @include absoluteCenter(horizontal);
+          top: 0px;
+          @media only screen and (max-width: $bigTablet){
+            min-height: 90px;
+          }
+          @media only screen and (max-width: $mobile){
+            content: none;
+          }
+        }
+        &:nth-child(3n + 3) {
+          &::after {
+            left: calc(50% - 10px);
+          }
+        }
+        .step-image {
+          max-width: 100%;
+          width: 100%;
+          position: relative;
+          min-height: 844px;
+          @media only screen and (max-width: $bigTablet){
+            min-height: 544px;
+          }
+          @media only screen and (max-width: $mobile){
+            min-height: 650px;
+          }
+        }
+      }
+    }
+  }
+}

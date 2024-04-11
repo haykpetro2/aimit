@@ -1,0 +1,53 @@
+.visions-section {
+  padding: 67px 0 8px 0;
+  @media only screen and (max-width: $tablet){
+    padding-top: 85px;
+  }
+  .visons-section-mainpanel{
+    margin-top: 27px;
+    @media only screen and (max-width: $tablet){
+      margin-top: 20px;
+    }
+    .vision-items{
+      @include flexRow(25,2);
+      @media only screen and (max-width: $bigTablet){
+        @include flexRow(0,1)
+      }
+      .vision-item{
+        @media only screen and (max-width: $bigTablet){
+          &:not(:first-child){
+            margin-top: 26px;
+          }
+        }
+        @media only screen and (max-width: $tablet){
+          &:not(:first-child){
+            margin-top: 96px;
+          }
+        }
+        .vision-item-image{
+          position: relative;
+          width: 100%;
+          max-width: 100%;
+          min-height: 452px;
+          @media only screen and (max-width: $bigTablet){
+            min-height: auto;
+            padding-bottom: 56.25%;
+          }
+        }
+        .vision-item-footer{
+          padding: 26px 57px;
+          @media only screen and (max-width: $tablet){
+            padding: 30px 0 0 0;
+          }
+          .vision-item-description{
+            *{
+              @include fontRem(20,400,32)
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,107 @@
+.hero-section{
+    padding: 70px 0;
+    background: $lightBlur;
+    @media only screen and (max-width: $tablet){
+        padding-top: 13px;
+    }
+    .hero-section-mainpanel{
+        @include d-flex;
+        justify-content: space-between;
+        align-items: center;
+        .section-heading{
+            *{
+                @include fontRem(40,700,48);
+                @media only screen and (max-width: $tablet){
+                    @include fontRem(20,700,24)
+                }
+            }
+        }
+        .hero-section-description-overlay{
+            max-width: 689px;
+            width: 100%;
+            @media only screen and (max-width: $laptop){
+                max-width: 533px;
+            }
+            @media only screen and (max-width: $bigTablet){
+                max-width: 392px;
+            }
+            @media only screen and (max-width: $mobile){
+                max-width: 100%;
+            }
+            *{
+                color: $white;
+            }
+            .hero-description-text{
+                margin-top: 35px;
+                @media only screen and (max-width: $tablet){
+                    margin-top: 11px;
+                }
+            }
+        }
+        .hero-section-image-overlay{
+            max-width: 346px;
+            width: 100%;
+            min-height: 346px;
+            position: relative;
+            @media only screen and (max-width: $tablet){
+                max-width: 144px;
+                min-height: 144px;
+            }
+            @media only screen and (max-width: $mobile){
+               margin-top: 100px;
+               margin:100px auto  0 auto
+            }
+
+            .hero-section-image-white-overlay{
+                @include flex-center;
+                height: 100%;
+                position: relative;
+                min-height: 346px;
+                @media only screen and (max-width: $tablet){
+                    min-height: 144px; 
+                }
+                &::after{
+                    content: " ";
+                    background-repeat: no-repeat;
+                    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='274' height='269' viewBox='0 0 274 269' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M114.455 1.75965C75.3648 -3.67068 35.5624 3.54209 0.863281 22.3441L33.7695 83.0725C50.1916 74.1643 69.0055 69.1051 89.001 69.1051C153.066 69.1051 205.001 121.04 205.001 185.105C205.001 204.03 200.469 221.896 192.432 237.677L253.852 268.958C271.762 233.79 277.957 193.817 271.531 154.878C265.105 115.939 246.395 80.0751 218.135 52.527C189.875 24.9788 153.545 7.18998 114.455 1.75965Z' fill='white' fill-opacity='0.56'/%3E%3C/svg%3E");
+                    background-repeat: no-repeat;
+                    right: 0;
+                    @include absoluteCenter(vertical);
+                    width: 100%;
+                    height: 100%;
+                    background-position:top right;
+                    animation: gradientBG 2s ease;
+                    @media only screen and (max-width: $tablet){
+                        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='148' height='145' viewBox='0 0 148 145' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M61.6344 1.68707C40.6682 -1.2255 19.32 2.64309 0.708984 12.7276L18.3583 45.2994C27.1662 40.5216 37.2569 37.8082 47.9814 37.8082C82.3429 37.8082 110.198 65.6637 110.198 100.025C110.198 110.175 107.768 119.758 103.457 128.222L136.4 145C146.007 126.138 149.329 104.698 145.883 83.8125C142.436 62.9275 132.401 43.6919 117.243 28.9163C102.086 14.1407 82.6006 4.59965 61.6344 1.68707Z' fill='white' fill-opacity='0.56'/%3E%3C/svg%3E");
+
+                    }
+
+                }
+                .hero-section-image{
+                    max-width: 232px;
+                    min-height: 232px;
+                    width: 100%;
+                    background-color: $lightBlur;
+                    border-radius: 50%;
+                    @include flex-center;
+                    @include absoluteCenter(both);
+                    @media only screen and (max-width: $tablet){
+                        max-width: 80px;
+                        min-height: 80px;
+                        top: 60%;
+                        left: 40%;
+                    }
+                }
+            }
+
+        }
+    }
+}
+@keyframes gradientBG {
+	0% {
+		height: 0%;
+	}
+	100% {
+		height: 100%;
+	}
+}

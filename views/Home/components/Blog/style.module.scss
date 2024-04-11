@@ -1,0 +1,58 @@
+.blog-section{
+    position: relative;
+  padding-bottom: 100px;
+  @media only screen and (max-width: $mobile){
+    padding-bottom: 0px;
+  }
+    .blog-section-inner{
+        padding: 0 105px;
+        position: relative;
+        @media only screen and (max-width: $smallDesktop){
+            padding-bottom: 120px;
+        }
+        @media only screen and (max-width: $bigTablet){
+            padding: 0 0 120px 0;
+        }
+        @media only screen and (max-width: $mobile){
+            padding-bottom: 97px;
+        }
+        .blog-section-mainpanel-overlay{
+            margin: 0 -15px;
+            .blog-section-mainpanel{
+                margin-top: 78px;
+                position: relative;
+                @media only screen and (max-width: $smallDesktop){
+                    margin-top: 50px;
+                }
+                @media only screen and (max-width: $mobile){
+                    margin-top: 35px;
+                }
+                .blogSwipe{
+                    padding: 15px;
+                }
+
+
+
+            }
+        }
+
+        .blog-buttons-overlay{
+            @include absoluteCenter(vertical);
+            width: 100%;
+            max-width: 100%;
+            left: 0;
+            right: 0;
+            @media only screen and (max-width: $bigTablet){
+                display: block;
+                max-width: 136px;
+                display: flex;
+                justify-content: space-between;
+                @include absoluteCenter(horizontal);
+                bottom: 0;
+                top: auto;
+            }
+        }
+    }
+
+}
+

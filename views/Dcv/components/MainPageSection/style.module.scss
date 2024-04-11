@@ -1,0 +1,56 @@
+.main-page-section {
+  max-height: 792px;
+  background-color: $white;
+  padding-top: 92px;
+  position: relative;
+  z-index: 9;
+  @media only screen and (max-width: $bigTablet) {
+    max-height: 500px;
+    padding-top: 50px;
+  }
+  @media only screen and (max-width: $mobile) {
+    max-height: 180px;
+  }
+  .section-headline {
+    text-align: center;
+    * {
+      @include fontRem(60, 700, 85);
+      color: $primary;
+      @media only screen and (max-width: $bigTablet) {
+        @include fontRem(30, 700, 55);
+      }
+    }
+  }
+  .section-main-panel {
+    margin-top: 22px;
+    padding: 0 15px;
+    @media only screen and (max-width: $bigTablet) {
+      margin-top: 15px;
+    }
+    .section-image-overlay {
+      border: 1px solid rgba(152, 162, 178, 0.1);
+      padding: 27px;
+      max-width: 1200px;
+      margin: 0px auto 0 auto;
+      border-radius: 30px;
+      overflow: hidden;
+      background-color: transparent;
+      @media only screen and (max-width: $mobile) {
+        padding: 10px;
+      }
+      .section-image {
+        max-width: 1200px;
+        width: 100%;
+        position: relative;
+        min-height: 780px;
+        margin: 0 auto;
+        @media only screen and (max-width: $bigTablet) {
+          min-height: 500px;
+        }
+        @media only screen and (max-width: $mobile) {
+          min-height: 200px;
+        }
+      }
+    }
+  }
+}

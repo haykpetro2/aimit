@@ -1,0 +1,129 @@
+.colors-section{
+  padding: 123px 0;
+  position: relative;
+  @media only screen and (max-width: $tablet){
+    padding-top: 60px;
+    padding-bottom: 101px;
+  }
+  &::after{
+    content: " ";
+    background: rgba(30, 135, 250, 0.3);
+    filter: blur(188.903px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+  }
+  .colors-section_mainpanel{
+    padding-top: 38px;
+    position: relative;
+    z-index: 2;
+    @include flexRow(0,5);
+    @media only screen and (max-width: $bigTablet){
+      @include flexRow(0,4);
+    }
+    @media only screen and (max-width: $tablet){
+      @include flexRow(0,2);
+    }
+    .color-item{
+      padding: 25px 28px;
+      @include d-flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      min-height: 190px;
+      width: 100%;
+      transition: transform 0.5s;
+      @media only screen and (max-width: $tablet){
+        min-height: 115px;
+        padding: 15px 21px;
+      }
+      .color-name{
+        *{
+          @include fontRem(22,600,26);
+          @media only screen and (max-width: $tablet){
+            @include fontRem(14,600,17);
+          }
+        }
+      }
+      .color-hex{
+        margin-top: 9px;
+        *{
+          @include fontRem(14,600,19);
+          @media only screen and (max-width: $tablet){
+            @include fontRem(10,600,13);
+          }
+        }
+      }
+      &.moulk-blue{
+        background-color: $moulkBlue;
+        box-shadow: 0px 4px 60px rgba($textStroke, 0.2);
+        .color-name{
+          *{
+            color: $white;
+          }
+        }
+        .color-hex{
+          *{
+            color: rgba($white,0.5);
+          }
+        }
+      }
+      &.darkgray-item{
+        background-color: $moulkDarkGray;
+        .color-name{
+          *{
+            color: $white;
+          }
+        }
+        .color-hex{
+          *{
+            color: rgba($white,0.5);
+          }
+        }
+      }
+      &.lightgray-item{
+        background-color: $moulkLightGray;
+        .color-name{
+          *{
+            color: $black;
+          }
+        }
+        .color-hex{
+          *{
+            color: rgba($black,0.5);
+          }
+        }
+      }
+      &.dark-item{
+        background-color: $textStroke;
+        .color-name{
+          *{
+            color: $white;
+          }
+        }
+        .color-hex{
+          *{
+            color: $white;
+          }
+        }
+      }
+      &.white-item{
+        background-color: $white;
+        .color-name{
+          *{
+            color: $black;
+          }
+        }
+        .color-hex{
+          *{
+            color: rgba($black,0.5);
+          }
+        }
+      }
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+}

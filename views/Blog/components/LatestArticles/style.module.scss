@@ -1,0 +1,31 @@
+.articles-section{
+    padding-top: 100px;
+    padding-bottom: 112px;
+    @media only screen and (max-width: $bigTablet) {
+        padding-top: 120px;
+        padding-bottom: 72px;
+    }
+    @media only screen and (max-width: $tablet) {
+        padding-top: 69px;
+        padding-bottom: 64px;
+    }
+    .articles-section_mainpanel{
+        margin-top: 26px;
+        @media only screen and (max-width: $tablet) {
+            margin-top: 12px;
+        }
+        .articleItems{
+           @include flexRow(26,2);
+           @media only screen and (max-width: $bigTablet) {
+            @include flexRow(0,1);
+           }
+           .article-item{
+            margin: 23px 0;
+            @media only screen and (max-width: $bigTablet) {
+                margin: 18px 0;
+            }
+           }
+        }
+
+        }
+    }

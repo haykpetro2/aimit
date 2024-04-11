@@ -1,0 +1,46 @@
+.getInTouch-section{
+    padding-bottom: 100px;
+    .getInTouch-section-mainpanel{
+        @include d-flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        .section-description-overlay{
+            max-width: 619px;
+            width: 100%;
+            .section-big-headline{
+                max-width: 992px;
+                width: 100%;
+                *{
+                    @include fontRem(60,700,77);
+                    color: $primary;
+                    @media only screen and (max-width: $tablet){
+                        @include fontRem(30,700,36);
+                    }
+                }
+            }
+            .section-big-description{
+                margin-top: 20px;
+                *{
+                    @include fontRem(24,500,34);
+                    @media only screen and (max-width: $tablet){
+                        @include fontRem(20,500,32);
+                    }
+                }
+            }
+        }
+        .getInTouch-btn{
+            @include buttonNulled;
+            padding: 22px 160px;
+            @include fontRem(30,700,36);
+            background-color: $lightBlur;
+            border-radius: 20px;
+            color: $white;
+            @media only screen and (max-width: $tablet){
+                margin-top: 15px;
+                @include fontRem(18,700,24);
+                padding: 18px 100px;
+            }
+        }
+
+    }
+}

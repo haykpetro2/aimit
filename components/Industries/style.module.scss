@@ -1,0 +1,28 @@
+.industriesItem{
+    padding: 42px 26px 63px 49px;
+    background: $extraLightGary;
+    border-radius: 20px;
+    @media only screen and (max-width: $mobile){
+        padding: 42px 16px 35px 22px;
+    }
+    .industriesItem-name{
+        *{
+            @include fontRem(28,700,34);
+            color: $primary;
+            @media only screen and (max-width: $mobile){
+                @include fontRem(18,700,21);
+            }
+        }
+    }
+    .industriesItem-description{
+        margin-top: 22px;
+        @include textShorten(4);
+        *{
+            @include fontRem(20,400,32);
+            color: $primary;
+            @media only screen and (max-width: $mobile){
+                @include fontRem(14,400,22);
+            }
+        }
+    }
+}

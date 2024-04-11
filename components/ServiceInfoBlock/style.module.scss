@@ -1,0 +1,50 @@
+.devops-section {
+  margin-top: 169px;
+  @media only screen and (max-width: $mobile){
+    margin-top: 48px
+  }
+  .devops-section_mainpanel{
+    margin-top: 43px;
+    @include flexRow(23,2);
+    @media only screen and (max-width: $mobile){
+      margin-top: 24px;
+    }
+    @media only screen and (max-width: $bigTablet){
+      @include flexRow(0,1);
+    }
+    .devops-item-overlay{
+      margin: 11px 0;
+      .devops-item{
+        background-color: $sectionBg2;
+        height: 100%;
+        padding: 42px 78px 11px 57px;
+        border-radius: 20px;
+        @media only screen and (max-width: $mobile){
+          padding: 23px 28px 38px 20px;
+        }
+        .devops-item-headline{
+          *{
+            @include fontRem(28,700,32);
+            color: $primary;
+            @media only screen and (max-width: $mobile){
+              @include fontRem(18,700,21);
+            }
+          }
+        }
+        .devops-item-description{
+          margin-top: 22px;
+          @media only screen and (max-width: $mobile){
+            margin-top: 7px;
+          }
+          *{
+            @include fontRem(20,400,32);
+            color: $primary;
+            @media only screen and (max-width: $mobile){
+              @include fontRem(14,400,22);
+            }
+          }
+        }
+      }
+    }
+  }
+}

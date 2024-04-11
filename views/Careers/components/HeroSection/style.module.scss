@@ -1,0 +1,77 @@
+.hero-section {
+  padding: 19px 0 8px 0;
+  background: $lightBlur;
+  overflow: hidden;
+  .hero-section-mainpanel {
+    @include d-flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: $tablet){
+      flex-direction: column;
+    }
+    .section-heading {
+      * {
+        @include fontRem(40, 700, 48)
+      }
+    }
+
+    .hero-section-description-overlay {
+      max-width: 689px;
+      width: 100%;
+      @media only screen and (max-width: $bigTablet){
+        max-width: 411px;
+      }
+      @media only screen and (max-width: $tablet){
+        max-width: 100%;
+      }
+      * {
+        color: $white;
+      }
+
+      .hero-description-text {
+        margin-top: 35px;
+        @media only screen and (max-width: $bigTablet) {
+          margin-top: 15px;
+        }
+        }
+    }
+
+    .hero-section-image-overlay {
+      max-width: 182px;
+      width: 100%;
+      min-height: 182px;
+      position: relative;
+      @media only screen and (max-width: $tablet){
+        margin-top: 71px;
+      }
+      .section-icon {
+        @include flex-center;
+        width: 100%;
+        height: 100%;
+        animation: rotate 3s linear 3;
+      }
+      .icon{
+        @include absoluteCenter(both)
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+    }
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}

@@ -1,0 +1,50 @@
+.tech-section{
+    padding-top: 64px;
+    padding-bottom: 110px;
+    @media only screen and (max-width: $tablet){
+        padding-bottom: 24px;
+    }
+    .tech-section-mainpanel{
+        .section-big-headline{
+            *{
+                    @include fontRem(60,700,77);
+                    color: $primary;
+                    @media only screen and (max-width: $tablet){
+                        @include fontRem(30,700,36);
+                    }
+            }
+        }
+        .tech-widgets-mainpanel{
+            @include flexRow(15,6);
+            align-items: stretch;
+            margin-top: 16px;
+            @media only screen and (max-width: $laptop){
+                @include flexRow(10,4);
+            }
+            @media only screen and (max-width: $laptop){
+                @include flexRow(5,3);
+            }
+            @media only screen and (max-width: $laptop){
+                @include flexRow(5,2);
+            }
+            .tech-widegt-ovaerlay{
+                margin: 7.5px 0px;
+                .tech-widget{
+                    padding: 31px 63px;
+                    background: $white;
+                    box-shadow: 0px 4px 11px rgba($lightGray, 0.25);
+                    border-radius: 20px;
+                    height: 100%;
+                    @include flex-center;
+                    .tech-widget-image{
+                        width: 100%;
+                        max-width: 100%;
+                        position: relative;
+                        min-height: 83px;
+                        @include flex-center;
+                    }
+                }
+            }
+        }
+    }
+}

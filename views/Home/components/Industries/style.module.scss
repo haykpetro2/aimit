@@ -1,0 +1,85 @@
+.industries-section{
+    padding: 137px 0px 126px 0px;
+    position: relative;
+    @media only screen and (max-width: $smallDesktop){
+        padding-top: 120px;
+    }
+    @media only screen and (max-width: $bigTablet){
+        padding: 89px 0 114px 0;
+    }
+    @media only screen and (max-width: $mobile){
+        padding-top:62px;
+        padding-bottom: 0;
+    }
+    .industries-section-mainpanel{
+        padding: 0 105px;
+        position: relative;
+        @media only screen and (max-width: $bigTablet){
+            padding: 0;
+        }
+        .industriesSwiper_overaly{
+            position: relative;
+            @media only screen and (max-width: $bigTablet){
+                padding:0 0 109px 0;
+            }
+                .industries_swipe{
+                    margin-top: 80px;
+                    background-color: $white;
+                    overflow: hidden;
+                    @media only screen and (max-width: $smallDesktop){
+                        margin-top: 50px;
+                    }
+                    @media only screen and (max-width: $mobile){
+                        margin-top: 39px;
+                    }
+                    .industriesItems{
+                        @include flexRow(26,2);
+                        @media only screen and (max-width: $bigTablet){
+                            @include flexRow(0,1);
+                        }
+                        .industriesItemOverlay{
+                            @media only screen and (max-width: $bigTablet){
+                                &:not(:first-child){
+                                    margin-top: 22px;
+                                }
+                            }
+                        }
+        
+                    }
+        
+                }
+
+        }
+    
+        .industries_button{
+            text-align: center;
+            margin-top: 63px;
+            @media only screen and (max-width: $bigTablet){
+                margin-top: 36px;
+            }
+            @media only screen and (max-width: $bigTablet){
+                margin-top: 0px;
+            }
+        }
+    }
+
+    .industries-buttons-overlay{
+        width: 100%;
+        max-width: 100%;
+        @include absoluteCenter(vertical);
+        left: 0;
+        @media only screen and (max-width: $bigTablet){
+            max-width: 136px;
+            position: absolute;
+            right: 83px;
+            bottom: 0;
+            top: auto;
+            transform: none;
+            left: auto;
+            padding:0;
+        }
+        @media only screen and (max-width: $tablet){
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.vacancies-section{
+    padding-top: 70px;
+    padding-bottom: 76px;
+    background-color: $sectionBg2;
+    @media only screen and (max-width: $bigTablet){
+        padding-top: 43px;
+       padding-bottom: 39px;
+    }
+    .vacancies-widgets {
+        @include flexRow(26, 3);
+        margin-top: 46px;
+        @media only screen and (max-width: $bigTablet){
+            @include flexRow(22, 2);
+        }
+        @media only screen and (max-width: $tablet){
+            @include flexRow(0, 1);
+        }
+        & > div{
+            &:nth-child(n+3){
+                @media only screen and (max-width: $bigTablet){
+                    display: none;
+                }
+              @media only screen and (max-width: $mobile){
+                display: block;
+              }
+            }
+        }
+      }
+      .view-more{
+        margin-top: 75px;
+        text-align: center;
+        a{
+            @include buttonNulled;
+            @include fontRem(20,700,24);
+            color: $primary;
+            text-decoration: underline;
+        }
+    }
+    }

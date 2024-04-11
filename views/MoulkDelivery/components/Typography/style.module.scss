@@ -1,0 +1,183 @@
+.typography-section {
+  padding-top: 2px;
+  .typography-section_mainpanel {
+    @include d-flex;
+    justify-content: space-between;
+    position: relative;
+    @media only screen and (max-width: $bigTablet){
+      justify-content: space-around ;
+    }
+    @media only screen and (max-width: $tablet){
+      justify-content: center ;
+      column-gap: 30px;
+    }
+    &:after{
+      content: " ";
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: rgba($moulkUi, 0.3);
+      filter: blur(150px);
+      width: 50%;
+      height: 100%;
+      @media only screen and (max-width: $bigTablet){
+        width: 100%;
+        height: 50%;
+        top: auto;
+        bottom: 0;
+      }
+    }
+    .word-variant {
+      max-width: 282px;
+      width: 100%;
+      position: relative;
+      padding-left: 38px;
+      padding-bottom: 42px;
+      margin-right: 83px;
+      @media only screen and (max-width: $bigTablet){
+        max-width: 50%;
+        margin-right: 0;
+      }
+      @media only screen and (max-width: $tablet){
+        max-width: 100%;
+      }
+      p {
+        @include fontRem(183,700,222);
+        text-transform: capitalize;
+        -webkit-text-stroke: 1px $textStroke;
+        color: transparent;
+        &::after {
+          content: 'Aa';
+          color: $moulkUi;
+          filter: blur(4.5px);
+          position: absolute;
+          left: 0px;
+          bottom: 0;
+        }
+      }
+
+    }
+    .typography-listing{
+      @media only screen and (max-width: $bigTablet){
+        padding-top: 42px;
+        width: 100%;
+        max-width: 50%;
+      }
+
+      @media only screen and (max-width: $tablet){
+        padding-top: 10px;
+        max-width: 100%;
+        @include flex-center-vert;
+      }
+      .listing-headline{
+        @media only screen and (max-width: $tablet){
+          max-width: 100%;
+          width: 100%;
+        }
+        *{
+            @include fontRem(32,700,39);
+           color: $primary;
+           @media only screen and (max-width: $tablet){
+            @include fontRem(22,700,27);
+          }
+        }
+      }
+      ul {
+
+        list-style: none;
+        margin-top: 37px;
+        @media only screen and (max-width: $tablet){
+          @include d-flex;
+          margin-top: 0px;
+        }
+        li{
+          color: $primary;
+          font-size: 18px;
+          line-height: 22px;
+          @media only screen and (max-width: $tablet){
+            padding-top: 13px;
+          }
+          &:first-child{
+            font-weight: 400;
+          }
+          &:nth-child(2){
+            font-weight: 600;
+          }
+          &:nth-child(3){
+            font-weight: 700;
+          }
+          &:not(:first-child){
+            margin-top: 8px;
+            @media only screen and (max-width: $tablet){
+              margin-top: 0px;
+            }
+          }
+
+          &:not(:last-child){
+            @media only screen and (max-width: $tablet){
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+    }
+    .headlines-listing{
+      @media only screen and (max-width: $bigTablet){
+        padding-top: 42px;
+      }
+      &.ui-listing{
+        ul{
+          li{
+            font-weight: 700;
+          }
+        }
+      }
+      ul{
+        list-style: none;
+        li{
+          font-weight: 600;
+          color: $primary;
+          &:first-child{
+            font-size: 30px;
+            line-height: 36px;
+          }
+          &:nth-child(2){
+            font-size: 22px;
+            line-height: 27px;
+            margin-top: 34px;
+          }
+          &:nth-child(3){
+            font-size: 16px;
+            line-height: 19px;
+            margin-top: 34px;
+          }
+          &:nth-child(4){
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 34px;
+          }
+          &:nth-child(5){
+            font-size: 12px;
+            line-height: 15px;
+            margin-top: 34px;
+          }
+        }
+      }
+    }
+    .section-description{
+      @media only screen and (max-width: $bigTablet){
+        padding-top: 42px;
+      }
+      @media only screen and (max-width: $tablet){
+        display: none;
+      }
+      *{
+        color: transparent;
+        writing-mode: vertical-rl;
+        @include fontRem(50,700,62);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgba($textStroke, 0.2);;
+      }
+    }
+  }
+}

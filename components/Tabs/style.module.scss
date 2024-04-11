@@ -1,0 +1,201 @@
+.tabs-overlay{
+  .tabs-section{
+    padding-top: 55px;
+    .tabs-mainpanel{
+      @include d-flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .bloc-tabs{
+        max-width: 366px;
+        width: 100%;
+        @include flex-column;
+        button{
+          @include buttonNulled;
+          text-align: left;
+          border-radius: 6px;
+          border-left: 6px solid transparent;
+          padding: 17px 10px 10px 44px;
+          color: $primary;
+          @include fontRem(20,700,32);
+          &:not(:first-child){
+            margin-top: 2px;
+          }
+          &.tab{
+            background-color: $sectionBg2;
+          }
+          &.active-tab{
+            background-color: rgba(79, 142, 254, 0.1);
+            border-left-color:$lightBlur ;
+          }
+        }
+      }
+      .content{
+        display: none;
+        max-width: 947px;
+        width: 100%;
+        &.active-content {
+          display: block;
+        }
+
+        @media only screen and (max-width: $smallDesktop){
+          max-width: 800px;
+        }
+        @media only screen and (max-width: $laptop){
+          max-width: 620px;
+        }
+        &.active-content{
+          display: block;
+        }
+      }
+    }
+  }
+  .faqs-section {
+    padding-top: 40px;
+    .faqs-section-mainpanel {
+      .accordion-items{
+        @include flex-column;
+        .accordion-item{
+          padding-bottom: 0px;
+          background: $extraLightGary;
+          border-radius: 20px;
+          overflow: hidden;
+          position: relative;
+          z-index: 1;
+          transition: all .5s;
+          cursor: pointer;
+          &::before{
+            content: " ";
+            width: 6px;
+            height: 100%;
+            @include absoluteCenter(vertical);
+            left: 0;
+            z-index: 9999;
+            background-color: transparent;
+          }
+          &:not(:first-child){
+            margin-top: 11px;
+          }
+          *{
+            pointer-events: none;
+          }
+          .accordion-item-name{
+            padding: 38px 157px 38px 47px;
+            cursor: pointer;
+            background: $extraLightGary;
+            position: relative;
+            z-index: 2;
+            @media only screen and (max-width: $tablet){
+              padding: 14px 50px 14px 27px;
+            }
+            &:after{
+              content: " ";
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 21.7812L8.5 13.2812L10.0229 11.7583L17 18.7708L23.9771 11.7937L25.5 13.3166L17 21.7812Z' fill='%231A2028'/%3E%3C/svg%3E");
+              width: 34px;
+              height: 34px;
+              right: 33px;
+              position: absolute;
+              top: 50%;
+              transform:translateY(-50%) rotate(0deg);
+              transition: .2s;
+            }
+            *{
+              @include fontRem(20,700,24);
+              color: $primary;
+            }
+          }
+          .accordion-item-description{
+            transition: .2s;
+            padding: 0 38px 0px 38px;
+            @media only screen and (max-width: $tablet){
+              padding: 0 27px 0px 27px;
+            }
+          }
+          &.openItem{
+            background: rgba(79, 142, 254, 0.1);
+            &::before{
+              background-color: $lightBlur;
+            }
+            & > .accordion-item-name{
+              background: rgba(79, 142, 254, 0);
+              &:after{
+                transform:translateY(-50%) rotate(180deg);
+                transition: .2s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tab-headline{
+    *{
+      @include fontRem(60,700,72);
+      color: $primary;
+    }
+  }
+  .tab-firstSubTitle{
+    margin-top: 23px;
+    margin-bottom: 6px;
+    @media only screen and (max-width: $bigTablet){
+      margin-top: 0px;
+    }
+    *{
+      @include fontRem(28,700,48);
+      color: $primary;
+      @media only screen and (max-width: $tablet){
+        @include fontRem(18,700,26);
+      }
+    }
+  }
+  .tab-description{
+    margin-top: 3px;
+    *{
+      @include fontRem(20,400,28);
+      color: $primary;
+      @media only screen and (max-width: $tablet){
+        @include fontRem(14,400,20);
+      }
+    }
+  }
+  .tab-secondSubTitle{
+    margin-top: 20px;
+    *{
+      @include fontRem(28,700,32);
+      color: $primary;
+      @media only screen and (max-width: $tablet){
+        @include fontRem(18,700,26);
+      }
+    }
+  }
+  .tab-images{
+    @include d-flex;
+    column-gap: 25px;
+    .tab-image{
+      max-width: 220px;
+      width: 100%;
+      position: relative;
+      min-height: 186px;
+      margin-top: 25px ;
+      @media only screen and (max-width: $tablet){
+        max-width: 114px;
+        min-height: 96px;
+        margin-top: 12px
+      }
+    }
+  }
+  .tab-imagesTitle{
+    margin-top: 69px;
+    @media only screen and (max-width: $tablet){
+      margin-top: 26px;
+    }
+    *{
+      @include fontRem(28,700,39);
+      color: $primary;
+      @media only screen and (max-width: $tablet){
+        @include fontRem(18,700,26);
+      }
+    }
+  }
+}
+

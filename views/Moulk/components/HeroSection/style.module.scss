@@ -1,0 +1,296 @@
+.hero-section {
+  padding-top: 200px;
+  background: $lightBlur;
+  overflow: hidden;
+  @media only screen and (max-width: $laptop){
+    padding-top: 150px;
+  }
+  .hero-section-mainpanel{
+    position: relative;
+    min-height: 1610px;
+    @media only screen and (max-width: $desktop) {
+      min-height: 1200px;
+    }
+    @media only screen and (max-width: $smallDesktop) {
+      min-height: 950px;
+    }
+    @media only screen and (max-width: $laptop) {
+      min-height: 870px;
+    }
+    @media only screen and (max-width: $bigTablet) {
+      min-height: 730px;
+    }
+    @media only screen and (max-width: $tablet) {
+      min-height: 563px;
+    }
+    @media only screen and (max-width: $mobile) {
+      min-height: 350px;
+    }
+    .section-descriptions{
+      max-width: 568px;
+      width: 100%;
+      margin: 0 auto;
+      .section-headline{
+        text-align: center;
+        *{
+          @include fontRem(53,700,64);
+          color: $white;
+          @media only screen and (max-width: $laptop) {
+            @include fontRem(40,700,48);
+          }
+          
+          @media only screen and (max-width: $tablet) {
+            @include fontRem(25,700,30);
+          }
+          @media only screen and (max-width: $middle) {
+            @include fontRem(25,700,23);
+          }
+        }
+
+      }
+      .section-subHeadline{
+        margin-top: 17px;
+        text-align: center;
+        @media only screen and (max-width: $bigTablet) {
+          margin-top: 10px;
+        }
+        *{
+          @include fontRem(26,500,42);
+          color: $white;
+          @media only screen and (max-width: $laptop) {
+            @include fontRem(16,700,38);
+          }
+          @media only screen and (max-width: $middle) {
+            @include fontRem(12,400,12);
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+    .moulk_login{
+      position: absolute;
+      top: 0;
+      right: -16px;
+      max-width: 531px;
+      width: 100%;
+      min-height: 299px;
+      @media only screen and (max-width: $desktop) {
+        max-width: 439px;
+        min-height: 265px;
+      }
+      @media only screen and (max-width: $smallDesktop) {
+        top: 50px;
+        max-width: 338px;
+        min-height: 217px;
+      }
+      @media only screen and (max-width: $laptop) {
+        max-width: 326px;
+        min-height: 213px;
+      }
+      @media only screen and (max-width: $bigTablet) {
+        max-width: 275px;
+        min-height: 153px;
+      }
+      @media only screen and (max-width: $tablet) {
+        max-width: 182px;
+        min-height: 108px;
+      }
+      @media only screen and (max-width: $mobile) {
+        max-width: 117px;
+        min-height: 75px;
+        top: 65px;
+      }
+    }
+    .moulk_admin{
+      position: absolute;
+      min-height: 899px;
+      top: 200px;
+      @include absoluteCenter(horizontal);
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      z-index: 2;
+      @media only screen and (max-width: $desktop) {
+        max-width: 915px;
+        min-height: 580px;
+      }
+      @media only screen and (max-width: $smallDesktop) {
+        max-width: 1000px;
+      }
+      @media only screen and (max-width: $laptop) {
+        max-width: 827px;
+        min-height: 500px;
+      }
+      @media only screen and (max-width: $bigTablet) {
+        top: 140px;
+        max-width: 641px;
+        min-height: 415px;
+      }
+      @media only screen and (max-width: $tablet) {
+        max-width: 459px;
+        min-height: 317px;
+        top: 116px;
+      }
+      @media only screen and (max-width: $mobile) {
+        max-width: 300px;
+        min-height: 194px;
+        top: 100px;
+      }
+    }
+    .select_example{
+      position: absolute;
+      top: 350px;
+      left: -15px;
+      min-height: 70px;
+      max-width: 325px;
+      width: 100%;
+      @media only screen and (max-width: $desktop) {
+        max-width: 259px;
+        min-height: 70px;
+      }
+      @media only screen and (max-width: $smallDesktop) {
+        max-width: 212px;
+        min-height: 61px;
+      }
+      @media only screen and (max-width: $bigTablet) {
+        top: 250px;
+      }
+      @media only screen and (max-width: $tablet) {
+        top: 150px;
+        max-width: 153px;
+        min-height: 41px;
+      }
+    }
+    .moulk_select{
+      position: absolute;
+      top: 450px;
+      left: 0;
+      min-height: 300px;
+      max-width: 425px;
+      width: 100%;
+      z-index: 1;
+      @media only screen and (max-width: $desktop) {
+        top: 360px;
+        min-height: 270px;
+        max-width: 361px;
+      }
+      @media only screen and (max-width: $smallDesktop) {
+        min-height: 240px;
+        max-width: 280px;
+      }
+      @media only screen and (max-width: $laptop) {
+        left: -45px;
+      }
+      @media only screen and (max-width: $bigTablet) {
+        top: 270px;
+      }
+      @media only screen and (max-width: $tablet) {
+        top: 150px;
+        left: -45px;
+      }
+      @media only screen and (max-width: $mobile) {
+        min-height: 150px;
+        max-width: 180px;
+        left: -30px;
+      }
+    }
+    .mobileShop_overaly{
+      position: absolute;
+      bottom: 90px;
+      left: 150px;
+      max-width: 320px;
+      min-height: 662px;
+      padding-right: 235px;
+      z-index: 3;
+      @media only screen and (max-width: $desktop) {
+        padding-right: 183px;
+        min-height: 507px;
+      }
+      @media only screen and (max-width: $smallDesktop) {
+        display: none;
+      }
+      .mobileShopText{
+        transform: rotate(180deg);
+        *{
+          @include fontRem(51,700,63);
+          color: rgba($white,0.2);
+          writing-mode: vertical-rl;
+          @media only screen and (max-width: $desktop) {
+            @include fontRem(40,700,52);
+          }
+        }
+      }
+      .mobile_shop{
+        @include absoluteCenter(vertical);
+        right: 0;
+        min-height: 562px;
+        max-width: 235px;
+        width: 100%;
+        @media only screen and (max-width: $desktop) {
+          min-height: 400px;
+          max-width: 183px;
+        }
+      }
+    }
+    .table_example{
+      max-width: 1380px;
+      width: 100%;
+      position: absolute;
+      bottom: 400px;
+      right: 20px;
+      min-height: 65px;
+      @media only screen and (max-width: $desktop) {
+        max-width: 900px;
+        min-height: 50px;
+      }
+      @media only screen and (max-width: $desktop) {
+        max-width: 700px;
+        min-height: 40px;
+        bottom: 150px;
+      }
+      @media only screen and (max-width: $tablet) {
+        max-width: 400px;
+        min-height: 33px;
+        bottom: 100px;
+      }
+      @media only screen and (max-width: $mobile) {
+        max-width: 290px;
+        min-height: 20px;
+        bottom: 40px;
+      }
+    }
+    .rate{
+      max-width: 830px;
+      width: 100%;
+      position: absolute;
+      bottom: 300px;
+      right: 200px;
+      min-height: 65px;
+      @media only screen and (max-width: $desktop) {
+        max-width: 650px;
+        min-height: 50px;
+        right: 150px;
+      }
+      @media only screen and (max-width: $desktop) {
+        max-width: 550px;
+        min-height: 40px;
+        bottom: 80px;
+        right: 80px;
+      }
+      @media only screen and (max-width: $tablet) {
+        max-width: 340px;
+        min-height: 26px;
+        bottom: 60px;
+        right: 46px;
+      }
+      @media only screen and (max-width: $mobile) {
+        max-width: 224px;
+        min-height: 18px;
+        bottom: 13px;
+        right: 35px;
+      }
+    }
+
+  }
+
+}

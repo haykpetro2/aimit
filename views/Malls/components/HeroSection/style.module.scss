@@ -1,0 +1,190 @@
+.hero-section {
+  background-color: $black;
+  padding-top: 140px;
+  @media only screen and (max-width: $bigTablet){
+    padding-top: 188px;
+    padding-bottom: 58px;
+  }
+  @media only screen and (max-width: $tablet)  {
+    padding-top: 130px;
+  }
+  @media only screen and (max-width: $mobile)  {
+    padding-top: 100px;
+  }
+  .hero-section-overlay{
+    position: relative;
+    padding-bottom: 150px;
+    @media only screen and (max-width: $bigTablet){
+      padding-bottom: 180px;
+    }
+    @media only screen and (max-width: $tablet){
+      padding-bottom: 100px;
+    }
+    .hero-section-mainpanel{
+      padding-bottom: 200px;
+      @media only screen and (max-width: $laptop){
+        padding-bottom: 50px;
+      }
+      .hero-headlie{
+        text-align: center;
+        h1 {
+          span:first-child{
+            transform: rotate(-26.69deg) ;
+            @media only screen and (min-width: $laptop)  {
+              animation: rotateM 1s ease-in-out infinite alternate;
+            }
+          }
+          span:nth-child(2){
+            transform: rotate(21.87deg) translate(60px, 127px);
+            @media only screen and (min-width: $laptop)  {
+              animation: rotateA 1s ease-in-out infinite alternate;
+            }
+            @media only screen and (max-width: $bigTablet) {
+              transform: rotate(21.87deg) translate(32px, 58px);
+            }
+            @media only screen and (max-width: $tablet){
+              transform: rotate(21.87deg) translate(19px, 36px);
+            }
+          }
+
+          span:nth-child(3){
+            @media only screen and (min-width: $laptop)  {
+            animation: rotateM 1s ease-in-out infinite alternate;
+            }
+            transform: rotate(-26.69deg);
+          }
+          span:nth-child(4){
+            transform: rotate(23.86deg) translate(110px, 127px);
+            @media only screen and (min-width: $laptop)  {
+              animation: rotateL 1s ease-in-out infinite alternate;
+            }
+            @media only screen and (max-width: $bigTablet) {
+              transform: rotate(23.86deg) translate(60px, 99px);
+            }
+            @media only screen and (max-width: $tablet){
+              transform: rotate(23.86deg) translate(39px, 47px);
+            }
+          }
+          span:nth-child(5){
+            @media only screen and (min-width: $laptop)  {
+            animation: rotateS 1s ease-in-out infinite alternate;
+            }
+            transform: rotate(-14.34deg);
+          }
+        }
+        *{
+          position: relative;
+          color: $white;
+          display: inline-block;
+          @include fontRem(361,900,466);
+          @media only screen and (max-width: $smallDesktop){
+            @include fontRem(300,900,436);
+          }
+          @media only screen and (max-width: $laptop){
+            @include fontRem(245,900,350);
+          }
+          @media only screen and (max-width: $bigTablet){
+            @include fontRem(190,900,240);
+          }
+          @media only screen and (max-width: $tablet){
+            @include fontRem(98,900,119);
+          }
+          @media only screen and (max-width: $mobile){
+            @include fontRem(85,900,119);
+          }
+        }
+      }
+      .circle{
+        width: 129px;
+        height: 129px;
+        background-color: $mallsBlue;
+        border-radius: 50%;
+        margin-left: auto;
+        position: relative;
+        @media only screen and (min-width: $laptop)  {
+          animation: translateCircle 1s ease-in-out infinite alternate;
+        }
+        @media only screen and (max-width: $bigTablet)  {
+          width: 65px;
+          height: 65px;
+        }
+        @media only screen and (max-width: $mobile)  {
+          width: 27px;
+          height: 27px;
+        }
+      }
+    }
+    .text-swap-main{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-width: 100%;
+      .text-swap{
+        width: 100%;
+        max-width: 110%;
+        @include d-flex;
+        justify-content: space-between;
+        padding: 27px;
+        @media only screen and (max-width: $mobile){
+          padding: 14px;
+        }
+        &:first-child{
+          background: $mallsBlue;
+          position: absolute;
+          bottom: 0;
+          transform: translateY(-4px) rotate(-2deg);
+          z-index: 2;
+          .swap-text{
+            *{
+              color: $white;
+            }
+          }
+        }
+        &:last-child{
+          background: $white;
+          transform: translateY(75px) rotate(2deg);
+          z-index: 1;
+          .swap-text{
+            *{
+              color: $black;
+            }
+          }
+        }
+        .swap-text{
+          *{
+            @include fontRem(37,700,46);
+            color: $white;
+          }
+        }
+        :global{
+          .swiper-wrapper{
+            transition-timing-function: linear;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@keyframes rotateM {
+  0% {transform: rotate(-26.69deg) translate(0)}
+  100% {transform: rotate(10.69deg) translateY(150px)}
+}
+@keyframes rotateA {
+  0% {transform:rotate(21.87deg) translate(60px, 127px)}
+  100% {transform: rotate(-20.87deg) translate(0px, -180px)}
+}
+@keyframes rotateL {
+  0% {transform:rotate(23.86deg) translate(110px, 127px)}
+  100% {transform: rotate(-23.86deg) translate(0px, 250px)}
+}
+@keyframes rotateS {
+  0% {transform:rotate(-14.34deg) translateY(0) scale(1)}
+  100% {transform: rotate(14.34deg) translateY(-50px) scale(0.8)}
+}
+@keyframes translateCircle {
+  0% {transform:translate(0,0) scale(1)}
+  100% {transform: translate(-350px,-350px) scale(1.2)}
+}

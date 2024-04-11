@@ -1,0 +1,30 @@
+.culture-section{
+    padding-top: 23px;
+    padding-bottom: 105px;
+    @media only screen and (max-width: $bigTablet){
+        padding-top: 11px;
+        padding-bottom: 22px;
+    }
+    @media only screen and (max-width: $mobile){
+        padding-top: 76px;
+    }
+    .swiper-overlay{
+        margin-top: 44px;
+      :global{
+        .swiper-slide{
+          min-width: 480px;
+          max-width: 480px;
+          @media only screen and (max-width: $tablet){
+            min-width: auto;
+            max-width: none;
+          }
+        }
+      }
+    }
+    .culture-button-overlay{
+        max-width: 136px;
+        margin-left: auto;
+        margin-top: 44px;
+    }
+}
+

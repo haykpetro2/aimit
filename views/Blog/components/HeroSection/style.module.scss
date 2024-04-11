@@ -1,0 +1,84 @@
+.hero-section {
+  padding: 61px 0 61px 0;
+  background: $lightBlur;
+  overflow: hidden;
+  @media only screen and (max-width: $bigTablet) {
+    padding-top: 51px;
+    padding-bottom: 80px;
+  }
+  @media only screen and (max-width: $tablet) {
+    padding-top: 29px;
+    padding-bottom: 44px;
+  }
+  .hero-section-mainpanel {
+    @include d-flex;
+    justify-content: space-between;
+    align-items: center;
+    .section-heading {
+      * {
+        @include fontRem(40, 700, 48)
+      }
+    }
+    .left-side{
+      max-width: 605px;
+      width: 100%;
+      @media only screen and (max-width: $bigTablet) {
+        max-width: 487px;
+      }
+      @media only screen and (max-width: $middle) {
+        max-width: 400px;
+      }
+      @media only screen and (max-width: $tablet) {
+        max-width: 100%;
+      }
+      .hero-section-description-overlay {
+        * {
+          color: $white;
+        }
+
+        .hero-description-text {
+          margin-top: 35px;
+          @media only screen and (max-width: $tablet) {
+            margin-top: 19px;
+          }
+        }
+      }
+      .email-here{
+        margin-top: 35px;
+      }
+    }
+
+
+    .hero-section-image-overlay {
+      max-width: 346px;
+      width: 100%;
+      min-height: 307px;
+      position: relative;
+      @media only screen and (max-width: $bigTablet) {
+        max-width: 304px;
+        min-height: 304px;
+      }
+      @media only screen and (max-width: $tablet) {
+        display: none;
+      }
+      .section-icon {
+        @include flex-center;
+        width: 100%;
+        height: 100%;
+        animation: rotate 3s linear 3;
+      }
+      .icon{
+        @include absoluteCenter(both)
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}

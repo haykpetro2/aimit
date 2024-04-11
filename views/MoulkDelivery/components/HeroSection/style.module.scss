@@ -1,0 +1,202 @@
+.hero-section {
+  background-color: $lightBlur;
+  overflow: hidden;
+  padding-top: 142px;
+  @media only screen and (max-width: $tablet) {
+    padding-top: 113px;
+  }
+
+  .hero-section-mainpanel {
+    background-size: 100% 100%;
+    position: relative;
+    @media only screen and (max-width: $laptop) {
+      background-image: url(../../../../public/images/uploads/moulk_responsive.png);
+    }
+    @media only screen and (max-width: $tablet) {
+      min-height: 418px;
+      background-size: 100% 107%;
+    }
+    @media only screen and (max-width: $tablet) {
+      background-size: 100% 100%;
+    }
+
+    .hands {
+      position: absolute;
+      @media only screen and (max-width: $laptop){
+        display: none;
+      }
+    }
+
+    .hand-left-middle {
+      top: 35%;
+      left: 0;
+      width: 292px;
+      height: 292px;
+      animation: transform 10s infinite;
+    }
+
+    .hand-left-top {
+      top: 0px;
+      left: 200px;
+      width: 159px;
+      height: 159px;
+      animation: transform 10s infinite;
+
+    }
+
+    .hand-left-bottom {
+      bottom: 0px;
+      left: 200px;
+      width: 159px;
+      height: 159px;
+      animation: transform 10s infinite;
+
+    }
+
+    .hand-right-middle {
+      top: 45%;
+      right: 230px;
+      width: 140px;
+      height: 140px;
+      animation: transformRight 10s infinite;
+
+    }
+
+    .hand-right-top {
+      top: 0px;
+      right: 0px;
+      width: 260px;
+      height: 260px;
+      animation: transformRight 10s infinite;
+    }
+
+    .hand-right-bottom {
+      bottom: 0px;
+      right: 0px;
+      width: 289px;
+      height: 289px;
+      animation: transformRight 10s infinite;
+    }
+
+    .hero-headline {
+      text-align: center;
+      padding: 0 15px;
+
+      * {
+        @include fontRem(40, 700, 48);
+        color: $white;
+        @media only screen and (max-width: $tablet) {
+          @include fontRem(20, 700, 24);
+        }
+      }
+    }
+
+    .delivery-image {
+      position: relative;
+      max-width: 897px;
+      width: 100%;
+      margin: 0 auto;
+      min-height: 774px;
+      @media only screen and (max-width: $laptop) {
+        max-width: 752px;
+        min-height: 649px;
+      }
+      @media only screen and (max-width: $tablet) {
+        max-width: 315px;
+        min-height: 272px;
+      }
+
+      &::after {
+        content: " ";
+        background: radial-gradient(50% 50% at 50% 50%, rgba(30, 135, 250, 0.0195) 65.05%, rgba(255, 255, 255, 0.15) 100%);
+        width: 598px;
+        height: 598px;
+        @include absoluteCenter(both);
+        border-radius: 50%;
+        z-index: 0;
+        @media only screen and (max-width: $tablet) {
+          width: 254px;
+          height: 254px;
+        }
+      }
+
+      img {
+        z-index: 9;
+      }
+    }
+  }
+
+}
+
+
+@keyframes transform {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px)
+  }
+  10% {
+    transform: rotate(10deg) translate(50px, 0px)
+  }
+  20% {
+    transform: rotate(0deg) translate(0px, 0px)
+  }
+  30% {
+    transform: rotate(25deg) translate(0px, 50px)
+  }
+  40% {
+    transform: rotate(20deg) translate(80px, -1px)
+  }
+  50% {
+    transform: rotate(-10deg) translate(50px, 0px)
+  }
+  60% {
+    transform: rotate(20deg)
+  }
+  70% {
+    transform: rotate(-20deg) translate(40px, 40px)
+  }
+  80% {
+    transform: rotate(0deg)
+  }
+  90% {
+    transform: rotate(-13deg) translate(50px, 0px)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
+}
+
+@keyframes transformRight {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px)
+  }
+  10% {
+    transform: rotate(-10deg) translate(-50px, 0px)
+  }
+  20% {
+    transform: rotate(0deg) translate(0px, 0px)
+  }
+  30% {
+    transform: rotate(-25deg) translate(0px, -50px)
+  }
+  40% {
+    transform: rotate(-20deg) translate(-80px, 1px)
+  }
+  50% {
+    transform: rotate(10deg) translate(-50px, 0px)
+  }
+  60% {
+    transform: rotate(-20deg)
+  }
+  70% {
+    transform: rotate(20deg) translate(-40px, -40px)
+  }
+  80% {
+    transform: rotate(0deg)
+  }
+  90% {
+    transform: rotate(13deg) translate(-50px, 0px)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
+}

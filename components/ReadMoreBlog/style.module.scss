@@ -1,0 +1,39 @@
+.articles-section{
+    padding-top: 69px;
+    padding-bottom: 65px;
+    background-color: #FAFAFE;
+    @media only screen and (max-width: $tablet){
+        padding-top: 34px;
+    }
+    .articles-section_mainpanel{
+        margin-top: 67px;
+        @media only screen and (max-width: $bigTablet){
+            margin-top: 36px;
+        }
+        .list-items{
+            max-width: 1300px;
+            width: 100%;
+            li:not(:first-child){
+                margin-top: 25px;
+                @media only screen and (max-width: $bigTablet){
+                    margin-top: 16px;
+                }
+                @media only screen and (max-width: $tablet){
+                    margin-top: 14px;
+                }
+            }
+            a{
+                text-decoration: none;
+            }
+        }
+        .view-more{
+            margin-top: 30px;
+            text-align: center;
+            button{
+                @include buttonNulled;
+                @include fontRem(20,700,24);
+                color: $primary;
+            }
+        }
+        }
+    }

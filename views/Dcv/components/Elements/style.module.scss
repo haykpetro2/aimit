@@ -1,0 +1,32 @@
+.cv-elements{
+  background-color: $primary;
+  padding-top: 140px;
+  @media only screen and (max-width: $bigTablet){
+    padding-top: 50px;
+  }
+  .section-headline{
+    text-align: center;
+    *{
+      @include fontRem(60,700,84);
+      color: $white;
+      @media only screen and (max-width: $bigTablet){
+        @include fontRem(30,700,55);
+      }
+    }
+  }
+  .cv-elements-main-panel{
+    margin-top: 50px;
+    background-image: url(../../../../public/images/uploads/elements_background.png);
+    min-height: 596px;
+    @include flex-center;
+    @media only screen and (max-width: $bigTablet){
+      margin-top: 25px;
+      min-height: 396px;
+      padding: 25px;
+    }
+    @media only screen and (max-width: $mobile){
+      min-height: 200px;
+      padding: 0;
+    }
+  }
+}

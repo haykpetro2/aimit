@@ -1,0 +1,75 @@
+.cv-steps {
+  padding-top: 95px;
+  padding-bottom: 244px;
+  @media only screen and (max-width: $bigTablet) {
+    padding: 50px 0;
+  }
+  .section-headline {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 103px;
+    text-align: center;
+    @media only screen and (max-width: $bigTablet) {
+      padding-bottom: 50px;
+    }
+    
+    * {
+      @include fontRem(60, 700, 85);
+      color: $primary;
+      @media only screen and (max-width: $bigTablet) {
+        @include fontRem(30, 700, 55);
+      }
+    }
+  }
+  .cv-steps-main-panel {
+    @include d-flex;
+    align-items: flex-start;
+    overflow: hidden;
+    padding-top: 200px;
+    @media only screen and (max-width: $bigTablet) {
+      padding-top: 100px;
+    }
+    @media only screen and (max-width: $mobile) {
+      padding-top: 50px;
+    }
+    .step-image-overlay {
+      max-width: 50%;
+      width: 100%;
+      &:nth-child(odd) {
+        margin-top: -200px;
+        @media only screen and (max-width: $bigTablet) {
+          margin-top: -100px;
+        }
+        @media only screen and (max-width: $mobile) {
+          margin-top: -50px;
+        }
+        .step-image {
+          margin-left: -23px;
+          @media only screen and (max-width: $mobile) {
+            margin-left: 0px;
+          }
+        }
+      }
+      &:nth-child(even) {
+        .step-image {
+          margin-left: 23px;
+          @media only screen and (max-width: $mobile) {
+            margin-left: 0px;
+          }
+        }
+      }
+      .step-image {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        min-height: 659px;
+        @media only screen and (max-width: $bigTablet) {
+          min-height: 359px;
+        }
+        @media only screen and (max-width: $mobile) {
+          min-height: 300px;
+        }
+      }
+    }
+  }
+}

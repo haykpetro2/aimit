@@ -1,0 +1,29 @@
+.slider-section{
+position: absolute;
+  top: -15px  ;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: $white;
+  transform: rotate(-1deg);
+.text-swipe{
+  padding: 35px 0;
+  @media only screen and (max-width: $tablet){
+    padding: 15px 0;
+  }
+  .swap-text{
+    *{
+      @include fontRem(32,700,44);
+      color: $black;
+      @media only screen and (max-width: $tablet){
+        @include fontRem(18,700,24);
+      }
+    }
+  }
+  :global{
+    .swiper-wrapper{
+      transition-timing-function: linear;
+    }
+  }
+}
+}

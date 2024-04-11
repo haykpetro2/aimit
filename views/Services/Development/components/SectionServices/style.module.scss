@@ -1,0 +1,61 @@
+.services-section{
+    padding-top: 95px;
+    @media only screen and (max-width: $tablet){
+        padding-top: 68px;
+    }
+    .sevices-section-mainpanel{
+        .section-big-headline{
+            max-width: 992px;
+            width: 100%;
+            *{
+                @include fontRem(60,700,77);
+                color: $primary;
+                @media only screen and (max-width: $tablet){
+                    @include fontRem(30,700,36);
+                }
+            }
+        }
+        .service-widgets{
+            @include flexRow(26,2);
+            margin-top: 43px;
+            @media only screen and (max-width: $tablet){
+                @include flexRow(0,1);
+                margin-top: 24px;
+            }
+            .service-widget-overlay{
+                margin: 13px 0;
+                @media only screen and (max-width: $tablet){
+                    margin: 13px 0;
+                }
+                .service-widget{
+                    padding: 42px 26px 39px 49px;
+                    background: $extraLightGary;
+                    border-radius: 20px;
+                    @media only screen and (max-width: $tablet){
+                        padding: 25px 18px 25px 18px;
+                    }
+                    .service-widget-name{
+                        *{
+                            @include fontRem(28,700,34);
+                            color: $primary;
+                            @media only screen and (max-width: $tablet){
+                                @include fontRem(18,700,21);
+                            }
+                        }
+                    }
+                    .service-widget-description{
+                        margin-top: 22px;
+                        *{
+                            @include fontRem(20,400,32);
+                            color: $primary;
+                            @media only screen and (max-width: $tablet){
+                                @include fontRem(14,400,22);
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

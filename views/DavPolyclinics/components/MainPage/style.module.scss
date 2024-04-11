@@ -1,0 +1,46 @@
+.mainpage-section{
+    background-color: $davClinicGray;
+    @media only screen and (max-width: $bigTablet) {
+        padding-top: 40px;
+    }
+    @media only screen and (max-width: $mobile) {
+        padding-top: 2px;
+    }
+    .container{
+        max-width: 1210px;
+        width: 100%;
+        padding: 0 15px ;
+        margin: 0 auto;
+        .section-heading{
+            text-align: center;
+            *{
+                color: $white;
+                span{
+                    color: $davGreen;
+                }
+            }
+        }
+        .mainpage-mainpanel{
+            max-height: 675px;
+            height: 100%;
+            @media only screen and (max-width: $bigTablet){
+                margin-top: 28px;
+                max-height: none;
+                padding-bottom: 186px;
+            }
+            @media only screen and (max-width: $tablet){
+                padding-bottom: 115px;
+            }
+            .maipage-image-overlay{
+                min-height: 808px;
+                position: relative;
+                @media only screen and (max-width: $tablet){
+                    min-height: 400px;
+                }
+                @media only screen and (max-width: $mobile){
+                    min-height: 230px;
+                }
+            }
+        }
+    }
+    }

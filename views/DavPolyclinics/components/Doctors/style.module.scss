@@ -1,0 +1,64 @@
+.doctors-section {
+  padding-top: 395px;
+  padding-bottom: 79px;
+  background-color: $white;
+  @media only screen and (max-width: $bigTablet) {
+    padding-top: 120px;
+    padding-bottom: 234px;
+  }
+  @media only screen and (max-width: $tablet) {
+    padding-bottom: 108px;
+  }
+
+  .section-heading {
+    text-align: center;
+
+    * {
+      color: $primary;
+
+      span {
+        color: $davGreen;
+      }
+    }
+  }
+
+  .doctors-mainpanel {
+    padding-top: 26px;
+    @media only screen and (max-width: $bigTablet) {
+      padding-top: 55px;
+    }
+    position: relative;
+
+    .section-image {
+      position: relative;
+      min-height: 680px;
+      max-width: 1268px;
+      width: 100%;
+      margin: 0 auto;
+      @media only screen and (max-width: $bigTablet) {
+        min-height: 480px;
+      }
+      @media only screen and (max-width: $tablet) {
+        min-height: 300px;
+      }
+    }
+
+    .doctor-image {
+      max-width: 500px;
+      min-height: 188px;
+      width: 100%;
+      position: absolute;
+      right: 30px;
+      filter: drop-shadow(0px 4px 60px rgba(34, 48, 60, 0.2));
+      bottom: 90px;
+      z-index: 2;
+      @media only screen and (max-width: $mobile){
+        max-width: 120px;
+        min-height: 50px;
+        bottom: 70px;
+        right: 0px;
+
+      }
+    }
+  }
+}

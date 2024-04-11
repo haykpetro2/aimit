@@ -1,0 +1,419 @@
+.getInTouch-section {
+  padding: 50px 0 84px 0;
+  background-color: $extraLightGary;
+  @media only screen and (max-width: $bigTablet) {
+    background-color: $white;
+  }
+  @media only screen and (max-width: $mobile) {
+    padding-top: 70px;
+  }
+
+  .getInTouch-headline {
+    @include d-flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    @media only screen and (max-width: $bigTablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .getInTouchDescription {
+      max-width: 657px;
+      width: 100%;
+      margin-right: 50px;
+      @media only screen and (max-width: $smallDesktop) {
+        margin-right: 0px;
+        max-width: 553px;
+      }
+      @media only screen and (max-width: $bigTablet) {
+        max-width: 657px;
+        width: 100%;
+        margin-top: 14px;
+      }
+    }
+  }
+
+  .getInTouch-mainpanel {
+    @include d-flex;
+    justify-content: space-between;
+    @media only screen and (max-width: $bigTablet) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .getInTouch-members {
+      max-width: 595px;
+      width: 100%;
+      @media only screen and (max-width: $smallDesktop) {
+        max-width: 460px;
+      }
+      @media only screen and (max-width: $bigTablet) {
+        max-width: 707px;
+        margin: 0 auto;
+      }
+
+      .members-mainpanel {
+        margin-top: 98px;
+        @include flexRow(0, 2);
+        @media only screen and (max-width: $mobile) {
+          flex-direction: column;
+        }
+
+        .member-item {
+          @media only screen and (max-width: $bigTablet) {
+            @include d-flex;
+            align-items: center;
+          }
+          @media only screen and (max-width: $mobile) {
+            width: 100%;
+            max-width: 100%;
+            &:not(:first-child) {
+              margin-top: 42px;
+            }
+          }
+
+          .member-image {
+            width: 92px;
+            height: 92px;
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+          }
+
+          .member-infos-overlay {
+            @media only screen and (max-width: $bigTablet) {
+              max-width: 189px;
+              margin-left: 39px;
+            }
+
+            .member-infos {
+              margin-top: 17px;
+
+              * {
+                @include fontRem(20, 700, 32);
+                color: $primary;
+              }
+
+              .member-name {
+                color: $primary;
+              }
+
+              .member-position {
+                color: $lightGray;
+              }
+            }
+
+            .member-contact {
+              @include fontRem(14, 400, 32);
+
+              a {
+                display: block;
+                color: $primary;
+                text-decoration: none;
+              }
+            }
+
+            .member-socials {
+              margin-top: 18px;
+
+              ul {
+                list-style: none;
+                @include flex-center-vert;
+
+                .social-item {
+                  position: relative;
+                  width: 36px;
+                  height: 36px;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  cursor: pointer;
+
+                  &:not(:last-child) {
+                    margin-right: 10px;
+                  }
+                }
+              }
+
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.getInTouch-form-overlay {
+  max-width: 707px;
+  width: 100%;
+  margin-top: 26px;
+  @media only screen and (max-width: $smallDesktop) {
+    max-width: 553px;
+  }
+  @media only screen and (max-width: $bigTablet) {
+    max-width: 707px;
+  }
+  @media only screen and (max-width: $mobile) {
+    margin-top: 0px;
+  }
+
+  .form {
+    margin-top: 54px;
+    @media only screen and (max-width: $mobile) {
+      margin-top: 36px;
+    }
+
+    .form-group {
+      width: 100%;
+      max-width: 100%;
+      @media only screen and (max-width: $tablet) {
+        @include flexRow(0, 1);
+        & > div:not(:first-child) {
+          margin-top: 24px;
+        }
+      };
+
+      &.user-infos {
+        @include flexRow(25, 2);
+        row-gap: 58px;
+        @media only screen and (max-width: $tablet) {
+          row-gap: 9px;
+        }
+        @media only screen and (max-width: $mobile) {
+          @include flexRow(0, 1);
+        }
+
+        & > :first-child {
+          width: 100%;
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-top: 58px;
+        @media only screen and (max-width: $mobile) {
+          margin-top: 34px;
+        }
+
+      }
+
+      &.form-group-config {
+        .select-overlay, .input-overlay, .file-overlay {
+          @media only screen and (max-width: $mobile) {
+            padding: 0;
+          }
+        }
+      }
+
+      .input-overlay {
+        width: 100%;
+        max-width: 100%;
+
+        input {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          border: none;
+          outline: none;
+          border-bottom: 1px solid $lightGray;
+          padding-bottom: 8px;
+          @include fontRem(20, 400, 32);
+          color: $lightGray;
+          background: transparent;
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus,
+          &:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px $white inset !important;
+          }
+
+          &::placeholder {
+            color: $lightGray;
+          }
+
+          @media only screen and (max-width: $mobile) {
+            @include fontRem(14, 400, 32);
+          }
+        }
+        textarea {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          border: none;
+          outline: none;
+          resize: none;
+          border-bottom: 1px solid $lightGray;
+          padding-bottom: 8px;
+          @include fontRem(20, 400, 32);
+          font-family: inherit;
+          color: $lightGray;
+          background: transparent;
+          overflow: hidden;
+          &::placeholder {
+            color: $lightGray;
+          }
+          @media only screen and (max-width: $mobile) {
+            @include fontRem(14, 400, 32);
+          }
+        }
+
+        .range-overlay {
+          position: relative;
+          width: 100%;
+          max-width: 100%;
+
+          input {
+            max-height: 2px;
+            padding-bottom: 0px;
+            position: relative;
+            z-index: 2;
+          }
+
+          .lines-overlay {
+            width: 100%;
+            max-width: 100%;
+            position: relative;
+            z-index: 1;
+            @include d-flex;
+            padding-left: 106px;
+            @include absoluteCenter(vertical);
+            justify-content: space-between;
+            .line{
+              width: 1px;
+              height: 10px;
+              background-color: $lightGray;
+            }
+          }
+
+        }
+
+      }
+      .select-overlay{
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        &::after{
+          content: " ";
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 17.9378L7 10.9378L8.25417 9.68359L14 15.4586L19.7458 9.71276L21 10.9669L14 17.9378Z' fill='black'/%3E%3C/svg%3E");
+          width: 28px;
+          height: 28px;
+          right: 5px;
+          @include absoluteCenter(vertical);
+          z-index: 1;
+        }
+        select{
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          border: none;
+          outline: none;
+          border-bottom: 1px solid $lightGray;
+          padding-bottom: 8px;
+          @include fontRem(20, 400, 32);
+          color: $lightGray;
+          background: transparent;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          cursor: pointer;
+          position: relative;
+          z-index: 2;
+          @media only screen and (max-width: $mobile) {
+            @include fontRem(14, 400, 32);
+          }
+        }
+      }
+    }
+    .file-overlay{
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+
+      .files-list {
+        @include flex-center-vert;
+        justify-content: space-between;
+        margin-top: 5px;
+        color: $lightBlur;
+        padding: 4px 10px 4px 55px;
+        background-color: $white;
+        position: relative;
+        p{
+          width: 100%;
+          max-width: 90%;
+          text-overflow: ellipsis;
+          max-height: 24px;
+          overflow: hidden;
+        }
+
+        &::after {
+          content: " ";
+          width: 21px;
+          height: 21px;
+          @include absoluteCenter(vertical);
+          left: 21px;
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.7976 10.3158L10.7564 18.357C9.77124 19.3421 8.43514 19.8956 7.04198 19.8956C5.64882 19.8956 4.31272 19.3421 3.32761 18.357C2.34249 17.3719 1.78906 16.0358 1.78906 14.6427C1.78906 13.2495 2.34249 11.9134 3.32761 10.9283L11.3689 2.88702C12.0256 2.23028 12.9163 1.86133 13.8451 1.86133C14.7739 1.86133 15.6646 2.23028 16.3214 2.88702C16.9781 3.54377 17.3471 4.4345 17.3471 5.36327C17.3471 6.29205 16.9781 7.18278 16.3214 7.83952L8.27136 15.8808C7.94299 16.2091 7.49762 16.3936 7.03323 16.3936C6.56885 16.3936 6.12348 16.2091 5.79511 15.8808C5.46674 15.5524 5.28226 15.107 5.28226 14.6427C5.28226 14.1783 5.46674 13.7329 5.79511 13.4045L13.2239 5.98452' stroke='%234F8EFE' stroke-width='2'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+        button {
+          @include buttonNulled;
+          width: 15px;
+          height: 15px;
+          background-size: contain;
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.44961 27.6496L0.349609 25.5496L11.8996 13.9996L0.349609 2.44961L2.44961 0.349609L13.9996 11.8996L25.5496 0.349609L27.6496 2.44961L16.0996 13.9996L27.6496 25.5496L25.5496 27.6496L13.9996 16.0996L2.44961 27.6496Z' fill='black'/%3E%3C/svg%3E");
+        }
+      }
+
+      input {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+      }
+      label{
+        padding: 24px;
+        border: 2px dashed $lightGray;
+        background: $white;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        cursor: pointer;
+        text-align: center;
+        @media only screen and (max-width: $mobile) {
+          padding: 30px 14px;
+        }
+        .file-name{
+          position: relative;
+          display: inline-block;
+          padding-left: 41px;
+          @media only screen and (max-width: $mobile) {
+            @include fontRem(12, 400, 22)
+          }
+          &::after{
+            content: " ";
+            width: 27px;
+            height: 27px;
+            background-size: contain;
+            @include absoluteCenter(vertical);
+            left: 0;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.1684 13.2636L13.8297 23.6023C12.5631 24.8689 10.8453 25.5804 9.05405 25.5804C7.26284 25.5804 5.545 24.8689 4.27842 23.6023C3.01185 22.3357 2.30029 20.6179 2.30029 18.8267C2.30029 17.0355 3.01185 15.3176 4.27842 14.0511L14.6172 3.71231C15.4616 2.86792 16.6068 2.39355 17.8009 2.39355C18.9951 2.39355 20.1403 2.86792 20.9847 3.71231C21.8291 4.55669 22.3034 5.70192 22.3034 6.89606C22.3034 8.0902 21.8291 9.23542 20.9847 10.0798L10.6347 20.4186C10.2125 20.8407 9.63987 21.0779 9.0428 21.0779C8.44573 21.0779 7.87311 20.8407 7.45092 20.4186C7.02873 19.9964 6.79155 19.4238 6.79155 18.8267C6.79155 18.2296 7.02873 17.657 7.45092 17.2348L17.0022 7.69481' stroke='%231A2028' stroke-width='2'/%3E%3C/svg%3E");
+            @media only screen and (max-width: $mobile) {
+              width: 19px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .submit-button {
+      margin-top: 61px;
+      text-align: right;
+      @media only screen and (max-width: $mobile) {
+        text-align: center;
+      }
+    }
+  }
+
+}

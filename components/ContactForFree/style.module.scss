@@ -1,0 +1,28 @@
+.getInTouch-section{
+  padding-bottom: 112px;
+  .getInTouch-section_mainpanel{
+    @include d-flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    .getInTouch-descriptions{
+      max-width: 613px;
+      width: 100%;
+      @media only screen and (max-width: $tablet){
+        .section-description{
+          margin-top: 20px;
+        }
+      }
+    }
+    .section-button{
+      max-width: 507px;
+      width: 100%;
+      @media only screen and (max-width: $tablet){
+          margin-top: 20px;
+      }
+      button{
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

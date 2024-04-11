@@ -1,0 +1,113 @@
+.about-section{
+  padding: 153px 0;
+    @media only screen and (max-width: $bigTablet){
+        padding-top: 48px;
+        padding-bottom: 30px;
+    }
+    @media only screen and (max-width: $tablet){
+        padding-top: 30px;
+        padding-bottom: 57px;
+    }
+    .about-descriptions{
+        *{
+            text-align: left;
+            @media only screen and (max-width: $bigTablet){
+                text-align: left;
+            }
+        }
+        .section-description{
+            margin-top: 41px;
+            @media only screen and (max-width: $bigTablet){
+                margin-top: 27px;
+            }
+            @media only screen and (max-width: $tablet){
+                margin-top: 24px;
+            }
+        }
+    }
+    .about-section_mainpanel{
+        margin-top: 40px;
+        @media only screen and (max-width: $tablet){
+            margin-top: 15px;
+        }
+        .about-widgets{
+            @include flexRow(25,4);
+            @media only screen and (max-width: $laptop){
+                @include flexRow(25,3);
+            }
+            @media only screen and (max-width: $bigTablet){
+                @include flexRow(25,2);
+            }
+            @media only screen and (max-width: $tablet){
+                @include flexRow(0,1)
+            }
+            .widget-overlay{
+                @media only screen and (max-width: $laptop){
+                    margin: 12.5px 0;
+                }
+                @media only screen and (max-width: $tablet){
+                    margin: 5px 0;
+                }
+                .about-widget{
+                    @include d-flex;
+                    background-color: $moulkwidget;
+                    padding: 17px 80px 54px 23px;
+                    position: relative;
+                    @media only screen and (max-width: $tablet){
+                        padding-bottom: 48px;
+                    }
+                    .widget-infos{
+                        .wiget-name{
+                            *{
+                                @include fontRem(28,700,34);
+                                color: $primary;
+                                @media only screen and (max-width: $tablet){
+                                    @include fontRem(25,700,31);
+                                }
+                            }
+                        }
+                        .widget-subInfo{
+                            margin-top: 11px;
+                            *{
+                                @include fontRem(20,400,32);
+                                color: $primary;
+                                @media only screen and (max-width: $tablet){
+                                    @include fontRem(18,400,29);
+                                }
+                            }
+                        }
+                    }
+                    .widget-icon{
+                        position: absolute;
+                        right: 14px;
+                        top: 14px;
+                        max-width: 66px;
+                        width: 100%;
+                        min-height: 60px;
+                      svg{
+                        path{
+                          fill: #FC3B3B;
+                          &:last-child{
+                            animation: translate 1.5s infinite alternate;
+                            position: relative;
+                            z-index: 3;
+                          }
+                        }
+                      }
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes translate {
+
+  0% {
+    transform: translate(-18px, -12px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1 !important;
+    transform: translate(0px, 0px) !important;
+  }
+}

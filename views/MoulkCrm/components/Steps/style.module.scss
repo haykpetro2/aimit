@@ -1,0 +1,145 @@
+.step-section{
+  background-color: $lightBlur;
+  position: relative;
+  padding-top: 111px;
+  padding-bottom: 250px;
+  @media only screen and (max-width: $bigTablet){
+    padding-top: 45px;
+    padding-bottom: 195px;
+  }
+  @media only screen and (max-width: $tablet){
+    padding-top: 34px;
+    padding-bottom: 94px;
+  }
+  .section-headline{
+    background-color: $black;
+    padding: 20px 50px 20px 20px;
+    max-width: 915px;
+    width: 100% ;
+    *{
+      @include fontRem(30,800,36);
+      color: $white;
+      text-transform: uppercase;
+      @media only screen and (max-width: $tablet){
+        @include fontRem(16,800,19);
+      }
+    }
+  }
+  .section-mainpanel{
+    border: 5px solid #000000;
+    max-width: 1440px;
+    width: 100%;
+    margin: 63px auto 0 auto;
+    background-color: $white;
+    @media only screen and (max-width: $tablet){
+      margin-top: 24px;
+    }
+    .listing-header{
+      position: relative;
+    }
+    .images-listing{
+      @include d-flex;
+      justify-content: space-between;
+      padding: 22px 49px 79px 22px;
+      background-color: #F2F3F7;
+      width: 100%;
+      max-width: 100%;
+      @media only screen and (max-width: $mobile){
+        padding: 14px;
+      }
+      .images-list{
+        @include d-flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 12px;
+        @media only screen and (max-width: $bigTablet){
+          gap: 5px;
+        }
+        .list-image{
+          min-height: 60px;
+          position: relative;
+          @media only screen and (max-width: $bigTablet){
+            &:nth-child(2n + 1){
+              display: none;
+            }
+          }
+          @media only screen and (max-width: $tablet){
+            min-height: 40px;
+          }
+          @media only screen and (max-width: $mobile){
+            min-height: 27px;
+          }
+        }
+      }
+      .list-image,.droppable-list{
+        max-width: 309px;
+        width: 100%;
+        position: relative;
+        @media only screen and (max-width: $smallDesktop){
+          max-width: 250px;
+        }
+        @media only screen and (max-width: $laptop){
+          max-width: 200px;
+        }
+        @media only screen and (max-width: $bigTablet){
+          max-width: 49%;
+        }
+
+      }
+      .droppable-list{
+        column-gap: 7px;
+        @media only screen and (max-width: $bigTablet){
+          &:nth-child(2n + 1){
+            display: none;
+          }
+        }
+        .drag-overlay{
+          @include d-flex;
+          flex-direction: column;
+          width: 100%;
+          max-width: 100%;
+          row-gap: 7px;
+          .list-image{
+            min-height: 60px;
+            @media only screen and (max-width: $bigTablet){
+              max-width: 100%;
+            }
+            @media only screen and (max-width: $tablet){
+              min-height: 40px;
+            }
+            @media only screen and (max-width: $mobile){
+              min-height: 27px;
+            }
+          }
+
+        }
+      }
+
+
+    }
+    .add-order{
+      width: 100%;
+      max-width: 100%;
+      margin-top: 70px;
+      button{
+        @include buttonNulled;
+        @include fontRem(18,600,22);
+        color: $white;
+        max-width: 336px;
+        width: 100%;
+        background-color: $lightBlur;
+        padding: 10px;
+        @media only screen and (max-width: $mobile){
+          max-width: 140px;
+          @include fontRem(7,600,9);
+          padding: 3px;
+        }
+      }
+      @media only screen and (max-width: $mobile){
+        margin-top: 13px;
+      }
+    }
+  }
+
+}

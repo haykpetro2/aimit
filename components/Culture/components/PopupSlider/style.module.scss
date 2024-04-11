@@ -1,0 +1,116 @@
+.close-modal {
+    @include buttonNulled;
+    width: 60px;
+    height: 60px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.61538 60L0 55.3846L25.3846 30L0 4.61538L4.61538 0L30 25.3846L55.3846 0L60 4.61538L34.6154 30L60 55.3846L55.3846 60L30 34.6154L4.61538 60Z' fill='white'/%3E%3C/svg%3E");
+    position: absolute;
+    top: 49px;
+    right: 43px;
+    z-index: 9999;
+    @media only screen and (max-width: $smallDesktop) {
+        right: 6px;
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+        top: 40px;
+        right: 40px;
+    }
+    @media only screen and (max-width: $bigTablet) {
+        right: 6px;
+        width: 19px;
+        height: 19px;
+        background-size: contain;
+        top: 40px;
+        right: 40px;
+    }
+}
+.swiper-overlay {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .modal-swiper {
+        padding-bottom: 55px;
+        max-height: 100%;
+        height: 100%;
+        .modal-image {
+            text-align: center;
+            height: 100%;
+            @include flex-center;
+            span {
+                user-select: none;
+                @media only screen and (max-width: $bigTablet) {
+                    width: 100% !important;
+                }
+            }
+            video {
+                width: 400px;
+                height: 400px;
+            }
+        }
+        :global {
+            .swiper-pagination {
+                color: $white;
+                text-align: center;
+                * {
+                    @include fontRem(16, 400, 24);
+                }
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: 86px;
+                height: 86px;
+                border-radius: 20px;
+                background-color: $white;
+                @media only screen and (max-width: $smallDesktop) {
+                    width: 72px;
+                    height: 72px;
+                }
+                @media only screen and (max-width: $bigTablet) {
+                    width: 72px;
+                    height: 72px;
+                    background-color: $black;
+                }
+                @media only screen and (max-width: $bigTablet) {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            .swiper-button-next::after,
+            .swiper-button-prev::after {
+                content: "";
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='%23192028' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.0003 0.0669194L26.0103 3.14859L8.3086 20.8503L45.9336 20.8503L45.9336 25.1503L8.3086 25.1503L26.0103 42.8519L23.0003 45.9336L0.0669307 23.0003L23.0003 0.0669194Z' fill='%23192028'/%3E%3C/svg%3E");
+                width: 45px;
+                height: 45px;
+                background-size: contain;
+                @media only screen and (max-width: $bigTablet) {
+                    width: 38px;
+                    height: 38px;
+                    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.0003 0.0669194L26.0103 3.14859L8.3086 20.8503L45.9336 20.8503L45.9336 25.1503L8.3086 25.1503L26.0103 42.8519L23.0003 45.9336L0.0669307 23.0003L23.0003 0.0669194Z' fill='white'/%3E%3C/svg%3E");
+                }
+                @media only screen and (max-width: $bigTablet) {
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+            .swiper-button-next {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}
+.culture-modal {
+    inset: 0;
+    padding: 0 !important;
+    height: 100%;
+    outline: none;
+}
+
+.imageWrapper {
+    position: relative;
+    max-width: 100%;
+    width: 800px;
+    height: calc(100vh - 65px);
+    margin-top: 20px;
+}

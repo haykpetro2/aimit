@@ -1,0 +1,40 @@
+.mobile-login {
+  background-color: #323545;
+  padding-top: 153px;
+  padding-bottom: 219px;
+  overflow: hidden;
+  @media only screen and (max-width: $bigTablet){
+    padding: 50px 0;
+  }
+  .container {
+    max-width: 1376px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    .cv-steps-main-panel {
+      @include d-flex;
+      position: relative;
+      .step-image-overlay {
+        max-width: 33.333%;
+        width: 100%;
+        padding: 0 15px;
+        position: relative;
+        @media only screen and (max-width: $mobile){
+          max-width: 100%;
+        } 
+        .step-image {
+          max-width: 100%;
+          width: 100%;
+          position: relative;
+          min-height: 844px;
+          @media only screen and (max-width: $bigTablet){
+            min-height: 544px;
+          }
+          @media only screen and (max-width: $mobile){
+            min-height: 650px;
+          } 
+        }
+      }
+    }
+  }
+}

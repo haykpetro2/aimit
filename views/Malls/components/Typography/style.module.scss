@@ -1,0 +1,91 @@
+.typography-section {
+  padding-top: 61px;
+  padding-bottom: 139px;
+  background-color: $white;
+  @media only screen and (max-width: $bigTablet){
+    padding-top: 53px;
+    padding-bottom: 123px;
+  }
+  @media only screen and (max-width: $mobile){
+    padding-bottom: 75px;
+  }
+  .typography-section_mainpanel{
+    @include d-flex;
+    justify-content: space-around;
+    @media only screen and (max-width: $bigTablet){
+      justify-content: flex-start;
+    }
+    .font-variants{
+      max-width: 323px;
+      width: 100%;
+      ul{
+        padding-top: 33px;
+        list-style: none;
+        li{
+          @include fontRem(30,600,36);
+          color: $black;
+          @media only screen and (max-width: $mobile){
+            @include fontRem(18,600,21);
+          }
+          &:not(:first-child){
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+    .color-variants{
+      max-width: 600px;
+      width: 100%;
+      @media only screen and (max-width: $bigTablet){
+        margin-top: 85px;
+      }
+      @media only screen and (max-width: $mobile){
+        margin-top: 40px;
+      }
+      ul{
+        @include flexRow(14,4);
+        list-style: none;
+        padding-top: 22px;
+        @media only screen and (max-width: $mobile){
+          @include flexRow(8,4);
+        }
+        .color-variant{
+          border-radius: 12px;
+          min-height: 81px;
+          @media only screen and (max-width: $mobile){
+            min-height: 46px;
+          }
+          &.dark{
+            background-color: $textStroke;
+          }
+          &.light{
+            background-color: $sectionBg;
+          }
+          &.blue{
+            background-color: $mallsBlue;
+          }
+          &.gray{
+            background-color: $mallsGray;
+          }
+        }
+        .color-name{
+          margin-top: 10px;
+          *{
+            @include fontRem(20,600,24);
+            color: $black;
+            text-align: center;
+            @media only screen and (max-width: $mobile){
+              @include fontRem(12,600,14);
+            }
+          }
+
+        }
+      }
+    }
+    .variant-heading{
+      *{
+        color: $black;
+      }
+    }
+  }
+}

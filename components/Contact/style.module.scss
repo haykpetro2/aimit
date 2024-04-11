@@ -1,0 +1,183 @@
+.contact-section {
+  padding-top: 105px;
+  @media only screen and (max-width: $mobile) {
+    padding-top: 54px;
+  }
+  .contact-section_mainpanel {
+    margin-top: 37px;
+    @media only screen and (max-width: $mobile) {
+      margin-top: 53px;
+    }
+    .contact-items {
+      @include flexRow(26, 3);
+      align-items: stretch;
+      @media only screen and (max-width: $bigTablet) {
+        @include flexRow(0, 1);
+        justify-content: center;
+      }
+
+      .contact_item_overlay {
+        @media only screen and (max-width: $bigTablet) {
+          max-width: 585px;
+        }
+
+          .contact-item {
+            box-shadow: 0px 4px 16px rgba($lightGray, 0.3);
+            background: $white;
+
+            .contact-item-title {
+              color: $primary
+            }
+
+            .contact-item-infos {
+              * {
+                color: $primary;
+              }
+            }
+          }
+        &:not(:first-child) {
+          @media only screen and (max-width: $bigTablet) {
+            margin-top: 19px;
+          }
+        }
+        .contact-item {
+          padding: 42px 77px 33px 25px;
+          border-radius: 20px;
+          position: relative;
+          height: 100%;
+          @media only screen and (max-width: $mobile) {
+            padding: 30px 16px 30px 16px;
+          }
+
+          .contact-item-title {
+            @include fontRem(28, 700, 34);
+            @media only screen and (max-width: $mobile) {
+              @include fontRem(20, 700, 34);
+            }
+
+          }
+
+          .contact-item-infos {
+            margin-top: 28px;
+            @include fontRem(20, 500, 34);
+            @media only screen and (max-width: $mobile) {
+              @include fontRem(14, 500, 22);
+              margin-top: 11px;
+            }
+
+            * {
+              text-decoration: none;
+            }
+          }
+
+          .contact-item-flag {
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            top: 19px;
+            right: 32px;
+            @media only screen and (max-width: $mobile) {
+              width: 24px;
+              height: 24px;
+            }
+
+          }
+
+          .social-icons {
+            margin-top: 15px;
+
+            ul {
+              list-style: none;
+              @include d-flex;
+
+              .social-item {
+                width: 36px;
+                height: 36px;
+                position: relative;
+                @media only screen and (max-width: $mobile){
+                  width: 32px;
+                  height: 32px;
+                }
+                &:not(:last-child) {
+                  margin-right: 7px;
+                }
+
+                a {
+                  display: block;
+                  width: auto;
+                  height: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  & > .contact_item_overlay {
+    width: 100%;
+    max-width: 100%;
+    background: $lightBlur;
+    margin-top: 161px;
+    padding: 31px 0;
+    .contact-item {
+      @include flex-center-vert;
+      justify-content: flex-end;
+      @media only screen and (max-width: $tablet) {
+        @include flex-center-column;
+      }
+      .contact-item-inner{
+        @include flex-center-vert;
+        @media only screen and (max-width: $mobile) {
+          justify-content: center;
+        }
+        &:not(:last-child){
+          margin-right: 68px;
+          @media only screen and (max-width: $tablet) {
+            margin-right: 0px;
+            margin-bottom: 20px;
+          }
+        }
+        .contact-item-title{
+          margin-right: 26px;
+          *{
+            @include fontRem(28,700,34);
+            @media only screen and (max-width: $mobile) {
+              @include fontRem(20, 700, 34);
+            }
+          }
+        }
+        .social-icons{
+          margin-top: 0px;
+          @media only screen and (max-width: $mobile) {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 10px;
+          }
+          ul{
+            list-style: none;
+            @include flex-center-vert;
+            @media only screen and (max-width: $mobile) {
+              justify-content: center;
+            }
+            li{
+              &:not(:last-child){
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+      .contact-item-title {
+        color: $white
+      }
+
+      .contact-item-infos {
+        * {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+

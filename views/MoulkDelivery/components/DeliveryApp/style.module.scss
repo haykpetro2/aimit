@@ -1,0 +1,100 @@
+.delivary-section{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='1920' height='636' viewBox='0 0 1920 636' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-0.575195 0.576172L1922.17 204.396V635.95L-0.575195 432.13V0.576172Z' fill='%231E87FA'/%3E%3C/svg%3E");
+  width: 100%;
+  max-width: 100%;
+  background-position: 100% 74%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  @media only screen and (max-width: $laptop){
+    background-size: 400% 100%;
+    background-position: 100% 50%;
+  }
+  @media only screen and (max-width: $bigTablet){
+    background-size: 500% 100%;
+  }
+  @media only screen and (max-width: $tablet){
+    background-size: cover;
+    background-position: 68% 100%;
+  }
+  .delivary-app{
+    margin-top: 95px;
+    @include flex-center-horiz;
+    align-items: flex-start;
+    position:relative;
+    column-gap: 33px;
+    .screen-image{
+      position: relative;
+      width: 100%;
+      max-width: 250px;
+      min-height: 530px;
+      filter: drop-shadow(0px 4px 60px rgba(10, 58, 127, 0.2));
+      border-radius: 20px;
+      @media only screen and (max-width: $middleDesktop) {
+        max-width: 210px;
+        min-height: 480px;
+      }
+    }
+    .order-images{
+      @include d-flex;
+      flex-direction: column;
+      max-width: 250px;
+      width: 100%;
+      row-gap: 33px;
+      @media only screen and (max-width: $middleDesktop) {
+        max-width: 210px;
+      }
+    }
+    .signIn-image{
+      margin-top: 200px;
+    }
+    .order-history{
+      margin-top: 230px;
+    }
+    .order-detail{
+      margin-top: 210px;
+    }
+
+  }
+  .delivary-app-ismobile{
+    margin-top: 95px;
+    @include flex-center;
+    position:relative;
+    column-gap: 40px;
+    @media only screen and (max-width: $mobile){
+      column-gap: 14px;
+      margin-top: 0px;
+    }
+    .screen-image{
+      position: relative;
+      width: 100%;
+      max-width: 250px;
+      min-height: 530px;
+      filter: drop-shadow(0px 4px 60px rgba(10, 58, 127, 0.2));
+      border-radius: 20px;
+      @media only screen and (max-width: $middle){
+        max-width: 210px;
+        min-height: 500px;
+      }
+      @media only screen and (max-width: $mobile){
+        max-width: 140px;
+        min-height: 305px;
+        column-gap: 14px;
+      }
+    }
+    .screen-group{
+      max-width: 250px;
+      width: 100%;
+      @include flex-column;
+      gap: 56px;
+      @media only screen and (max-width: $middle){
+        max-width: 210px;
+      }
+      @media only screen and (max-width: $mobile){
+        max-width: 140px;
+        &:nth-child(2){
+          margin-top: 112px;
+        }
+      }
+    }
+  }
+}

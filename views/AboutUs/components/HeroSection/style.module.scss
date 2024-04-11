@@ -1,0 +1,50 @@
+.hero-section {
+  padding: 79px 0 8px 0;
+  @media only screen and (max-width: $bigTablet){
+    padding-top: 40px;
+  }
+  @media only screen and (max-width: $tablet){
+    padding-top: 14px;
+  }
+  .hero-section-mainpanel {
+    margin-top: 32px;
+    @media only screen and (max-width: $tablet){
+      margin-top: 44px;
+    }
+    .video-overlay{
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      .video-thumbnail{
+        max-width: 100%;
+        width: 100%;
+        background: $lightBlur;
+        min-height: 440px;
+        position: relative;
+        z-index: 2;
+        .about-play{
+          @include absoluteCenter(both);
+        }
+        @media only screen and (max-width: $mobile){
+          min-height: 181px;
+        }
+      }
+      .iframe-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        z-index: 1;
+        iframe{
+          width: 100%;
+          height: 440px;
+          @media only screen and (max-width: $mobile){
+            height: 181px;
+          }
+        }
+      }
+    }
+  }
+
+}

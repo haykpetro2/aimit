@@ -1,0 +1,86 @@
+.mobile-section{
+    background-color: $davClinicGray;
+    padding-bottom: 113px;
+    margin-bottom: 232px;
+    @media only screen and (max-width: $bigTablet) {
+      padding-top: 41px;
+      margin-bottom: 41px;
+    }
+    @media only screen and (max-width: $tablet){
+      margin-bottom: 0px;
+    }
+    .container{
+        max-width: 1160px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        .section-heading{
+            text-align: center;
+            *{
+                color: $white;
+                span{
+                    color: $davGreen;
+                }
+            }
+        }
+        .section-big-headline{
+            text-align: center;
+            *{
+                @include fontRem(174,700,250);
+                color: #1C2B37;
+                text-shadow: 0px 2.41704px 38.6727px #2F4150;
+                text-transform: capitalize;
+                @media only screen and (max-width: $laptop){
+                    @include fontRem(103,700,148);
+                }
+                @media only screen and (max-width: $tablet){
+                    @include fontRem(46,700,66);
+                }
+            }
+        }
+        .mobile-mainpanel{
+            padding-top: 40px;
+            @include flexRow(24,4);
+            justify-content: center;
+            @media only screen and (max-width: $bigTablet){
+                @include flexRow(20,3);
+                justify-content: center;
+                padding-top: 34px;
+            }
+            @media only screen and (max-width: $tablet){
+                @include flexRow(30,2);
+                justify-content: center;
+            }
+            @media only screen and (max-width: $mobile){
+                padding-top: 28px;
+            }
+            .section-image{
+                min-height: 557px;
+                position: relative;
+                filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.2));
+                text-align: center;
+                @media only screen and (max-width: $bigTablet){
+                    margin: 40px 0;
+                }
+                @media only screen and (max-width: $tablet){
+                    margin: 20px 0;
+                }
+                @media only screen and (max-width: $mobile){
+                    margin: 20px 0;
+                    min-height: 300px;
+                }
+            }
+        }
+        .section-middle-headline{
+            *{
+                @include fontRem(102,700,146);
+                text-align: center;
+                color: #1C2B37;
+            }
+            @media only screen and (max-width: $tablet){
+                display: none;
+            }
+        }
+    }
+
+}

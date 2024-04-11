@@ -1,0 +1,123 @@
+.wholePackage-section{
+    padding-top: 111px;
+    @media only screen and (max-width: $smallDesktop){
+        padding-top: 60px;
+    }
+    @media only screen and (max-width: $mobile){
+        padding-top: 23px;
+    }
+    .wholePackage_description{
+        margin-top: 39px;
+      max-width: 986px;
+      width: 100%;
+        @media only screen and (max-width: $bigTablet){
+            margin-top: 17px;
+        }
+        @media only screen and (max-width: $mobile){
+            margin-top: 7px;
+        }
+        .second_description{
+            margin-top: 25px;
+            display: block;
+        }
+    }
+    .wholePackage-section_mainpanel{
+        margin-top: 39px;
+        background-color: $extraLightGary;
+        padding: 36px 0 68px 0;
+        @media only screen and (max-width: $bigTablet){
+            padding-top: 8px;
+            padding-bottom: 33px;
+        }
+        @media only screen and (max-width: $mobile){
+            margin-top: 19px;
+            padding-top: 30px;
+            padding-bottom: 75px;
+        }
+        .wholePackageItems{
+            @include flexRow(25,3);
+            @media only screen and (max-width: $bigTablet){
+                @include flexRow(23,2);
+            }
+            @media only screen and (max-width: $mobile){
+                @include flexRow(0,1);
+            }
+            .wholePackage-item_overlay{
+                position: relative;
+                padding-top: 28px;
+                margin: 16px 0;
+                @media only screen and (max-width: $bigTablet){
+                    margin-top: 21.5px;
+                    padding-top: 23px;
+                    margin-bottom: 21px;
+                }
+                @media only screen and (max-width: $mobile){
+                    margin-top: 8.5px;
+                    padding-top: 19px;
+                }
+                .wholePackage-item{
+                    padding: 42px 42px 35px 37px;
+                    background: $white;
+                    border-radius: 20px;
+                    @media only screen and (max-width: $bigTablet){
+                       padding-left: 32px;
+                    }
+                    @media only screen and (max-width: $mobile){
+                        padding: 28px 26px 59px 23px;
+                     }
+                    .wholePackage-item_icon{
+                        width: 56px;
+                        height: 56px;
+                        background: $lightBlur;
+                        border-radius: 12px;
+                        position: absolute;
+                        top: 0;
+                        left: 42px;
+                        @include flex-center;
+                        @media only screen and (max-width: $bigTablet){
+                            width: 50px;
+                            height: 50px;
+                            left: 26px;
+                        }
+                        @media only screen and (max-width: $mobile){
+                            width: 37px;
+                            height: 37px;
+                            svg{
+                                width:100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                    .wholePackage-item_name{
+                        *{
+                            @include fontRem(24,700,32);
+                            color: $primary;
+                            @media only screen and (max-width: $mobile){
+                                @include fontRem(18,700,32);
+                            }
+                        }
+                    }
+                    .wholePackage-item_description{
+                        max-width: 293px;
+                        width: 100%;
+                        margin-top: 12px;
+                        @media only screen and (max-width: $mobile){
+                            margin-top: 8px;
+                        }
+                        *{
+                            @include fontRem(18,400,28);
+                            color: $primary;
+                            @media only screen and (max-width: $mobile){
+                                @include fontRem(14,400,22);
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+    }
+}
+

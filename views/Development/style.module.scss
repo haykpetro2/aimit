@@ -1,0 +1,16 @@
+.working-process{
+  margin: 112px 0 57px 0;
+  padding: 64px 0 42px 0;
+  background-color: $sectionBg2;
+  @media only screen and (max-width: $tablet){
+    margin: 167px 0 74px 0;
+    padding: 0;
+    background: $white;
+  }
+}
+.contact-us{
+  padding-top: 159px;
+}
+.featured-content{
+  margin-bottom: 78px;
+}

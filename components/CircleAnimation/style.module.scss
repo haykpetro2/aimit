@@ -1,0 +1,25 @@
+.circle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .circle__spinner {
+    width: 100%;
+    height: 100%;
+    transform: rotate(195deg);
+    & .path {
+      animation: dash 3s linear alternate 3;
+    }
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dasharray: 100, 100;
+    stroke-dashoffset: 0;
+  }
+}

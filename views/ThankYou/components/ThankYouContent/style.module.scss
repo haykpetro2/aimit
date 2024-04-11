@@ -1,0 +1,101 @@
+.thankYou-section{
+  padding-bottom: 264px;
+  padding-top: 164px;
+  background-color: $sectionBg;
+  @media only screen and (max-width: $tablet){
+    padding-bottom: 47px;
+    padding-top: 64px;
+  }
+  .container-small{
+    max-width: 1030px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    @media only screen and (max-width: $bigTablet){
+      max-width: 830px
+    }
+    .section-mainpanel{
+      min-height: 550px;
+      background: $white;
+      box-shadow: 0px 4px 60px rgba($lightBlur, 0.1);
+      border-radius: 20px;
+      @include d-flex;
+      justify-content: space-between;
+      overflow: hidden;
+      @media only screen and (max-width: $tablet){
+        flex-direction: column-reverse;
+      }
+      .contact{
+        min-height: 550px;
+        background-color: $lightBlur;
+        max-width: 428px;
+        width: 100%;
+        padding-left: 53px;
+        padding-bottom: 60px;
+        @media only screen and (max-width: $bigTablet){
+          min-height: 320px;
+          max-width: 100%;
+        }
+        @media only screen and (max-width: $mobile){
+          padding-top: 25px;
+          padding-bottom: 37px;
+        }
+        @include d-flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .contact-list{
+          &:not(:first-child){
+            margin-top: 40px;
+          }
+          .contact-list-headline{
+            *{
+              color: $white;
+              @include fontRem(24,700,20);
+            }
+          }
+          .contact-list-subHeadline{
+            margin-top: 14px;
+            *{
+              text-decoration: none;
+              @include fontRem(16,500,25);
+              color: $white;
+              display: block;
+            }
+          }
+          ul{
+            list-style: none;
+            margin-top: 10px;
+            @include d-flex;
+            li{
+              &:not(:last-child){
+                margin-right: 7px;
+              }
+            }
+          }
+        }
+      }
+      .contact-message{
+        @include flex-center;
+        margin: 0 auto;
+        flex-direction: column;
+        @media only screen and (max-width: $tablet) {
+          padding-bottom: 80px;
+        }
+        .thankYou-Image{
+          position: relative;
+          max-width: 134px;
+          width: 100%;
+          min-height: 146px;
+        }
+        .section-subheading{
+          margin-top: 19px;
+          *{
+            @include fontRem(20,400,32);
+            color: $lightGray;
+          }
+        }
+      }
+    }
+
+  }
+}

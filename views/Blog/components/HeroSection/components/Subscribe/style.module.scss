@@ -1,0 +1,56 @@
+.subscripe-overlay{
+    max-width: 488px;
+    width: 100%;
+    position: relative;
+    .input-overaly{
+        width: 100%;
+        max-width: 100%;
+        input{
+            display: block;
+            padding: 15.5px 160px 15.5px 38px;
+            width: 100%;
+            max-width: 100%;
+            border-radius: 43px;
+            outline: none;
+            border: none;
+            @include fontRem(16,500,19);
+            color: $black;
+            &::placeholder{
+                @include fontRem(16,500,19);
+                color: $lightGray;
+            }
+        }
+    }
+    .button-overlay{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+  .button-subscribe {
+    @include buttonNulled;
+    padding: 16px 38px;
+    @include fontRem(16,700,19);
+    background: $primary;
+    border-radius: 30px;
+    color: $white;
+    margin: 0px;
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+
+.input-error {
+  margin: 4px 0 0 38px;
+}
+
+.subscripe-success {
+  display: flex;
+  align-items: center;
+  .subscripe-ssuccessfully {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    color:  $white;
+    margin-right: 12px;
+  }
+}

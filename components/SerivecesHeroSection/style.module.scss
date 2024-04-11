@@ -1,0 +1,124 @@
+.subServices-section {
+  padding: 47px 0 85px 0;
+  background-color: $lightBlur;
+  position: relative;
+  overflow: hidden;
+  @media only screen and (max-width: $tablet) {
+    padding-bottom: 140px;
+  }
+
+  .subServices-mainpanel {
+    @include flex-center-vert;
+    justify-content: space-between;
+    @media only screen and (max-width: $tablet) {
+      flex-direction: column;
+    }
+
+    .subServices-descriptions {
+      max-width: 732px;
+      width: 100%;
+      @media only screen and (max-width: $smallDesktop) {
+        max-width: 500px;
+      }
+      @media only screen and (max-width: $middle) {
+        max-width: 450px;
+      }
+
+      .section-heading {
+        * {
+          color: $white;
+        }
+      }
+
+      .section-description {
+        margin-top: 25px;
+
+        * {
+          color: $white;
+        }
+      }
+
+      .section-button {
+        @media only screen and (max-width: $tablet) {
+          width: 100%;
+          max-width: 100%;
+          bottom: 50px;
+          text-align: center;
+          @include absoluteCenter(horizontal);
+        }
+
+        .booking-call {
+          margin-top: 35px;
+          max-width: 309px;
+          width: 100%;
+          @media only screen and (max-width: $tablet) {
+            margin: 0 auto;
+          }
+
+         button {
+            text-decoration: none;
+            @include fontRem(20, 700, 24);
+            color: $white;
+            @include flex-center-vert;
+            padding: 15px 45px;
+            background-color: rgba($white, 0.1);
+            border: 2px solid $white;
+            border-radius: 61px;
+            @media only screen and (max-width: $mobile) {
+              @include fontRem(14, 700, 16);
+            }
+            svg {
+              margin-right: 18px;
+            }
+          }
+        }
+
+      }
+    }
+
+    .section-icon-overlay {
+      width: 342px;
+      height: 342px;
+      position: relative;
+      @include flex-center;
+      @media only screen and (max-width: $middle) {
+        width: 250px;
+        height: 250px;
+      }
+      @media only screen and (max-width: $middle) {
+        width: 180px;
+        height: 180px;
+        margin-top: 25px;
+      }
+      .section-icon {
+        @include flex-center;
+        width: 100%;
+        height: 100%;
+        animation: rotate 3s linear 3;
+      }
+      .icon {
+        @include flex-center;
+        width: 232px;
+        height: 232px;
+        border-radius: 50%;
+        @include absoluteCenter(both);
+        @media only screen and (max-width: $middle) {
+          width: 120px;
+          height: 120px;
+          padding: 30px;
+        }
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+    }
+  }
+}
+

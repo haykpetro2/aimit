@@ -1,0 +1,151 @@
+.letter-section{
+    background-image: url(../../../../public/images/uploads/letters_section.png);
+    padding: 150px 0;
+    @media only screen and (max-width: $tablet){
+        padding: 50px 0;
+    }
+    .container{
+        max-width: 1450px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        @media only screen and (max-width: $laptop){
+            max-width: 1024px;
+        }
+        @media only screen and (max-width: $middle){
+            max-width: 768px;
+        }
+        @media only screen and (max-width: $tablet){
+            max-width: 576px;
+        }
+        @media only screen and (max-width: $mobile){
+            max-width: 360px;
+        }
+        .letters-headline{
+            white-space: pre-wrap;
+            word-break: break-all;
+            text-align: center;
+            span{
+                @include fontRem(190,700,230);
+                color: $primary;
+                text-transform: uppercase;
+                @media only screen and (max-width: $desktop) {
+                    @include fontRem(170, 700, 180);
+                  }
+                  @media only screen and (max-width: $laptop){
+                    @include fontRem(120, 700, 140);
+                  }
+                  @media only screen and (max-width: $middle){
+                    @include fontRem(92, 700, 100);
+                  }
+                  @media only screen and (max-width: $tablet){
+                    @include fontRem(70, 700, 80);
+                  }
+                  @media only screen and (max-width: $mobile){
+                    @include fontRem(38, 700, 60);
+                }
+                &.icon-area{
+                    width: 149px;
+                    height: 138px;
+                    background-image: url(../../../../public/images/uploads/cv_letters-image-one.png);
+                    display: inline-block;
+                    background-size: contain;
+                    @media only screen and (max-width: $laptop){
+                        width: 97px;
+                        height: 90px;
+                    }
+                    @media only screen and (max-width: $middle){
+                        width: 65px;
+                        height: 60px;
+                    }
+                    @media only screen and (max-width: $middle){
+                        width: 32px;
+                        height: 30px;
+                    }
+                }
+                &.area-green{
+                    width: 238px;
+                    height: 148px;
+                    background-color: rgba(45, 192, 141, 1);
+                    display: inline-block;
+                    @media only screen and (max-width: $laptop){
+                        width: 215px;
+                        height: 90px;
+                    }
+                    @media only screen and (max-width: $middle){
+                        width: 114px;
+                        height: 68px;
+                    }
+                    @media only screen and (max-width: $middle){
+                        width: 88px;
+                        height: 33px;
+                    }
+                }
+                &.area-black{
+                    width: 111px;
+                    height: 140px;
+                    background-color: $primary;
+                    display: inline-block;
+                    @media only screen and (max-width: $laptop){
+                        height: 90px;
+                    }
+                    @media only screen and (max-width: $tablet){
+                        width: 60px;
+                        height: 50px;
+                    }
+                    @media only screen and (max-width: $mobile){
+                        width: 60px;
+                        height: 31px;
+                    }
+                }
+                &.blue{
+                    color: rgba(79, 142, 254, 1);
+                }
+                &.icon{
+                    width: 132px;
+                    height: 142px;
+                    background-image: url(../../../../public/images/uploads/cv_icon.png);
+                    display: inline-block;
+                    position: relative;
+                    @media only screen and (max-width: $laptop){
+                        width: 97px;
+                        height: 90px;
+                        background-size: contain;
+                        background-position: center;
+                    }
+                    @media only screen and (max-width: $tablet){
+                        width: 75px;
+                        height: 57px;
+                    }
+                    @media only screen and (max-width: $mobile){
+                        width: 49px;
+                        height: 38px;
+                    }
+                    &::after{
+                        content: " ";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;   
+                    }
+                    &.icon-first{
+                        &::after{
+                         background-color:rgba(45, 192, 141, 0.6);
+                        }
+                     }
+                    &.icon-second{
+                        &::after{
+                         background-color:rgba(79, 142, 254, 0.6);
+                        }
+                     }
+                    &.icon-thrty{
+                       &::after{
+                        background-color: rgba(255, 61, 61, 0.6);
+                       }
+                    }
+                }
+            }
+        }
+    }
+}

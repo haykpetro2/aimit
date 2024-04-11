@@ -1,0 +1,88 @@
+.video-section{
+    padding-top: 69px;
+    padding-bottom: 65px;
+    .video-section_mainpanel{
+        margin-top: 67px;
+        @media only screen and (max-width: $bigTablet){
+            margin-top: 30px;
+        }
+        .videoItems{
+            @include flexRow(26,3);
+            @media only screen and (max-width: $bigTablet){
+                @include flexRow(35,2);
+            }
+            @media only screen and (max-width: $tablet){
+                @include flexRow(0,1);
+            }
+            .video-item{
+              margin:13px 0;
+                @media only screen and (max-width: $tablet){
+                    &:not(:first-child){
+                        margin-top: 18px;
+                    }
+                }
+                .video-overlay{
+                    position: relative;
+                    .video-thumbnail{
+                        position: relative;
+                        min-height: 317px;
+                        width: 100%;
+                        max-width: 100%;
+                        z-index: 2;
+                        @media only screen and (max-width: $tablet){
+                            min-height: 211px;
+                        }
+
+                    }
+                    .video-iframe{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        max-width: 100%;
+                        z-index: 1;
+                        padding: 0 5px;
+                        iframe{
+                            height: 317px;
+                            width: 100%;
+                            max-width: 100%;
+                            @media only screen and (max-width: $tablet){
+                                    height: 211px;
+                            }
+                        }
+
+                    }
+                    .video-play{
+                        @include absoluteCenter(both);
+                        z-index: 3;
+                    }
+                }
+                .video-description{
+                    *{
+                        @include fontRem(28,700,45);
+                        color: $primary;
+                        @include textShorten(2);
+                        @media only screen and (max-width: $tablet){
+                            @include fontRem(18,700,28);
+                        }
+                    }
+                }
+            }
+        }
+        .view-more{
+            margin-top: 30px;
+            text-align: center;
+            @media only screen and (max-width: $bigTablet){
+                margin-top: 60px;
+            }
+            @media only screen and (max-width: $tablet){
+                margin-top: 29px;
+            }
+            button{
+                @include buttonNulled;
+                @include fontRem(20,700,24);
+                color: $primary;
+            }
+        }
+        }
+    }
